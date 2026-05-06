@@ -1,0 +1,1476 @@
+2026-04-26 12:20:43 I tivit.stage.train: building dataloaders and model
+2026-04-26 12:20:43 I tivit.stage.train: starting training with configs=['configs/default.yaml', 'configs/overrides/manual_training.yaml', 'configs/overrides/manual_training_keyroi_train.yaml']
+2026-04-26 12:20:43 I tivit.data.roi.keyboard_roi: reg_refined: canonical_hw=(180, 1536) cache=/home/achatzigiannis/tivit-vam/reg_refined_pianovam.json
+2026-04-26 12:20:43 I tivit.data.roi.keyboard_roi: reg_refined: loaded 31 cache entries from /home/achatzigiannis/tivit-vam/reg_refined_pianovam.json (upgraded=0 skipped_target_hw=0 skipped_invalid=0)
+2026-04-26 12:20:43 I tivit.data.roi.keyboard_roi: reg_refined: cache_path=/home/achatzigiannis/tivit-vam/reg_refined_pianovam.json entries=31 canonical_hw=(180, 1536)
+2026-04-26 12:20:43 I tivit.data.roi.keyboard_roi: reg_refined: cache_keys_preview=['video_01', 'video_03', 'video_04', 'video_06', 'video_07']
+2026-04-26 12:20:43 D h5py._conv: Creating converter from 7 to 5
+2026-04-26 12:20:43 D h5py._conv: Creating converter from 5 to 7
+2026-04-26 12:20:43 D h5py._conv: Creating converter from 7 to 5
+2026-04-26 12:20:43 D h5py._conv: Creating converter from 5 to 7
+2026-04-26 12:20:44 I tivit.data.sampler: Onset-balanced sampler enabled | size=53 onset=53 nearmiss=29 bg=0 fractions={'onset': 0.5, 'nearmiss': 0.25, 'background': 0.25} radius=6
+2026-04-26 12:20:44 I tivit.data.roi.keyboard_roi: reg_refined: loaded 31 cache entries from /home/achatzigiannis/tivit-vam/reg_refined_pianovam.json (upgraded=0 skipped_target_hw=0 skipped_invalid=0)
+2026-04-26 12:20:44 I tivit.train.loop: Seeded onset head bias to prior=0.0066 (logit=-5.0101)
+2026-04-26 12:20:44 I tivit.train.loop: Seeded offset head bias to prior=0.0061 (logit=-5.0967)
+2026-04-26 12:20:44 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_21-57-38.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=1536 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_21-57-38.mp4
+2026-04-26 12:20:52 W tivit.data.roi.keyboard_roi: reg_refined: video_38 status=fallback_worsened err_before=5.40px err_after=5.40px err_white=5.40px err_black=5.40px frames=96
+2026-04-26 12:20:52 I tivit.data.targets.frame_targets: [targets:soft] split=train onset[min=0.000 mean=0.007 max=1.000] pitch[min=0.000 mean=0.029 max=1.000]
+2026-04-26 12:20:53 I tivit.losses.multitask_loss: [onoff_loss] head=pitch mode=adaptive_band context=frame band=[2.00, 4.00] pos_weight min=2.000 mean=3.636 max=4.000
+2026-04-26 12:20:53 I tivit.losses.multitask_loss: [onoff_loss] head=onset mode=adaptive_band context=frame band=[4.00, 12.00] pos_weight min=4.000 mean=10.545 max=12.000
+2026-04-26 12:20:53 I tivit.losses.multitask_loss: [onoff_loss] head=offset mode=adaptive_band context=frame band=[4.00, 12.00] pos_weight min=4.000 mean=10.545 max=12.000
+2026-04-26 12:20:58 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-04_04-14-36.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=7081 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-04_04-14-36.mp4
+2026-04-26 12:21:01 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-17_21-37-57.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=543 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-17_21-37-57.mp4
+2026-04-26 12:21:04 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-04_04-36-26.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=3133 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-04_04-36-26.mp4
+2026-04-26 12:21:08 I tivit.train.loop: [train] epoch=1 step=5 avg_loss=1.0774
+2026-04-26 12:21:08 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_23-14-13.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=52997 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_23-14-13.mp4
+2026-04-26 12:21:12 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-04-08_23-10-23.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=36892 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-04-08_23-10-23.mp4
+2026-04-26 12:21:16 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-17_22-12-41.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=26150 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-17_22-12-41.mp4
+2026-04-26 12:21:26 W tivit.data.roi.keyboard_roi: reg_refined: video_41 status=fallback_worsened err_before=5.26px err_after=5.26px err_white=5.26px err_black=5.26px frames=96
+2026-04-26 12:21:28 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-26_16-33-49.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=38463 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-26_16-33-49.mp4
+2026-04-26 12:21:36 I tivit.train.loop: [train] epoch=1 step=10 avg_loss=1.0812
+2026-04-26 12:21:36 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-15_22-54-26.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=66022 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-15_22-54-26.mp4
+2026-04-26 12:21:39 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-18_04-15-06.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=90515 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-18_04-15-06.mp4
+2026-04-26 12:21:47 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-13_11-32-42.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=16170 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-13_11-32-42.mp4
+2026-04-26 12:21:54 I tivit.train.loop: [train] epoch=1 step=15 avg_loss=1.1639
+2026-04-26 12:21:54 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-17_00-29-10.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=3615 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-17_00-29-10.mp4
+2026-04-26 12:22:02 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-04-08_22-49-18.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=1340 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-04-08_22-49-18.mp4
+2026-04-26 12:22:09 W tivit.data.roi.keyboard_roi: reg_refined: video_18 status=fallback_worsened err_before=4.68px err_after=4.68px err_white=4.68px err_black=4.68px frames=96
+2026-04-26 12:22:14 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-17_00-12-50.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=12264 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-17_00-12-50.mp4
+2026-04-26 12:22:18 I tivit.train.loop: [train] epoch=1 step=20 avg_loss=1.1490
+2026-04-26 12:22:18 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-17_18-54-44.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=50287 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-17_18-54-44.mp4
+2026-04-26 12:22:21 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-04-08_23-50-57.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=8065 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-04-08_23-50-57.mp4
+2026-04-26 12:22:25 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-17_22-33-45.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=14506 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-17_22-33-45.mp4
+2026-04-26 12:22:36 I tivit.train.loop: [train] epoch=1 step=25 avg_loss=1.1627
+2026-04-26 12:22:36 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_20-54-38.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=17554 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_20-54-38.mp4
+2026-04-26 12:22:39 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-04-09_03-42-36.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=7790 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-04-09_03-42-36.mp4
+2026-04-26 12:22:50 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_15-13-10.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=57636 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_15-13-10.mp4
+2026-04-26 12:22:54 I tivit.train.loop: [train] epoch=1 step=30 avg_loss=1.1376
+2026-04-26 12:22:54 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-16_23-19-03.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=13732 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-16_23-19-03.mp4
+2026-04-26 12:22:58 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-04_03-46-36.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=845 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-04_03-46-36.mp4
+2026-04-26 12:23:05 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-22_14-11-52.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=110059 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-22_14-11-52.mp4
+2026-04-26 12:23:09 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-14_20-37-55.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=62917 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-14_20-37-55.mp4
+2026-04-26 12:23:12 I tivit.train.loop: [train] epoch=1 step=35 avg_loss=1.1627
+2026-04-26 12:23:16 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-20_18-23-30.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=129107 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-20_18-23-30.mp4
+2026-04-26 12:23:32 I tivit.train.loop: [train] epoch=1 step=40 avg_loss=1.1602
+2026-04-26 12:23:35 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-20_18-08-35.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=8792 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-20_18-08-35.mp4
+2026-04-26 12:23:50 I tivit.train.loop: [train] epoch=1 step=45 avg_loss=1.1617
+2026-04-26 12:23:50 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-16_14-41-07.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=1203 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-16_14-41-07.mp4
+2026-04-26 12:23:54 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_20-28-13.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=4618 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_20-28-13.mp4
+2026-04-26 12:23:58 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_21-18-14.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=31266 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_21-18-14.mp4
+2026-04-26 12:24:02 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-14_19-44-26.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=11796 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-14_19-44-26.mp4
+2026-04-26 12:24:09 I tivit.train.loop: [train] epoch=1 step=50 avg_loss=1.1692
+2026-04-26 12:24:09 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-14_21-30-04.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=148960 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-14_21-30-04.mp4
+2026-04-26 12:24:22 I tivit.train.loop: [train] epoch=1 metrics={'loss': 1.1754847202660903, 'pitch': 0.6763276952617573, 'onset': 0.2953853610692159, 'offset': 0.20377166688723383, 'hand': 0.0, 'clef': 0.0, 'total': 1.1754847202660903}
+2026-04-26 12:24:22 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_20-07-54.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_20-07-54.mp4
+2026-04-26 12:24:24 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_20-38-23.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_20-38-23.mp4
+2026-04-26 12:24:27 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_21-33-36.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_21-33-36.mp4
+2026-04-26 12:24:30 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-13_11-54-57.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-13_11-54-57.mp4
+2026-04-26 12:24:33 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_12-45-12.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_12-45-12.mp4
+2026-04-26 12:24:42 W tivit.data.roi.keyboard_roi: reg_refined: video_12 status=fallback_worsened err_before=5.38px err_after=5.38px err_white=5.38px err_black=5.38px frames=96
+2026-04-26 12:24:43 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_15-05-42.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_15-05-42.mp4
+2026-04-26 12:24:46 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_15-26-39.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_15-26-39.mp4
+2026-04-26 12:24:54 W tivit.data.roi.keyboard_roi: reg_refined: video_39 status=fallback_worsened err_before=5.50px err_after=5.50px err_white=5.50px err_black=5.50px frames=96
+2026-04-26 12:24:55 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_19-40-55.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_19-40-55.mp4
+2026-04-26 12:24:58 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_23-22-31.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_23-22-31.mp4
+2026-04-26 12:25:08 W tivit.data.roi.keyboard_roi: reg_refined: video_31 status=fallback_worsened err_before=5.33px err_after=5.33px err_white=5.33px err_black=5.33px frames=96
+2026-04-26 12:25:08 I tivit.train.loop: [eval] epoch=1 metrics={'loss': 0.9582582116127014, 'pitch': 0.6418442063861423, 'onset': 0.15666809388332897, 'offset': 0.1597459175520473, 'hand': 0.0, 'clef': 0.0, 'total': 0.9582582116127014}
+2026-04-26 12:25:09 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_1.pt
+2026-04-26 12:25:16 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-27_11-49-04.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=641 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-27_11-49-04.mp4
+2026-04-26 12:25:26 I tivit.train.loop: [train] epoch=2 step=5 avg_loss=1.3968
+2026-04-26 12:25:26 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_21-40-43.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=10549 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_21-40-43.mp4
+2026-04-26 12:25:44 I tivit.train.loop: [train] epoch=2 step=10 avg_loss=1.2816
+2026-04-26 12:25:48 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_18-29-40.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=849 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_18-29-40.mp4
+2026-04-26 12:25:55 W tivit.data.roi.keyboard_roi: reg_refined: video_40 status=fallback_worsened err_before=5.68px err_after=5.68px err_white=5.68px err_black=5.68px frames=96
+2026-04-26 12:26:08 I tivit.train.loop: [train] epoch=2 step=15 avg_loss=1.2300
+2026-04-26 12:26:08 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-04_03-50-34.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=25744 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-04_03-50-34.mp4
+2026-04-26 12:26:27 I tivit.train.loop: [train] epoch=2 step=20 avg_loss=1.1710
+2026-04-26 12:26:34 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-12_15-43-01.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=52650 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-12_15-43-01.mp4
+2026-04-26 12:26:38 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_21-01-11.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=15229 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_21-01-11.mp4
+2026-04-26 12:26:46 I tivit.train.loop: [train] epoch=2 step=25 avg_loss=1.1801
+2026-04-26 12:27:04 I tivit.train.loop: [train] epoch=2 step=30 avg_loss=1.1991
+2026-04-26 12:27:18 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-22_11-58-09.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=33860 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-22_11-58-09.mp4
+2026-04-26 12:27:22 I tivit.train.loop: [train] epoch=2 step=35 avg_loss=1.1858
+2026-04-26 12:27:33 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_22-02-16.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=25695 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_22-02-16.mp4
+2026-04-26 12:27:43 W tivit.data.roi.keyboard_roi: reg_refined: video_16 status=fallback_worsened err_before=5.24px err_after=5.24px err_white=5.24px err_black=5.24px frames=96
+2026-04-26 12:27:49 I tivit.train.loop: [train] epoch=2 step=40 avg_loss=1.2265
+2026-04-26 12:27:49 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-04_22-38-33.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=24815 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-04_22-38-33.mp4
+2026-04-26 12:27:59 W tivit.data.roi.keyboard_roi: reg_refined: video_33 status=fallback_worsened err_before=4.68px err_after=4.68px err_white=4.68px err_black=4.68px frames=96
+2026-04-26 12:28:14 I tivit.train.loop: [train] epoch=2 step=45 avg_loss=1.2210
+2026-04-26 12:28:33 I tivit.train.loop: [train] epoch=2 step=50 avg_loss=1.2197
+2026-04-26 12:28:40 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-14_19-10-09.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=17969 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-14_19-10-09.mp4
+2026-04-26 12:28:44 I tivit.train.loop: [train] epoch=2 metrics={'loss': 1.2204796356974907, 'pitch': 0.619573508793453, 'onset': 0.35476228334712534, 'offset': 0.2461438443300859, 'hand': 0.0, 'clef': 0.0, 'total': 1.2204796356974907}
+2026-04-26 12:29:07 I tivit.train.loop: [eval] epoch=2 metrics={'loss': 0.9217039081785414, 'pitch': 0.6059338980250888, 'onset': 0.15648823148674434, 'offset': 0.1592817803223928, 'hand': 0.0, 'clef': 0.0, 'total': 0.9217039081785414}
+2026-04-26 12:29:07 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_2.pt
+2026-04-26 12:29:10 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-04_04-32-11.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=8096 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-04_04-32-11.mp4
+2026-04-26 12:29:24 I tivit.train.loop: [train] epoch=3 step=5 avg_loss=0.9654
+2026-04-26 12:29:43 I tivit.train.loop: [train] epoch=3 step=10 avg_loss=1.0575
+2026-04-26 12:30:00 I tivit.train.loop: [train] epoch=3 step=15 avg_loss=1.0979
+2026-04-26 12:30:04 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_13-19-32.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=16501 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_13-19-32.mp4
+2026-04-26 12:30:19 I tivit.train.loop: [train] epoch=3 step=20 avg_loss=1.0921
+2026-04-26 12:30:38 I tivit.train.loop: [train] epoch=3 step=25 avg_loss=1.1255
+2026-04-26 12:30:41 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-04-08_23-42-45.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=2334 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-04-08_23-42-45.mp4
+2026-04-26 12:30:52 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-04-09_04-09-27.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=68560 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-04-09_04-09-27.mp4
+2026-04-26 12:30:56 I tivit.train.loop: [train] epoch=3 step=30 avg_loss=1.0943
+2026-04-26 12:30:56 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-03-11_22-23-29.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=19208 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-03-11_22-23-29.mp4
+2026-04-26 12:31:00 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_18-25-31.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=480 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_18-25-31.mp4
+2026-04-26 12:31:05 W tivit.data.roi.keyboard_roi: reg_refined: video_31 status=fallback_worsened err_before=5.30px err_after=5.30px err_white=5.30px err_black=5.30px frames=96
+2026-04-26 12:31:18 I tivit.train.loop: [train] epoch=3 step=35 avg_loss=1.0815
+2026-04-26 12:31:37 I tivit.train.loop: [train] epoch=3 step=40 avg_loss=1.0725
+2026-04-26 12:31:54 I tivit.train.loop: [train] epoch=3 step=45 avg_loss=1.0901
+2026-04-26 12:32:08 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_22-18-32.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=2967 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_22-18-32.mp4
+2026-04-26 12:32:13 I tivit.train.loop: [train] epoch=3 step=50 avg_loss=1.1130
+2026-04-26 12:32:24 I tivit.train.loop: [train] epoch=3 metrics={'loss': 1.1035116247411043, 'pitch': 0.5818822316403659, 'onset': 0.308360589422145, 'offset': 0.21326880880965376, 'hand': 0.0, 'clef': 0.0, 'total': 1.1035116247411043}
+2026-04-26 12:32:46 I tivit.train.loop: [eval] epoch=3 metrics={'loss': 0.8923701776398553, 'pitch': 0.5770299235979716, 'onset': 0.15644670277833939, 'offset': 0.15889354588256943, 'hand': 0.0, 'clef': 0.0, 'total': 0.8923701776398553}
+2026-04-26 12:32:46 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_3.pt
+2026-04-26 12:33:04 I tivit.train.loop: [train] epoch=4 step=5 avg_loss=1.0883
+2026-04-26 12:33:23 I tivit.train.loop: [train] epoch=4 step=10 avg_loss=1.1106
+2026-04-26 12:33:23 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_20-50-18.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=11583 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_20-50-18.mp4
+2026-04-26 12:33:41 I tivit.train.loop: [train] epoch=4 step=15 avg_loss=1.0622
+2026-04-26 12:33:41 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-15_22-57-11.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=3804 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-15_22-57-11.mp4
+2026-04-26 12:33:59 I tivit.train.loop: [train] epoch=4 step=20 avg_loss=1.0610
+2026-04-26 12:34:13 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-09-02_23-49-01.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=33592 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-09-02_23-49-01.mp4
+2026-04-26 12:34:17 I tivit.train.loop: [train] epoch=4 step=25 avg_loss=1.0385
+2026-04-26 12:34:36 I tivit.train.loop: [train] epoch=4 step=30 avg_loss=1.0678
+2026-04-26 12:34:53 I tivit.train.loop: [train] epoch=4 step=35 avg_loss=1.0528
+2026-04-26 12:35:12 I tivit.train.loop: [train] epoch=4 step=40 avg_loss=1.0500
+2026-04-26 12:35:30 I tivit.train.loop: [train] epoch=4 step=45 avg_loss=1.0615
+2026-04-26 12:35:47 I tivit.train.loop: [train] epoch=4 step=50 avg_loss=1.0507
+2026-04-26 12:35:58 I tivit.train.loop: [train] epoch=4 metrics={'loss': 1.0502092849533513, 'pitch': 0.5560782675473195, 'onset': 0.29192573520934806, 'offset': 0.2022052824778377, 'hand': 0.0, 'clef': 0.0, 'total': 1.0502092849533513}
+2026-04-26 12:36:21 I tivit.train.loop: [eval] epoch=4 metrics={'loss': 0.8688558604982164, 'pitch': 0.5541908078723483, 'onset': 0.15609704496132004, 'offset': 0.15856800311141545, 'hand': 0.0, 'clef': 0.0, 'total': 0.8688558604982164}
+2026-04-26 12:36:21 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_4.pt
+2026-04-26 12:36:38 I tivit.train.loop: [train] epoch=5 step=5 avg_loss=1.1603
+2026-04-26 12:36:56 I tivit.train.loop: [train] epoch=5 step=10 avg_loss=1.1778
+2026-04-26 12:37:14 I tivit.train.loop: [train] epoch=5 step=15 avg_loss=1.1148
+2026-04-26 12:37:32 I tivit.train.loop: [train] epoch=5 step=20 avg_loss=1.0855
+2026-04-26 12:37:49 I tivit.train.loop: [train] epoch=5 step=25 avg_loss=1.0603
+2026-04-26 12:38:07 I tivit.train.loop: [train] epoch=5 step=30 avg_loss=1.0700
+2026-04-26 12:38:25 I tivit.train.loop: [train] epoch=5 step=35 avg_loss=1.0845
+2026-04-26 12:38:43 I tivit.train.loop: [train] epoch=5 step=40 avg_loss=1.0809
+2026-04-26 12:39:02 I tivit.train.loop: [train] epoch=5 step=45 avg_loss=1.0897
+2026-04-26 12:39:20 I tivit.train.loop: [train] epoch=5 step=50 avg_loss=1.1083
+2026-04-26 12:39:30 I tivit.train.loop: [train] epoch=5 metrics={'loss': 1.090646506480451, 'pitch': 0.5356224775314331, 'onset': 0.3279520907913739, 'offset': 0.2270719362598545, 'hand': 0.0, 'clef': 0.0, 'total': 1.090646506480451}
+2026-04-26 12:39:53 I tivit.train.loop: [eval] epoch=5 metrics={'loss': 0.8468129701084561, 'pitch': 0.5327247480551401, 'onset': 0.15589620918035507, 'offset': 0.15819200542238024, 'hand': 0.0, 'clef': 0.0, 'total': 0.8468129701084561}
+2026-04-26 12:39:53 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_5.pt
+2026-04-26 12:40:01 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-02-14_20-58-43.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=25251 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-02-14_20-58-43.mp4
+2026-04-26 12:40:12 I tivit.train.loop: [train] epoch=6 step=5 avg_loss=1.0582
+2026-04-26 12:40:30 I tivit.train.loop: [train] epoch=6 step=10 avg_loss=1.0174
+2026-04-26 12:40:47 I tivit.train.loop: [train] epoch=6 step=15 avg_loss=1.0774
+2026-04-26 12:41:05 I tivit.train.loop: [train] epoch=6 step=20 avg_loss=1.0802
+2026-04-26 12:41:23 I tivit.train.loop: [train] epoch=6 step=25 avg_loss=1.0883
+2026-04-26 12:41:42 I tivit.train.loop: [train] epoch=6 step=30 avg_loss=1.0652
+2026-04-26 12:42:00 I tivit.train.loop: [train] epoch=6 step=35 avg_loss=1.0408
+2026-04-26 12:42:17 I tivit.train.loop: [train] epoch=6 step=40 avg_loss=1.0390
+2026-04-26 12:42:36 I tivit.train.loop: [train] epoch=6 step=45 avg_loss=1.0634
+2026-04-26 12:42:54 I tivit.train.loop: [train] epoch=6 step=50 avg_loss=1.0476
+2026-04-26 12:43:05 I tivit.train.loop: [train] epoch=6 metrics={'loss': 1.0446982260020274, 'pitch': 0.5105816255200584, 'onset': 0.3153957943871336, 'offset': 0.21872079751963885, 'hand': 0.0, 'clef': 0.0, 'total': 1.0446982260020274}
+2026-04-26 12:43:28 I tivit.train.loop: [eval] epoch=6 metrics={'loss': 0.8261943525738187, 'pitch': 0.5124814675913917, 'onset': 0.15565544615189233, 'offset': 0.1580574181344774, 'hand': 0.0, 'clef': 0.0, 'total': 0.8261943525738187}
+2026-04-26 12:43:28 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_6.pt
+2026-04-26 12:43:46 I tivit.train.loop: [train] epoch=7 step=5 avg_loss=1.0071
+2026-04-26 12:44:05 I tivit.train.loop: [train] epoch=7 step=10 avg_loss=1.0802
+2026-04-26 12:44:23 I tivit.train.loop: [train] epoch=7 step=15 avg_loss=1.0465
+2026-04-26 12:44:40 I tivit.train.loop: [train] epoch=7 step=20 avg_loss=1.0184
+2026-04-26 12:44:59 I tivit.train.loop: [train] epoch=7 step=25 avg_loss=1.0126
+2026-04-26 12:45:17 I tivit.train.loop: [train] epoch=7 step=30 avg_loss=1.0165
+2026-04-26 12:45:34 I tivit.train.loop: [train] epoch=7 step=35 avg_loss=1.0367
+2026-04-26 12:45:51 I tivit.train.loop: [train] epoch=7 step=40 avg_loss=1.0368
+2026-04-26 12:46:09 I tivit.train.loop: [train] epoch=7 step=45 avg_loss=1.0247
+2026-04-26 12:46:26 I tivit.train.loop: [train] epoch=7 step=50 avg_loss=1.0128
+2026-04-26 12:46:37 I tivit.train.loop: [train] epoch=7 metrics={'loss': 1.0098169356022242, 'pitch': 0.48652821160712334, 'onset': 0.30907723883975224, 'offset': 0.21421148410102106, 'hand': 0.0, 'clef': 0.0, 'total': 1.0098169356022242}
+2026-04-26 12:47:00 I tivit.train.loop: [eval] epoch=7 metrics={'loss': 0.8056552078988817, 'pitch': 0.49288473195499843, 'onset': 0.15512621568308937, 'offset': 0.15764425115452874, 'hand': 0.0, 'clef': 0.0, 'total': 0.8056552078988817}
+2026-04-26 12:47:00 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_7.pt
+2026-04-26 12:47:17 I tivit.train.loop: [train] epoch=8 step=5 avg_loss=0.8923
+2026-04-26 12:47:35 I tivit.train.loop: [train] epoch=8 step=10 avg_loss=0.9306
+2026-04-26 12:47:53 I tivit.train.loop: [train] epoch=8 step=15 avg_loss=0.9215
+2026-04-26 12:48:11 I tivit.train.loop: [train] epoch=8 step=20 avg_loss=0.9317
+2026-04-26 12:48:29 I tivit.train.loop: [train] epoch=8 step=25 avg_loss=0.9223
+2026-04-26 12:48:47 I tivit.train.loop: [train] epoch=8 step=30 avg_loss=0.9032
+2026-04-26 12:49:06 I tivit.train.loop: [train] epoch=8 step=35 avg_loss=0.8984
+2026-04-26 12:49:24 I tivit.train.loop: [train] epoch=8 step=40 avg_loss=0.9148
+2026-04-26 12:49:42 I tivit.train.loop: [train] epoch=8 step=45 avg_loss=0.9446
+2026-04-26 12:50:00 I tivit.train.loop: [train] epoch=8 step=50 avg_loss=0.9427
+2026-04-26 12:50:10 I tivit.train.loop: [train] epoch=8 metrics={'loss': 0.946126399175176, 'pitch': 0.4651297454564077, 'onset': 0.2838918766323126, 'offset': 0.1971047762429939, 'hand': 0.0, 'clef': 0.0, 'total': 0.946126399175176}
+2026-04-26 12:50:33 I tivit.train.loop: [eval] epoch=8 metrics={'loss': 0.7873047060436673, 'pitch': 0.47494024369451737, 'onset': 0.15500399304760826, 'offset': 0.1573604717850685, 'hand': 0.0, 'clef': 0.0, 'total': 0.7873047060436673}
+2026-04-26 12:50:33 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_8.pt
+2026-04-26 12:50:44 W tivit.data.datasets.base: HDF5 decode failed for /raid_storage/data_achatzigiannis/PianoVAM_v1.0/HDF5/2024-04-08_23-26-19.h5 (HDF5 file appears to contain a fixed clip, not a full video; cannot serve start_frame=31088 from 96 stored frames); falling back to /raid_storage/data_achatzigiannis/PianoVAM_v1.0/Video/2024-04-08_23-26-19.mp4
+2026-04-26 12:50:51 I tivit.train.loop: [train] epoch=9 step=5 avg_loss=0.8384
+2026-04-26 12:51:09 I tivit.train.loop: [train] epoch=9 step=10 avg_loss=0.9791
+2026-04-26 12:51:27 I tivit.train.loop: [train] epoch=9 step=15 avg_loss=0.9943
+2026-04-26 12:51:45 I tivit.train.loop: [train] epoch=9 step=20 avg_loss=0.9716
+2026-04-26 12:52:03 I tivit.train.loop: [train] epoch=9 step=25 avg_loss=0.9589
+2026-04-26 12:52:21 I tivit.train.loop: [train] epoch=9 step=30 avg_loss=0.9778
+2026-04-26 12:52:39 I tivit.train.loop: [train] epoch=9 step=35 avg_loss=0.9399
+2026-04-26 12:52:57 I tivit.train.loop: [train] epoch=9 step=40 avg_loss=0.9456
+2026-04-26 12:53:14 I tivit.train.loop: [train] epoch=9 step=45 avg_loss=0.9401
+2026-04-26 12:53:32 I tivit.train.loop: [train] epoch=9 step=50 avg_loss=0.9579
+2026-04-26 12:53:42 I tivit.train.loop: [train] epoch=9 metrics={'loss': 0.9610026051413338, 'pitch': 0.44586119786748346, 'onset': 0.30423335295240833, 'offset': 0.21090805207221014, 'hand': 0.0, 'clef': 0.0, 'total': 0.9610026051413338}
+2026-04-26 12:54:05 I tivit.train.loop: [eval] epoch=9 metrics={'loss': 0.7648656699392531, 'pitch': 0.4533078538046943, 'onset': 0.1545885991719034, 'offset': 0.15696921779049766, 'hand': 0.0, 'clef': 0.0, 'total': 0.7648656699392531}
+2026-04-26 12:54:05 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_9.pt
+2026-04-26 12:54:23 I tivit.train.loop: [train] epoch=10 step=5 avg_loss=0.7978
+2026-04-26 12:54:42 I tivit.train.loop: [train] epoch=10 step=10 avg_loss=0.9878
+2026-04-26 12:55:00 I tivit.train.loop: [train] epoch=10 step=15 avg_loss=0.9912
+2026-04-26 12:55:18 I tivit.train.loop: [train] epoch=10 step=20 avg_loss=0.9788
+2026-04-26 12:55:35 I tivit.train.loop: [train] epoch=10 step=25 avg_loss=1.0674
+2026-04-26 12:55:54 I tivit.train.loop: [train] epoch=10 step=30 avg_loss=1.0354
+2026-04-26 12:56:11 I tivit.train.loop: [train] epoch=10 step=35 avg_loss=1.0008
+2026-04-26 12:56:29 I tivit.train.loop: [train] epoch=10 step=40 avg_loss=1.0124
+2026-04-26 12:56:47 I tivit.train.loop: [train] epoch=10 step=45 avg_loss=0.9998
+2026-04-26 12:57:05 I tivit.train.loop: [train] epoch=10 step=50 avg_loss=1.0102
+2026-04-26 12:57:16 I tivit.train.loop: [train] epoch=10 metrics={'loss': 1.0089229699575677, 'pitch': 0.4285437920183506, 'onset': 0.342490645933826, 'offset': 0.23788852813952374, 'hand': 0.0, 'clef': 0.0, 'total': 1.0089229699575677}
+2026-04-26 12:57:39 I tivit.train.loop: [eval] epoch=10 metrics={'loss': 0.7442015608151754, 'pitch': 0.4336596462461684, 'onset': 0.1539207568599118, 'offset': 0.15662115812301636, 'hand': 0.0, 'clef': 0.0, 'total': 0.7442015608151754}
+2026-04-26 12:57:39 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_10.pt
+2026-04-26 12:57:58 I tivit.train.loop: [train] epoch=11 step=5 avg_loss=0.7276
+2026-04-26 12:58:17 I tivit.train.loop: [train] epoch=11 step=10 avg_loss=0.7729
+2026-04-26 12:58:35 I tivit.train.loop: [train] epoch=11 step=15 avg_loss=0.7840
+2026-04-26 12:58:54 I tivit.train.loop: [train] epoch=11 step=20 avg_loss=0.8250
+2026-04-26 12:59:13 I tivit.train.loop: [train] epoch=11 step=25 avg_loss=0.8286
+2026-04-26 12:59:32 I tivit.train.loop: [train] epoch=11 step=30 avg_loss=0.8617
+2026-04-26 12:59:51 I tivit.train.loop: [train] epoch=11 step=35 avg_loss=0.8724
+2026-04-26 13:00:09 I tivit.train.loop: [train] epoch=11 step=40 avg_loss=0.8520
+2026-04-26 13:00:26 I tivit.train.loop: [train] epoch=11 step=45 avg_loss=0.8754
+2026-04-26 13:00:44 I tivit.train.loop: [train] epoch=11 step=50 avg_loss=0.8834
+2026-04-26 13:00:55 I tivit.train.loop: [train] epoch=11 metrics={'loss': 0.8792159652934884, 'pitch': 0.4041301906108856, 'onset': 0.2798865372139328, 'offset': 0.19519923226732128, 'hand': 0.0, 'clef': 0.0, 'total': 0.8792159652934884}
+2026-04-26 13:01:18 I tivit.train.loop: [eval] epoch=11 metrics={'loss': 0.7226133280330234, 'pitch': 0.4135098523563809, 'onset': 0.15323228968514335, 'offset': 0.155871185577578, 'hand': 0.0, 'clef': 0.0, 'total': 0.7226133280330234}
+2026-04-26 13:01:18 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_11.pt
+2026-04-26 13:01:36 I tivit.train.loop: [train] epoch=12 step=5 avg_loss=0.9130
+2026-04-26 13:01:54 I tivit.train.loop: [train] epoch=12 step=10 avg_loss=0.8609
+2026-04-26 13:02:13 I tivit.train.loop: [train] epoch=12 step=15 avg_loss=0.8673
+2026-04-26 13:02:32 I tivit.train.loop: [train] epoch=12 step=20 avg_loss=0.8764
+2026-04-26 13:02:50 I tivit.train.loop: [train] epoch=12 step=25 avg_loss=0.9002
+2026-04-26 13:03:09 I tivit.train.loop: [train] epoch=12 step=30 avg_loss=0.8721
+2026-04-26 13:03:26 I tivit.train.loop: [train] epoch=12 step=35 avg_loss=0.8894
+2026-04-26 13:03:44 I tivit.train.loop: [train] epoch=12 step=40 avg_loss=0.8711
+2026-04-26 13:04:01 I tivit.train.loop: [train] epoch=12 step=45 avg_loss=0.8677
+2026-04-26 13:04:20 I tivit.train.loop: [train] epoch=12 step=50 avg_loss=0.8923
+2026-04-26 13:04:31 I tivit.train.loop: [train] epoch=12 metrics={'loss': 0.8891953286134971, 'pitch': 0.38696823761148275, 'onset': 0.2958142335684794, 'offset': 0.20641285708209253, 'hand': 0.0, 'clef': 0.0, 'total': 0.8891953286134971}
+2026-04-26 13:04:53 I tivit.train.loop: [eval] epoch=12 metrics={'loss': 0.7013706896040175, 'pitch': 0.3938034176826477, 'onset': 0.15204142447974947, 'offset': 0.1555258399910397, 'hand': 0.0, 'clef': 0.0, 'total': 0.7013706896040175}
+2026-04-26 13:04:53 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_12.pt
+2026-04-26 13:05:12 I tivit.train.loop: [train] epoch=13 step=5 avg_loss=0.9484
+2026-04-26 13:05:30 I tivit.train.loop: [train] epoch=13 step=10 avg_loss=0.9271
+2026-04-26 13:05:48 I tivit.train.loop: [train] epoch=13 step=15 avg_loss=0.9596
+2026-04-26 13:06:06 I tivit.train.loop: [train] epoch=13 step=20 avg_loss=0.9526
+2026-04-26 13:06:25 I tivit.train.loop: [train] epoch=13 step=25 avg_loss=0.9534
+2026-04-26 13:06:43 I tivit.train.loop: [train] epoch=13 step=30 avg_loss=0.9324
+2026-04-26 13:07:00 I tivit.train.loop: [train] epoch=13 step=35 avg_loss=0.9357
+2026-04-26 13:07:19 I tivit.train.loop: [train] epoch=13 step=40 avg_loss=0.9155
+2026-04-26 13:07:37 I tivit.train.loop: [train] epoch=13 step=45 avg_loss=0.9056
+2026-04-26 13:07:56 I tivit.train.loop: [train] epoch=13 step=50 avg_loss=0.9091
+2026-04-26 13:08:06 I tivit.train.loop: [train] epoch=13 metrics={'loss': 0.9072069728149558, 'pitch': 0.370946208261094, 'onset': 0.3153563324572905, 'offset': 0.22090443083137837, 'hand': 0.0, 'clef': 0.0, 'total': 0.9072069728149558}
+2026-04-26 13:08:29 I tivit.train.loop: [eval] epoch=13 metrics={'loss': 0.6815976235601637, 'pitch': 0.3755626082420349, 'onset': 0.1514351177546713, 'offset': 0.1545998909407192, 'hand': 0.0, 'clef': 0.0, 'total': 0.6815976235601637}
+2026-04-26 13:08:29 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_13.pt
+2026-04-26 13:08:48 I tivit.train.loop: [train] epoch=14 step=5 avg_loss=0.7355
+2026-04-26 13:09:06 I tivit.train.loop: [train] epoch=14 step=10 avg_loss=0.6756
+2026-04-26 13:09:24 I tivit.train.loop: [train] epoch=14 step=15 avg_loss=0.7317
+2026-04-26 13:09:43 I tivit.train.loop: [train] epoch=14 step=20 avg_loss=0.7627
+2026-04-26 13:10:02 I tivit.train.loop: [train] epoch=14 step=25 avg_loss=0.8701
+2026-04-26 13:10:20 I tivit.train.loop: [train] epoch=14 step=30 avg_loss=0.8651
+2026-04-26 13:10:39 I tivit.train.loop: [train] epoch=14 step=35 avg_loss=0.8598
+2026-04-26 13:10:56 I tivit.train.loop: [train] epoch=14 step=40 avg_loss=0.8476
+2026-04-26 13:11:15 I tivit.train.loop: [train] epoch=14 step=45 avg_loss=0.8568
+2026-04-26 13:11:34 I tivit.train.loop: [train] epoch=14 step=50 avg_loss=0.8647
+2026-04-26 13:11:46 I tivit.train.loop: [train] epoch=14 metrics={'loss': 0.8698263612558257, 'pitch': 0.3507173342524834, 'onset': 0.3047518713294335, 'offset': 0.21435715750140963, 'hand': 0.0, 'clef': 0.0, 'total': 0.8698263612558257}
+2026-04-26 13:12:08 I tivit.train.loop: [eval] epoch=14 metrics={'loss': 0.6618777943982018, 'pitch': 0.3574552900261349, 'onset': 0.15034151201446852, 'offset': 0.15408099566896757, 'hand': 0.0, 'clef': 0.0, 'total': 0.6618777943982018}
+2026-04-26 13:12:08 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_14.pt
+2026-04-26 13:12:27 I tivit.train.loop: [train] epoch=15 step=5 avg_loss=0.8342
+2026-04-26 13:12:46 I tivit.train.loop: [train] epoch=15 step=10 avg_loss=0.8712
+2026-04-26 13:13:03 I tivit.train.loop: [train] epoch=15 step=15 avg_loss=0.8761
+2026-04-26 13:13:22 I tivit.train.loop: [train] epoch=15 step=20 avg_loss=0.8413
+2026-04-26 13:13:40 I tivit.train.loop: [train] epoch=15 step=25 avg_loss=0.8369
+2026-04-26 13:13:59 I tivit.train.loop: [train] epoch=15 step=30 avg_loss=0.8047
+2026-04-26 13:14:17 I tivit.train.loop: [train] epoch=15 step=35 avg_loss=0.7764
+2026-04-26 13:14:35 I tivit.train.loop: [train] epoch=15 step=40 avg_loss=0.7960
+2026-04-26 13:14:53 I tivit.train.loop: [train] epoch=15 step=45 avg_loss=0.7708
+2026-04-26 13:15:11 I tivit.train.loop: [train] epoch=15 step=50 avg_loss=0.7698
+2026-04-26 13:15:22 I tivit.train.loop: [train] epoch=15 metrics={'loss': 0.7646316469840284, 'pitch': 0.33772304429198213, 'onset': 0.2506642503980196, 'offset': 0.17624435088825677, 'hand': 0.0, 'clef': 0.0, 'total': 0.7646316469840284}
+2026-04-26 13:15:44 I tivit.train.loop: [eval] epoch=15 metrics={'loss': 0.6429703533649445, 'pitch': 0.3416372703181373, 'onset': 0.1490472402009699, 'offset': 0.15228584243191612, 'hand': 0.0, 'clef': 0.0, 'total': 0.6429703533649445}
+2026-04-26 13:15:44 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_15.pt
+2026-04-26 13:16:03 I tivit.train.loop: [train] epoch=16 step=5 avg_loss=0.8471
+2026-04-26 13:16:21 I tivit.train.loop: [train] epoch=16 step=10 avg_loss=0.9962
+2026-04-26 13:16:38 I tivit.train.loop: [train] epoch=16 step=15 avg_loss=0.9239
+2026-04-26 13:16:56 I tivit.train.loop: [train] epoch=16 step=20 avg_loss=0.9004
+2026-04-26 13:17:14 I tivit.train.loop: [train] epoch=16 step=25 avg_loss=0.8799
+2026-04-26 13:17:32 I tivit.train.loop: [train] epoch=16 step=30 avg_loss=0.8666
+2026-04-26 13:17:50 I tivit.train.loop: [train] epoch=16 step=35 avg_loss=0.9006
+2026-04-26 13:18:08 I tivit.train.loop: [train] epoch=16 step=40 avg_loss=0.8830
+2026-04-26 13:18:26 I tivit.train.loop: [train] epoch=16 step=45 avg_loss=0.9047
+2026-04-26 13:18:44 I tivit.train.loop: [train] epoch=16 step=50 avg_loss=0.9138
+2026-04-26 13:18:56 I tivit.train.loop: [train] epoch=16 metrics={'loss': 0.9241304459436884, 'pitch': 0.3261293375267173, 'onset': 0.35000837285001324, 'offset': 0.24799274611023236, 'hand': 0.0, 'clef': 0.0, 'total': 0.9241304459436884}
+2026-04-26 13:19:18 I tivit.train.loop: [eval] epoch=16 metrics={'loss': 0.6287817690107558, 'pitch': 0.32905399799346924, 'onset': 0.1481412769191795, 'offset': 0.15158650113476646, 'hand': 0.0, 'clef': 0.0, 'total': 0.6287817690107558}
+2026-04-26 13:19:18 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_16.pt
+2026-04-26 13:19:38 I tivit.train.loop: [train] epoch=17 step=5 avg_loss=0.8206
+2026-04-26 13:19:55 I tivit.train.loop: [train] epoch=17 step=10 avg_loss=0.8904
+2026-04-26 13:20:13 I tivit.train.loop: [train] epoch=17 step=15 avg_loss=0.8289
+2026-04-26 13:20:30 I tivit.train.loop: [train] epoch=17 step=20 avg_loss=0.9307
+2026-04-26 13:20:48 I tivit.train.loop: [train] epoch=17 step=25 avg_loss=0.9141
+2026-04-26 13:21:06 I tivit.train.loop: [train] epoch=17 step=30 avg_loss=0.8851
+2026-04-26 13:21:25 I tivit.train.loop: [train] epoch=17 step=35 avg_loss=0.9164
+2026-04-26 13:21:43 I tivit.train.loop: [train] epoch=17 step=40 avg_loss=0.9282
+2026-04-26 13:22:01 I tivit.train.loop: [train] epoch=17 step=45 avg_loss=0.9038
+2026-04-26 13:22:19 I tivit.train.loop: [train] epoch=17 step=50 avg_loss=0.8931
+2026-04-26 13:22:30 I tivit.train.loop: [train] epoch=17 metrics={'loss': 0.8848584299942233, 'pitch': 0.316981148607326, 'onset': 0.3321687301515408, 'offset': 0.23570855812362904, 'hand': 0.0, 'clef': 0.0, 'total': 0.8848584299942233}
+2026-04-26 13:22:52 I tivit.train.loop: [eval] epoch=17 metrics={'loss': 0.6117277178499434, 'pitch': 0.31488877369297874, 'onset': 0.14678465781940353, 'offset': 0.15005429751343197, 'hand': 0.0, 'clef': 0.0, 'total': 0.6117277178499434}
+2026-04-26 13:22:52 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_17.pt
+2026-04-26 13:23:10 I tivit.train.loop: [train] epoch=18 step=5 avg_loss=0.7121
+2026-04-26 13:23:28 I tivit.train.loop: [train] epoch=18 step=10 avg_loss=0.8367
+2026-04-26 13:23:46 I tivit.train.loop: [train] epoch=18 step=15 avg_loss=0.8791
+2026-04-26 13:24:04 I tivit.train.loop: [train] epoch=18 step=20 avg_loss=0.8347
+2026-04-26 13:24:22 I tivit.train.loop: [train] epoch=18 step=25 avg_loss=0.8235
+2026-04-26 13:24:41 I tivit.train.loop: [train] epoch=18 step=30 avg_loss=0.8342
+2026-04-26 13:24:59 I tivit.train.loop: [train] epoch=18 step=35 avg_loss=0.8305
+2026-04-26 13:25:16 I tivit.train.loop: [train] epoch=18 step=40 avg_loss=0.8323
+2026-04-26 13:25:34 I tivit.train.loop: [train] epoch=18 step=45 avg_loss=0.8357
+2026-04-26 13:25:52 I tivit.train.loop: [train] epoch=18 step=50 avg_loss=0.8182
+2026-04-26 13:26:03 I tivit.train.loop: [train] epoch=18 metrics={'loss': 0.822824921810402, 'pitch': 0.30314659959865065, 'onset': 0.30338273752691614, 'offset': 0.2162955893590203, 'hand': 0.0, 'clef': 0.0, 'total': 0.822824921810402}
+2026-04-26 13:26:25 I tivit.train.loop: [eval] epoch=18 metrics={'loss': 0.5921114749378629, 'pitch': 0.3002432650989956, 'onset': 0.14394005139668783, 'offset': 0.14792817251549828, 'hand': 0.0, 'clef': 0.0, 'total': 0.5921114749378629}
+2026-04-26 13:26:25 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_18.pt
+2026-04-26 13:26:43 I tivit.train.loop: [train] epoch=19 step=5 avg_loss=0.6285
+2026-04-26 13:27:01 I tivit.train.loop: [train] epoch=19 step=10 avg_loss=0.7161
+2026-04-26 13:27:20 I tivit.train.loop: [train] epoch=19 step=15 avg_loss=0.6973
+2026-04-26 13:27:37 I tivit.train.loop: [train] epoch=19 step=20 avg_loss=0.7172
+2026-04-26 13:27:54 I tivit.train.loop: [train] epoch=19 step=25 avg_loss=0.7134
+2026-04-26 13:28:14 I tivit.train.loop: [train] epoch=19 step=30 avg_loss=0.7491
+2026-04-26 13:28:33 I tivit.train.loop: [train] epoch=19 step=35 avg_loss=0.7453
+2026-04-26 13:28:52 I tivit.train.loop: [train] epoch=19 step=40 avg_loss=0.7461
+2026-04-26 13:29:11 I tivit.train.loop: [train] epoch=19 step=45 avg_loss=0.7689
+2026-04-26 13:29:29 I tivit.train.loop: [train] epoch=19 step=50 avg_loss=0.7545
+2026-04-26 13:29:40 I tivit.train.loop: [train] epoch=19 metrics={'loss': 0.7483485464779835, 'pitch': 0.28697755848461726, 'onset': 0.26892686241640235, 'offset': 0.19244411854811436, 'hand': 0.0, 'clef': 0.0, 'total': 0.7483485464779835}
+2026-04-26 13:30:02 I tivit.train.loop: [eval] epoch=19 metrics={'loss': 0.5776286688115861, 'pitch': 0.28870315187507206, 'onset': 0.1424750466313627, 'offset': 0.1464504794114166, 'hand': 0.0, 'clef': 0.0, 'total': 0.5776286688115861}
+2026-04-26 13:30:02 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_19.pt
+2026-04-26 13:30:21 I tivit.train.loop: [train] epoch=20 step=5 avg_loss=0.9086
+2026-04-26 13:30:39 I tivit.train.loop: [train] epoch=20 step=10 avg_loss=0.8013
+2026-04-26 13:30:56 I tivit.train.loop: [train] epoch=20 step=15 avg_loss=0.8901
+2026-04-26 13:31:14 I tivit.train.loop: [train] epoch=20 step=20 avg_loss=0.9196
+2026-04-26 13:31:32 I tivit.train.loop: [train] epoch=20 step=25 avg_loss=0.9279
+2026-04-26 13:31:50 I tivit.train.loop: [train] epoch=20 step=30 avg_loss=0.9007
+2026-04-26 13:32:09 I tivit.train.loop: [train] epoch=20 step=35 avg_loss=0.8536
+2026-04-26 13:32:27 I tivit.train.loop: [train] epoch=20 step=40 avg_loss=0.8528
+2026-04-26 13:32:46 I tivit.train.loop: [train] epoch=20 step=45 avg_loss=0.8340
+2026-04-26 13:33:04 I tivit.train.loop: [train] epoch=20 step=50 avg_loss=0.8370
+2026-04-26 13:33:14 I tivit.train.loop: [train] epoch=20 metrics={'loss': 0.8349992655358225, 'pitch': 0.28211027271342726, 'onset': 0.32121278233123274, 'offset': 0.2316762070470261, 'hand': 0.0, 'clef': 0.0, 'total': 0.8349992655358225}
+2026-04-26 13:33:37 I tivit.train.loop: [eval] epoch=20 metrics={'loss': 0.565463039610121, 'pitch': 0.2785966098308563, 'onset': 0.14264180097315046, 'offset': 0.1442246362566948, 'hand': 0.0, 'clef': 0.0, 'total': 0.565463039610121}
+2026-04-26 13:33:37 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_20.pt
+2026-04-26 13:33:54 I tivit.train.loop: [train] epoch=21 step=5 avg_loss=1.0171
+2026-04-26 13:34:12 I tivit.train.loop: [train] epoch=21 step=10 avg_loss=0.8968
+2026-04-26 13:34:29 I tivit.train.loop: [train] epoch=21 step=15 avg_loss=0.8264
+2026-04-26 13:34:48 I tivit.train.loop: [train] epoch=21 step=20 avg_loss=0.7848
+2026-04-26 13:35:05 I tivit.train.loop: [train] epoch=21 step=25 avg_loss=0.7711
+2026-04-26 13:35:23 I tivit.train.loop: [train] epoch=21 step=30 avg_loss=0.7651
+2026-04-26 13:35:41 I tivit.train.loop: [train] epoch=21 step=35 avg_loss=0.7337
+2026-04-26 13:35:58 I tivit.train.loop: [train] epoch=21 step=40 avg_loss=0.7389
+2026-04-26 13:36:16 I tivit.train.loop: [train] epoch=21 step=45 avg_loss=0.7480
+2026-04-26 13:36:34 I tivit.train.loop: [train] epoch=21 step=50 avg_loss=0.7467
+2026-04-26 13:36:45 I tivit.train.loop: [train] epoch=21 metrics={'loss': 0.7639719034140965, 'pitch': 0.2712701542197533, 'onset': 0.2863459286262404, 'offset': 0.2063558226767576, 'hand': 0.0, 'clef': 0.0, 'total': 0.7639719034140965}
+2026-04-26 13:37:07 I tivit.train.loop: [eval] epoch=21 metrics={'loss': 0.5524703992737664, 'pitch': 0.2700697084267934, 'onset': 0.14028306305408478, 'offset': 0.14211763689915338, 'hand': 0.0, 'clef': 0.0, 'total': 0.5524703992737664}
+2026-04-26 13:37:07 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_21.pt
+2026-04-26 13:37:27 I tivit.train.loop: [train] epoch=22 step=5 avg_loss=1.0526
+2026-04-26 13:37:44 I tivit.train.loop: [train] epoch=22 step=10 avg_loss=0.9244
+2026-04-26 13:38:02 I tivit.train.loop: [train] epoch=22 step=15 avg_loss=0.8514
+2026-04-26 13:38:22 I tivit.train.loop: [train] epoch=22 step=20 avg_loss=0.8153
+2026-04-26 13:38:40 I tivit.train.loop: [train] epoch=22 step=25 avg_loss=0.7899
+2026-04-26 13:38:59 I tivit.train.loop: [train] epoch=22 step=30 avg_loss=0.8085
+2026-04-26 13:39:17 I tivit.train.loop: [train] epoch=22 step=35 avg_loss=0.7992
+2026-04-26 13:39:35 I tivit.train.loop: [train] epoch=22 step=40 avg_loss=0.7873
+2026-04-26 13:39:53 I tivit.train.loop: [train] epoch=22 step=45 avg_loss=0.7617
+2026-04-26 13:40:11 I tivit.train.loop: [train] epoch=22 step=50 avg_loss=0.7428
+2026-04-26 13:40:22 I tivit.train.loop: [train] epoch=22 metrics={'loss': 0.7452747383207645, 'pitch': 0.2611610358053783, 'onset': 0.28013313533562534, 'offset': 0.20398056254072008, 'hand': 0.0, 'clef': 0.0, 'total': 0.7452747383207645}
+2026-04-26 13:40:44 I tivit.train.loop: [eval] epoch=22 metrics={'loss': 0.5423309604326884, 'pitch': 0.26163207160102, 'onset': 0.13924311846494675, 'offset': 0.1414557844400406, 'hand': 0.0, 'clef': 0.0, 'total': 0.5423309604326884}
+2026-04-26 13:40:44 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_22.pt
+2026-04-26 13:41:02 I tivit.train.loop: [train] epoch=23 step=5 avg_loss=0.6868
+2026-04-26 13:41:19 I tivit.train.loop: [train] epoch=23 step=10 avg_loss=0.6727
+2026-04-26 13:41:38 I tivit.train.loop: [train] epoch=23 step=15 avg_loss=0.6338
+2026-04-26 13:41:57 I tivit.train.loop: [train] epoch=23 step=20 avg_loss=0.6341
+2026-04-26 13:42:15 I tivit.train.loop: [train] epoch=23 step=25 avg_loss=0.6080
+2026-04-26 13:42:33 I tivit.train.loop: [train] epoch=23 step=30 avg_loss=0.6050
+2026-04-26 13:42:52 I tivit.train.loop: [train] epoch=23 step=35 avg_loss=0.6359
+2026-04-26 13:43:10 I tivit.train.loop: [train] epoch=23 step=40 avg_loss=0.6517
+2026-04-26 13:43:28 I tivit.train.loop: [train] epoch=23 step=45 avg_loss=0.6520
+2026-04-26 13:43:47 I tivit.train.loop: [train] epoch=23 step=50 avg_loss=0.6532
+2026-04-26 13:43:58 I tivit.train.loop: [train] epoch=23 metrics={'loss': 0.660789891796292, 'pitch': 0.2411844626350223, 'onset': 0.24348098587877345, 'offset': 0.17612444370422722, 'hand': 0.0, 'clef': 0.0, 'total': 0.660789891796292}
+2026-04-26 13:44:21 I tivit.train.loop: [eval] epoch=23 metrics={'loss': 0.5292040010293325, 'pitch': 0.2522946794827779, 'onset': 0.1378379658692413, 'offset': 0.13907135609123442, 'hand': 0.0, 'clef': 0.0, 'total': 0.5292040010293325}
+2026-04-26 13:44:21 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_23.pt
+2026-04-26 13:44:38 I tivit.train.loop: [train] epoch=24 step=5 avg_loss=0.6779
+2026-04-26 13:44:57 I tivit.train.loop: [train] epoch=24 step=10 avg_loss=0.7162
+2026-04-26 13:45:15 I tivit.train.loop: [train] epoch=24 step=15 avg_loss=0.6751
+2026-04-26 13:45:33 I tivit.train.loop: [train] epoch=24 step=20 avg_loss=0.6405
+2026-04-26 13:45:51 I tivit.train.loop: [train] epoch=24 step=25 avg_loss=0.6260
+2026-04-26 13:46:08 I tivit.train.loop: [train] epoch=24 step=30 avg_loss=0.6366
+2026-04-26 13:46:25 I tivit.train.loop: [train] epoch=24 step=35 avg_loss=0.6275
+2026-04-26 13:46:43 I tivit.train.loop: [train] epoch=24 step=40 avg_loss=0.6251
+2026-04-26 13:47:00 I tivit.train.loop: [train] epoch=24 step=45 avg_loss=0.6206
+2026-04-26 13:47:18 I tivit.train.loop: [train] epoch=24 step=50 avg_loss=0.6210
+2026-04-26 13:47:29 I tivit.train.loop: [train] epoch=24 metrics={'loss': 0.6293455435419982, 'pitch': 0.23887944333958175, 'onset': 0.22622457287221584, 'offset': 0.16424152852510507, 'hand': 0.0, 'clef': 0.0, 'total': 0.6293455435419982}
+2026-04-26 13:47:52 I tivit.train.loop: [eval] epoch=24 metrics={'loss': 0.5197354820039537, 'pitch': 0.243879410955641, 'onset': 0.13710589872466195, 'offset': 0.13875016611483362, 'hand': 0.0, 'clef': 0.0, 'total': 0.5197354820039537}
+2026-04-26 13:47:52 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_24.pt
+2026-04-26 13:48:10 I tivit.train.loop: [train] epoch=25 step=5 avg_loss=0.6615
+2026-04-26 13:48:28 I tivit.train.loop: [train] epoch=25 step=10 avg_loss=0.6317
+2026-04-26 13:48:47 I tivit.train.loop: [train] epoch=25 step=15 avg_loss=0.6629
+2026-04-26 13:49:05 I tivit.train.loop: [train] epoch=25 step=20 avg_loss=0.6375
+2026-04-26 13:49:23 I tivit.train.loop: [train] epoch=25 step=25 avg_loss=0.6589
+2026-04-26 13:49:42 I tivit.train.loop: [train] epoch=25 step=30 avg_loss=0.6801
+2026-04-26 13:50:01 I tivit.train.loop: [train] epoch=25 step=35 avg_loss=0.7038
+2026-04-26 13:50:19 I tivit.train.loop: [train] epoch=25 step=40 avg_loss=0.6864
+2026-04-26 13:50:37 I tivit.train.loop: [train] epoch=25 step=45 avg_loss=0.6944
+2026-04-26 13:50:55 I tivit.train.loop: [train] epoch=25 step=50 avg_loss=0.6884
+2026-04-26 13:51:06 I tivit.train.loop: [train] epoch=25 metrics={'loss': 0.6984086368443831, 'pitch': 0.2413522038819655, 'onset': 0.2635854960612531, 'offset': 0.19347093816635744, 'hand': 0.0, 'clef': 0.0, 'total': 0.6984086368443831}
+2026-04-26 13:51:29 I tivit.train.loop: [eval] epoch=25 metrics={'loss': 0.5114353597164154, 'pitch': 0.23767030404673684, 'onset': 0.1370315369632509, 'offset': 0.1367335187064277, 'hand': 0.0, 'clef': 0.0, 'total': 0.5114353597164154}
+2026-04-26 13:51:29 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_25.pt
+2026-04-26 13:51:47 I tivit.train.loop: [train] epoch=26 step=5 avg_loss=0.5617
+2026-04-26 13:52:04 I tivit.train.loop: [train] epoch=26 step=10 avg_loss=0.7135
+2026-04-26 13:52:22 I tivit.train.loop: [train] epoch=26 step=15 avg_loss=0.7810
+2026-04-26 13:52:42 I tivit.train.loop: [train] epoch=26 step=20 avg_loss=0.8160
+2026-04-26 13:53:00 I tivit.train.loop: [train] epoch=26 step=25 avg_loss=0.7697
+2026-04-26 13:53:18 I tivit.train.loop: [train] epoch=26 step=30 avg_loss=0.7506
+2026-04-26 13:53:36 I tivit.train.loop: [train] epoch=26 step=35 avg_loss=0.7330
+2026-04-26 13:53:53 I tivit.train.loop: [train] epoch=26 step=40 avg_loss=0.7253
+2026-04-26 13:54:12 I tivit.train.loop: [train] epoch=26 step=45 avg_loss=0.7045
+2026-04-26 13:54:30 I tivit.train.loop: [train] epoch=26 step=50 avg_loss=0.7006
+2026-04-26 13:54:42 I tivit.train.loop: [train] epoch=26 metrics={'loss': 0.700953761923988, 'pitch': 0.23929956977097494, 'onset': 0.2664958106459312, 'offset': 0.19515838431862165, 'hand': 0.0, 'clef': 0.0, 'total': 0.700953761923988}
+2026-04-26 13:55:04 I tivit.train.loop: [eval] epoch=26 metrics={'loss': 0.5037983722156949, 'pitch': 0.23286602397759756, 'onset': 0.1352599337697029, 'offset': 0.1356724202632904, 'hand': 0.0, 'clef': 0.0, 'total': 0.5037983722156949}
+2026-04-26 13:55:04 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_26.pt
+2026-04-26 13:55:22 I tivit.train.loop: [train] epoch=27 step=5 avg_loss=0.8123
+2026-04-26 13:55:40 I tivit.train.loop: [train] epoch=27 step=10 avg_loss=0.7817
+2026-04-26 13:55:59 I tivit.train.loop: [train] epoch=27 step=15 avg_loss=0.6948
+2026-04-26 13:56:17 I tivit.train.loop: [train] epoch=27 step=20 avg_loss=0.7330
+2026-04-26 13:56:36 I tivit.train.loop: [train] epoch=27 step=25 avg_loss=0.7039
+2026-04-26 13:56:54 I tivit.train.loop: [train] epoch=27 step=30 avg_loss=0.7019
+2026-04-26 13:57:12 I tivit.train.loop: [train] epoch=27 step=35 avg_loss=0.6907
+2026-04-26 13:57:30 I tivit.train.loop: [train] epoch=27 step=40 avg_loss=0.6999
+2026-04-26 13:57:49 I tivit.train.loop: [train] epoch=27 step=45 avg_loss=0.7127
+2026-04-26 13:58:07 I tivit.train.loop: [train] epoch=27 step=50 avg_loss=0.7091
+2026-04-26 13:58:18 I tivit.train.loop: [train] epoch=27 metrics={'loss': 0.7246281459646405, 'pitch': 0.23519643578889235, 'onset': 0.28072367749124205, 'offset': 0.2087080290997928, 'hand': 0.0, 'clef': 0.0, 'total': 0.7246281459646405}
+2026-04-26 13:58:40 I tivit.train.loop: [eval] epoch=27 metrics={'loss': 0.5006929039955139, 'pitch': 0.22832005553775364, 'onset': 0.1375683860646354, 'offset': 0.13480446653233635, 'hand': 0.0, 'clef': 0.0, 'total': 0.5006929039955139}
+2026-04-26 13:58:40 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_27.pt
+2026-04-26 13:58:59 I tivit.train.loop: [train] epoch=28 step=5 avg_loss=0.6484
+2026-04-26 13:59:17 I tivit.train.loop: [train] epoch=28 step=10 avg_loss=0.6839
+2026-04-26 13:59:34 I tivit.train.loop: [train] epoch=28 step=15 avg_loss=0.6733
+2026-04-26 13:59:52 I tivit.train.loop: [train] epoch=28 step=20 avg_loss=0.6386
+2026-04-26 14:00:10 I tivit.train.loop: [train] epoch=28 step=25 avg_loss=0.6350
+2026-04-26 14:00:29 I tivit.train.loop: [train] epoch=28 step=30 avg_loss=0.6524
+2026-04-26 14:00:47 I tivit.train.loop: [train] epoch=28 step=35 avg_loss=0.6742
+2026-04-26 14:01:06 I tivit.train.loop: [train] epoch=28 step=40 avg_loss=0.6766
+2026-04-26 14:01:24 I tivit.train.loop: [train] epoch=28 step=45 avg_loss=0.6664
+2026-04-26 14:01:41 I tivit.train.loop: [train] epoch=28 step=50 avg_loss=0.6570
+2026-04-26 14:01:52 I tivit.train.loop: [train] epoch=28 metrics={'loss': 0.6556889251717981, 'pitch': 0.22154999144797055, 'onset': 0.24953607610374126, 'offset': 0.18460285923672173, 'hand': 0.0, 'clef': 0.0, 'total': 0.6556889251717981}
+2026-04-26 14:02:15 I tivit.train.loop: [eval] epoch=28 metrics={'loss': 0.4925224184989929, 'pitch': 0.22235082586606345, 'onset': 0.1367705406414138, 'offset': 0.1334010519915157, 'hand': 0.0, 'clef': 0.0, 'total': 0.4925224184989929}
+2026-04-26 14:02:15 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_28.pt
+2026-04-26 14:02:33 I tivit.train.loop: [train] epoch=29 step=5 avg_loss=0.5716
+2026-04-26 14:02:51 I tivit.train.loop: [train] epoch=29 step=10 avg_loss=0.5395
+2026-04-26 14:03:09 I tivit.train.loop: [train] epoch=29 step=15 avg_loss=0.5676
+2026-04-26 14:03:28 I tivit.train.loop: [train] epoch=29 step=20 avg_loss=0.5628
+2026-04-26 14:03:46 I tivit.train.loop: [train] epoch=29 step=25 avg_loss=0.5884
+2026-04-26 14:04:04 I tivit.train.loop: [train] epoch=29 step=30 avg_loss=0.5673
+2026-04-26 14:04:23 I tivit.train.loop: [train] epoch=29 step=35 avg_loss=0.5799
+2026-04-26 14:04:41 I tivit.train.loop: [train] epoch=29 step=40 avg_loss=0.5693
+2026-04-26 14:04:59 I tivit.train.loop: [train] epoch=29 step=45 avg_loss=0.5619
+2026-04-26 14:05:17 I tivit.train.loop: [train] epoch=29 step=50 avg_loss=0.5534
+2026-04-26 14:05:29 I tivit.train.loop: [train] epoch=29 metrics={'loss': 0.5630592855642427, 'pitch': 0.2122679681710477, 'onset': 0.20309147744808556, 'offset': 0.14769984163203329, 'hand': 0.0, 'clef': 0.0, 'total': 0.5630592855642427}
+2026-04-26 14:05:52 I tivit.train.loop: [eval] epoch=29 metrics={'loss': 0.4861611757013533, 'pitch': 0.2190464735031128, 'onset': 0.13440891934765709, 'offset': 0.1327057894733217, 'hand': 0.0, 'clef': 0.0, 'total': 0.4861611757013533}
+2026-04-26 14:05:52 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_29.pt
+2026-04-26 14:06:09 I tivit.train.loop: [train] epoch=30 step=5 avg_loss=0.5557
+2026-04-26 14:06:27 I tivit.train.loop: [train] epoch=30 step=10 avg_loss=0.6243
+2026-04-26 14:06:45 I tivit.train.loop: [train] epoch=30 step=15 avg_loss=0.6243
+2026-04-26 14:07:03 I tivit.train.loop: [train] epoch=30 step=20 avg_loss=0.6248
+2026-04-26 14:07:21 I tivit.train.loop: [train] epoch=30 step=25 avg_loss=0.6427
+2026-04-26 14:07:39 I tivit.train.loop: [train] epoch=30 step=30 avg_loss=0.6458
+2026-04-26 14:07:57 I tivit.train.loop: [train] epoch=30 step=35 avg_loss=0.6632
+2026-04-26 14:08:14 I tivit.train.loop: [train] epoch=30 step=40 avg_loss=0.6445
+2026-04-26 14:08:34 I tivit.train.loop: [train] epoch=30 step=45 avg_loss=0.6608
+2026-04-26 14:08:52 I tivit.train.loop: [train] epoch=30 step=50 avg_loss=0.6651
+2026-04-26 14:09:04 I tivit.train.loop: [train] epoch=30 metrics={'loss': 0.6593405722447161, 'pitch': 0.21920277853057069, 'onset': 0.253461000773142, 'offset': 0.18667679476850438, 'hand': 0.0, 'clef': 0.0, 'total': 0.6593405722447161}
+2026-04-26 14:09:26 I tivit.train.loop: [eval] epoch=30 metrics={'loss': 0.48721439639727276, 'pitch': 0.21523477302657235, 'onset': 0.13736914015478557, 'offset': 0.13461048321591484, 'hand': 0.0, 'clef': 0.0, 'total': 0.48721439639727276}
+2026-04-26 14:09:26 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_30.pt
+2026-04-26 14:09:45 I tivit.train.loop: [train] epoch=31 step=5 avg_loss=0.6768
+2026-04-26 14:10:03 I tivit.train.loop: [train] epoch=31 step=10 avg_loss=0.6543
+2026-04-26 14:10:21 I tivit.train.loop: [train] epoch=31 step=15 avg_loss=0.6199
+2026-04-26 14:10:40 I tivit.train.loop: [train] epoch=31 step=20 avg_loss=0.6321
+2026-04-26 14:10:57 I tivit.train.loop: [train] epoch=31 step=25 avg_loss=0.6442
+2026-04-26 14:11:15 I tivit.train.loop: [train] epoch=31 step=30 avg_loss=0.6360
+2026-04-26 14:11:34 I tivit.train.loop: [train] epoch=31 step=35 avg_loss=0.6384
+2026-04-26 14:11:53 I tivit.train.loop: [train] epoch=31 step=40 avg_loss=0.6280
+2026-04-26 14:12:10 I tivit.train.loop: [train] epoch=31 step=45 avg_loss=0.6330
+2026-04-26 14:12:29 I tivit.train.loop: [train] epoch=31 step=50 avg_loss=0.6297
+2026-04-26 14:12:40 I tivit.train.loop: [train] epoch=31 metrics={'loss': 0.6264909342774805, 'pitch': 0.2079196549811453, 'onset': 0.2412047249809751, 'offset': 0.17736655333132115, 'hand': 0.0, 'clef': 0.0, 'total': 0.6264909342774805}
+2026-04-26 14:13:03 I tivit.train.loop: [eval] epoch=31 metrics={'loss': 0.4773254460758633, 'pitch': 0.20983946406179005, 'onset': 0.13655922893020842, 'offset': 0.13092673901054594, 'hand': 0.0, 'clef': 0.0, 'total': 0.4773254460758633}
+2026-04-26 14:13:03 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_31.pt
+2026-04-26 14:13:20 I tivit.train.loop: [train] epoch=32 step=5 avg_loss=0.8864
+2026-04-26 14:13:39 I tivit.train.loop: [train] epoch=32 step=10 avg_loss=0.7814
+2026-04-26 14:13:57 I tivit.train.loop: [train] epoch=32 step=15 avg_loss=0.7363
+2026-04-26 14:14:15 I tivit.train.loop: [train] epoch=32 step=20 avg_loss=0.6757
+2026-04-26 14:14:33 I tivit.train.loop: [train] epoch=32 step=25 avg_loss=0.6671
+2026-04-26 14:14:51 I tivit.train.loop: [train] epoch=32 step=30 avg_loss=0.6566
+2026-04-26 14:15:09 I tivit.train.loop: [train] epoch=32 step=35 avg_loss=0.6501
+2026-04-26 14:15:27 I tivit.train.loop: [train] epoch=32 step=40 avg_loss=0.6344
+2026-04-26 14:15:45 I tivit.train.loop: [train] epoch=32 step=45 avg_loss=0.6145
+2026-04-26 14:16:04 I tivit.train.loop: [train] epoch=32 step=50 avg_loss=0.6230
+2026-04-26 14:16:15 I tivit.train.loop: [train] epoch=32 metrics={'loss': 0.6261069577819897, 'pitch': 0.21583993985967817, 'onset': 0.23755252783028585, 'offset': 0.17271448552327337, 'hand': 0.0, 'clef': 0.0, 'total': 0.6261069577819897}
+2026-04-26 14:16:38 I tivit.train.loop: [eval] epoch=32 metrics={'loss': 0.47646865248680115, 'pitch': 0.20802825854884255, 'onset': 0.13699963274929258, 'offset': 0.1314407562216123, 'hand': 0.0, 'clef': 0.0, 'total': 0.47646865248680115}
+2026-04-26 14:16:38 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_32.pt
+2026-04-26 14:16:56 I tivit.train.loop: [train] epoch=33 step=5 avg_loss=0.5712
+2026-04-26 14:17:14 I tivit.train.loop: [train] epoch=33 step=10 avg_loss=0.5969
+2026-04-26 14:17:31 I tivit.train.loop: [train] epoch=33 step=15 avg_loss=0.6195
+2026-04-26 14:17:50 I tivit.train.loop: [train] epoch=33 step=20 avg_loss=0.6092
+2026-04-26 14:18:09 I tivit.train.loop: [train] epoch=33 step=25 avg_loss=0.6101
+2026-04-26 14:18:26 I tivit.train.loop: [train] epoch=33 step=30 avg_loss=0.6066
+2026-04-26 14:18:44 I tivit.train.loop: [train] epoch=33 step=35 avg_loss=0.6050
+2026-04-26 14:19:02 I tivit.train.loop: [train] epoch=33 step=40 avg_loss=0.5987
+2026-04-26 14:19:19 I tivit.train.loop: [train] epoch=33 step=45 avg_loss=0.5982
+2026-04-26 14:19:37 I tivit.train.loop: [train] epoch=33 step=50 avg_loss=0.5855
+2026-04-26 14:19:48 I tivit.train.loop: [train] epoch=33 metrics={'loss': 0.5871892599564679, 'pitch': 0.20921710597456628, 'onset': 0.21849429073198787, 'offset': 0.15947786057895086, 'hand': 0.0, 'clef': 0.0, 'total': 0.5871892599564679}
+2026-04-26 14:20:11 I tivit.train.loop: [eval] epoch=33 metrics={'loss': 0.47201260593202377, 'pitch': 0.20575450940264595, 'onset': 0.13440673963891137, 'offset': 0.13185135813222992, 'hand': 0.0, 'clef': 0.0, 'total': 0.47201260593202377}
+2026-04-26 14:20:11 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_33.pt
+2026-04-26 14:20:28 I tivit.train.loop: [train] epoch=34 step=5 avg_loss=0.6091
+2026-04-26 14:20:47 I tivit.train.loop: [train] epoch=34 step=10 avg_loss=0.6175
+2026-04-26 14:21:05 I tivit.train.loop: [train] epoch=34 step=15 avg_loss=0.6498
+2026-04-26 14:21:22 I tivit.train.loop: [train] epoch=34 step=20 avg_loss=0.6570
+2026-04-26 14:21:40 I tivit.train.loop: [train] epoch=34 step=25 avg_loss=0.6377
+2026-04-26 14:21:57 I tivit.train.loop: [train] epoch=34 step=30 avg_loss=0.6421
+2026-04-26 14:22:15 I tivit.train.loop: [train] epoch=34 step=35 avg_loss=0.6277
+2026-04-26 14:22:33 I tivit.train.loop: [train] epoch=34 step=40 avg_loss=0.6411
+2026-04-26 14:22:51 I tivit.train.loop: [train] epoch=34 step=45 avg_loss=0.6388
+2026-04-26 14:23:08 I tivit.train.loop: [train] epoch=34 step=50 avg_loss=0.6463
+2026-04-26 14:23:19 I tivit.train.loop: [train] epoch=34 metrics={'loss': 0.6503025827542791, 'pitch': 0.2176282599849521, 'onset': 0.2497522085905075, 'offset': 0.18292211080497167, 'hand': 0.0, 'clef': 0.0, 'total': 0.6503025827542791}
+2026-04-26 14:23:42 I tivit.train.loop: [eval] epoch=34 metrics={'loss': 0.4677643014325036, 'pitch': 0.2030531656410959, 'onset': 0.13417280713717142, 'offset': 0.13053832782639396, 'hand': 0.0, 'clef': 0.0, 'total': 0.4677643014325036}
+2026-04-26 14:23:42 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_34.pt
+2026-04-26 14:23:59 I tivit.train.loop: [train] epoch=35 step=5 avg_loss=0.6514
+2026-04-26 14:24:18 I tivit.train.loop: [train] epoch=35 step=10 avg_loss=0.6092
+2026-04-26 14:24:37 I tivit.train.loop: [train] epoch=35 step=15 avg_loss=0.5889
+2026-04-26 14:24:55 I tivit.train.loop: [train] epoch=35 step=20 avg_loss=0.6261
+2026-04-26 14:25:13 I tivit.train.loop: [train] epoch=35 step=25 avg_loss=0.6564
+2026-04-26 14:25:31 I tivit.train.loop: [train] epoch=35 step=30 avg_loss=0.6880
+2026-04-26 14:25:50 I tivit.train.loop: [train] epoch=35 step=35 avg_loss=0.6665
+2026-04-26 14:26:08 I tivit.train.loop: [train] epoch=35 step=40 avg_loss=0.6638
+2026-04-26 14:26:26 I tivit.train.loop: [train] epoch=35 step=45 avg_loss=0.6517
+2026-04-26 14:26:44 I tivit.train.loop: [train] epoch=35 step=50 avg_loss=0.6610
+2026-04-26 14:26:56 I tivit.train.loop: [train] epoch=35 metrics={'loss': 0.6599958167885834, 'pitch': 0.21036308497752784, 'onset': 0.25890790108802186, 'offset': 0.19072483226938067, 'hand': 0.0, 'clef': 0.0, 'total': 0.6599958167885834}
+2026-04-26 14:27:19 I tivit.train.loop: [eval] epoch=35 metrics={'loss': 0.46663641929626465, 'pitch': 0.20040694210264418, 'onset': 0.1369167309668329, 'offset': 0.12931274622678757, 'hand': 0.0, 'clef': 0.0, 'total': 0.46663641929626465}
+2026-04-26 14:27:19 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_35.pt
+2026-04-26 14:27:37 I tivit.train.loop: [train] epoch=36 step=5 avg_loss=0.7380
+2026-04-26 14:27:55 I tivit.train.loop: [train] epoch=36 step=10 avg_loss=0.6626
+2026-04-26 14:28:12 I tivit.train.loop: [train] epoch=36 step=15 avg_loss=0.6590
+2026-04-26 14:28:29 I tivit.train.loop: [train] epoch=36 step=20 avg_loss=0.6635
+2026-04-26 14:28:48 I tivit.train.loop: [train] epoch=36 step=25 avg_loss=0.6516
+2026-04-26 14:29:05 I tivit.train.loop: [train] epoch=36 step=30 avg_loss=0.6377
+2026-04-26 14:29:25 I tivit.train.loop: [train] epoch=36 step=35 avg_loss=0.6486
+2026-04-26 14:29:43 I tivit.train.loop: [train] epoch=36 step=40 avg_loss=0.6312
+2026-04-26 14:30:01 I tivit.train.loop: [train] epoch=36 step=45 avg_loss=0.6246
+2026-04-26 14:30:19 I tivit.train.loop: [train] epoch=36 step=50 avg_loss=0.6339
+2026-04-26 14:30:30 I tivit.train.loop: [train] epoch=36 metrics={'loss': 0.634880245294211, 'pitch': 0.21410979864732274, 'onset': 0.2424033686237515, 'offset': 0.17836707816371378, 'hand': 0.0, 'clef': 0.0, 'total': 0.634880245294211}
+2026-04-26 14:30:52 I tivit.train.loop: [eval] epoch=36 metrics={'loss': 0.4622492127948337, 'pitch': 0.19723840223418343, 'onset': 0.1346864394015736, 'offset': 0.13032437447044584, 'hand': 0.0, 'clef': 0.0, 'total': 0.4622492127948337}
+2026-04-26 14:30:52 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_36.pt
+2026-04-26 14:31:10 I tivit.train.loop: [train] epoch=37 step=5 avg_loss=0.6846
+2026-04-26 14:31:28 I tivit.train.loop: [train] epoch=37 step=10 avg_loss=0.6543
+2026-04-26 14:31:46 I tivit.train.loop: [train] epoch=37 step=15 avg_loss=0.6584
+2026-04-26 14:32:03 I tivit.train.loop: [train] epoch=37 step=20 avg_loss=0.6625
+2026-04-26 14:32:20 I tivit.train.loop: [train] epoch=37 step=25 avg_loss=0.6407
+2026-04-26 14:32:40 I tivit.train.loop: [train] epoch=37 step=30 avg_loss=0.6520
+2026-04-26 14:32:57 I tivit.train.loop: [train] epoch=37 step=35 avg_loss=0.6501
+2026-04-26 14:33:14 I tivit.train.loop: [train] epoch=37 step=40 avg_loss=0.6504
+2026-04-26 14:33:32 I tivit.train.loop: [train] epoch=37 step=45 avg_loss=0.6469
+2026-04-26 14:33:49 I tivit.train.loop: [train] epoch=37 step=50 avg_loss=0.6389
+2026-04-26 14:34:00 I tivit.train.loop: [train] epoch=37 metrics={'loss': 0.6418120630507199, 'pitch': 0.2069322147740508, 'onset': 0.25106328135391454, 'offset': 0.1838165687502555, 'hand': 0.0, 'clef': 0.0, 'total': 0.6418120630507199}
+2026-04-26 14:34:22 I tivit.train.loop: [eval] epoch=37 metrics={'loss': 0.46536538667149013, 'pitch': 0.19672752420107523, 'onset': 0.136185175842709, 'offset': 0.13245268248849446, 'hand': 0.0, 'clef': 0.0, 'total': 0.46536538667149013}
+2026-04-26 14:34:22 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_37.pt
+2026-04-26 14:34:41 I tivit.train.loop: [train] epoch=38 step=5 avg_loss=0.8021
+2026-04-26 14:34:58 I tivit.train.loop: [train] epoch=38 step=10 avg_loss=0.6609
+2026-04-26 14:35:16 I tivit.train.loop: [train] epoch=38 step=15 avg_loss=0.6412
+2026-04-26 14:35:35 I tivit.train.loop: [train] epoch=38 step=20 avg_loss=0.6724
+2026-04-26 14:35:53 I tivit.train.loop: [train] epoch=38 step=25 avg_loss=0.6737
+2026-04-26 14:36:11 I tivit.train.loop: [train] epoch=38 step=30 avg_loss=0.7109
+2026-04-26 14:36:30 I tivit.train.loop: [train] epoch=38 step=35 avg_loss=0.6882
+2026-04-26 14:36:47 I tivit.train.loop: [train] epoch=38 step=40 avg_loss=0.6910
+2026-04-26 14:37:05 I tivit.train.loop: [train] epoch=38 step=45 avg_loss=0.6662
+2026-04-26 14:37:24 I tivit.train.loop: [train] epoch=38 step=50 avg_loss=0.6549
+2026-04-26 14:37:34 I tivit.train.loop: [train] epoch=38 metrics={'loss': 0.6564555837298339, 'pitch': 0.20943140716485256, 'onset': 0.25639571235427316, 'offset': 0.19062846744397902, 'hand': 0.0, 'clef': 0.0, 'total': 0.6564555837298339}
+2026-04-26 14:37:57 I tivit.train.loop: [eval] epoch=38 metrics={'loss': 0.46083341704474556, 'pitch': 0.1941701422135035, 'onset': 0.13523604224125543, 'offset': 0.13142723052038086, 'hand': 0.0, 'clef': 0.0, 'total': 0.46083341704474556}
+2026-04-26 14:37:57 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_38.pt
+2026-04-26 14:38:15 I tivit.train.loop: [train] epoch=39 step=5 avg_loss=0.7044
+2026-04-26 14:38:34 I tivit.train.loop: [train] epoch=39 step=10 avg_loss=0.6400
+2026-04-26 14:38:52 I tivit.train.loop: [train] epoch=39 step=15 avg_loss=0.6418
+2026-04-26 14:39:09 I tivit.train.loop: [train] epoch=39 step=20 avg_loss=0.6294
+2026-04-26 14:39:27 I tivit.train.loop: [train] epoch=39 step=25 avg_loss=0.6303
+2026-04-26 14:39:46 I tivit.train.loop: [train] epoch=39 step=30 avg_loss=0.6202
+2026-04-26 14:40:03 I tivit.train.loop: [train] epoch=39 step=35 avg_loss=0.6099
+2026-04-26 14:40:22 I tivit.train.loop: [train] epoch=39 step=40 avg_loss=0.6219
+2026-04-26 14:40:40 I tivit.train.loop: [train] epoch=39 step=45 avg_loss=0.6094
+2026-04-26 14:40:59 I tivit.train.loop: [train] epoch=39 step=50 avg_loss=0.6182
+2026-04-26 14:41:09 I tivit.train.loop: [train] epoch=39 metrics={'loss': 0.6205635976116612, 'pitch': 0.21047556147260485, 'onset': 0.23610184819630856, 'offset': 0.17398618709928584, 'hand': 0.0, 'clef': 0.0, 'total': 0.6205635976116612}
+2026-04-26 14:41:32 I tivit.train.loop: [eval] epoch=39 metrics={'loss': 0.45978697803285384, 'pitch': 0.19394668026102913, 'onset': 0.13476540644963583, 'offset': 0.13107489546140036, 'hand': 0.0, 'clef': 0.0, 'total': 0.45978697803285384}
+2026-04-26 14:41:32 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_39.pt
+2026-04-26 14:41:50 I tivit.train.loop: [train] epoch=40 step=5 avg_loss=0.6406
+2026-04-26 14:42:08 I tivit.train.loop: [train] epoch=40 step=10 avg_loss=0.6701
+2026-04-26 14:42:25 I tivit.train.loop: [train] epoch=40 step=15 avg_loss=0.6424
+2026-04-26 14:42:44 I tivit.train.loop: [train] epoch=40 step=20 avg_loss=0.6028
+2026-04-26 14:43:02 I tivit.train.loop: [train] epoch=40 step=25 avg_loss=0.6321
+2026-04-26 14:43:20 I tivit.train.loop: [train] epoch=40 step=30 avg_loss=0.6294
+2026-04-26 14:43:37 I tivit.train.loop: [train] epoch=40 step=35 avg_loss=0.6106
+2026-04-26 14:43:55 I tivit.train.loop: [train] epoch=40 step=40 avg_loss=0.6168
+2026-04-26 14:44:13 I tivit.train.loop: [train] epoch=40 step=45 avg_loss=0.6164
+2026-04-26 14:44:31 I tivit.train.loop: [train] epoch=40 step=50 avg_loss=0.6118
+2026-04-26 14:44:43 I tivit.train.loop: [train] epoch=40 metrics={'loss': 0.6144987069210917, 'pitch': 0.20458334023660085, 'onset': 0.23635081595407342, 'offset': 0.173564557478113, 'hand': 0.0, 'clef': 0.0, 'total': 0.6144987069210917}
+2026-04-26 14:45:06 I tivit.train.loop: [eval] epoch=40 metrics={'loss': 0.46019573344124687, 'pitch': 0.19220484710401958, 'onset': 0.136092070904043, 'offset': 0.13189881708886889, 'hand': 0.0, 'clef': 0.0, 'total': 0.46019573344124687}
+2026-04-26 14:45:06 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_40.pt
+2026-04-26 14:45:24 I tivit.train.loop: [train] epoch=41 step=5 avg_loss=0.7488
+2026-04-26 14:45:41 I tivit.train.loop: [train] epoch=41 step=10 avg_loss=0.6820
+2026-04-26 14:46:01 I tivit.train.loop: [train] epoch=41 step=15 avg_loss=0.6631
+2026-04-26 14:46:18 I tivit.train.loop: [train] epoch=41 step=20 avg_loss=0.6719
+2026-04-26 14:46:36 I tivit.train.loop: [train] epoch=41 step=25 avg_loss=0.6374
+2026-04-26 14:46:56 I tivit.train.loop: [train] epoch=41 step=30 avg_loss=0.6337
+2026-04-26 14:47:13 I tivit.train.loop: [train] epoch=41 step=35 avg_loss=0.6393
+2026-04-26 14:47:32 I tivit.train.loop: [train] epoch=41 step=40 avg_loss=0.6469
+2026-04-26 14:47:49 I tivit.train.loop: [train] epoch=41 step=45 avg_loss=0.6555
+2026-04-26 14:48:08 I tivit.train.loop: [train] epoch=41 step=50 avg_loss=0.6496
+2026-04-26 14:48:19 I tivit.train.loop: [train] epoch=41 metrics={'loss': 0.6526343001509612, 'pitch': 0.20071194616128812, 'onset': 0.25952773302231197, 'offset': 0.19239462082678416, 'hand': 0.0, 'clef': 0.0, 'total': 0.6526343001509612}
+2026-04-26 14:48:42 I tivit.train.loop: [eval] epoch=41 metrics={'loss': 0.4549814528889126, 'pitch': 0.18885655535591972, 'onset': 0.13513905637794071, 'offset': 0.13098583536015618, 'hand': 0.0, 'clef': 0.0, 'total': 0.4549814528889126}
+2026-04-26 14:48:42 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_41.pt
+2026-04-26 14:49:00 I tivit.train.loop: [train] epoch=42 step=5 avg_loss=0.6343
+2026-04-26 14:49:18 I tivit.train.loop: [train] epoch=42 step=10 avg_loss=0.6719
+2026-04-26 14:49:36 I tivit.train.loop: [train] epoch=42 step=15 avg_loss=0.5948
+2026-04-26 14:49:53 I tivit.train.loop: [train] epoch=42 step=20 avg_loss=0.5613
+2026-04-26 14:50:11 I tivit.train.loop: [train] epoch=42 step=25 avg_loss=0.5851
+2026-04-26 14:50:29 I tivit.train.loop: [train] epoch=42 step=30 avg_loss=0.5904
+2026-04-26 14:50:46 I tivit.train.loop: [train] epoch=42 step=35 avg_loss=0.5745
+2026-04-26 14:51:04 I tivit.train.loop: [train] epoch=42 step=40 avg_loss=0.5806
+2026-04-26 14:51:22 I tivit.train.loop: [train] epoch=42 step=45 avg_loss=0.5809
+2026-04-26 14:51:40 I tivit.train.loop: [train] epoch=42 step=50 avg_loss=0.5939
+2026-04-26 14:51:52 I tivit.train.loop: [train] epoch=42 metrics={'loss': 0.5864085594438156, 'pitch': 0.1883864273440163, 'onset': 0.22895816024744287, 'offset': 0.1690639741718769, 'hand': 0.0, 'clef': 0.0, 'total': 0.5864085594438156}
+2026-04-26 14:52:14 I tivit.train.loop: [eval] epoch=42 metrics={'loss': 0.45102694299485946, 'pitch': 0.1871866343749894, 'onset': 0.13474741081396738, 'offset': 0.1290928874578741, 'hand': 0.0, 'clef': 0.0, 'total': 0.45102694299485946}
+2026-04-26 14:52:14 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_42.pt
+2026-04-26 14:52:33 I tivit.train.loop: [train] epoch=43 step=5 avg_loss=0.7626
+2026-04-26 14:52:51 I tivit.train.loop: [train] epoch=43 step=10 avg_loss=0.6699
+2026-04-26 14:53:09 I tivit.train.loop: [train] epoch=43 step=15 avg_loss=0.6519
+2026-04-26 14:53:27 I tivit.train.loop: [train] epoch=43 step=20 avg_loss=0.6457
+2026-04-26 14:53:46 I tivit.train.loop: [train] epoch=43 step=25 avg_loss=0.6276
+2026-04-26 14:54:04 I tivit.train.loop: [train] epoch=43 step=30 avg_loss=0.6221
+2026-04-26 14:54:23 I tivit.train.loop: [train] epoch=43 step=35 avg_loss=0.6008
+2026-04-26 14:54:40 I tivit.train.loop: [train] epoch=43 step=40 avg_loss=0.6117
+2026-04-26 14:55:00 I tivit.train.loop: [train] epoch=43 step=45 avg_loss=0.5973
+2026-04-26 14:55:18 I tivit.train.loop: [train] epoch=43 step=50 avg_loss=0.5966
+2026-04-26 14:55:28 I tivit.train.loop: [train] epoch=43 metrics={'loss': 0.5985728277350372, 'pitch': 0.19902576196868466, 'onset': 0.2295423757355168, 'offset': 0.17000468553237194, 'hand': 0.0, 'clef': 0.0, 'total': 0.5985728277350372}
+2026-04-26 14:55:51 I tivit.train.loop: [eval] epoch=43 metrics={'loss': 0.4510260936286714, 'pitch': 0.18681902521186405, 'onset': 0.13450624379846784, 'offset': 0.12970082379049724, 'hand': 0.0, 'clef': 0.0, 'total': 0.4510260936286714}
+2026-04-26 14:55:51 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_43.pt
+2026-04-26 14:56:09 I tivit.train.loop: [train] epoch=44 step=5 avg_loss=0.7636
+2026-04-26 14:56:27 I tivit.train.loop: [train] epoch=44 step=10 avg_loss=0.6862
+2026-04-26 14:56:46 I tivit.train.loop: [train] epoch=44 step=15 avg_loss=0.6868
+2026-04-26 14:57:03 I tivit.train.loop: [train] epoch=44 step=20 avg_loss=0.6310
+2026-04-26 14:57:21 I tivit.train.loop: [train] epoch=44 step=25 avg_loss=0.6154
+2026-04-26 14:57:39 I tivit.train.loop: [train] epoch=44 step=30 avg_loss=0.6322
+2026-04-26 14:57:56 I tivit.train.loop: [train] epoch=44 step=35 avg_loss=0.6357
+2026-04-26 14:58:15 I tivit.train.loop: [train] epoch=44 step=40 avg_loss=0.6156
+2026-04-26 14:58:33 I tivit.train.loop: [train] epoch=44 step=45 avg_loss=0.6174
+2026-04-26 14:58:52 I tivit.train.loop: [train] epoch=44 step=50 avg_loss=0.6285
+2026-04-26 14:59:02 I tivit.train.loop: [train] epoch=44 metrics={'loss': 0.628974938730024, 'pitch': 0.2031303361620543, 'onset': 0.24416852939241337, 'offset': 0.18167606783363055, 'hand': 0.0, 'clef': 0.0, 'total': 0.628974938730024}
+2026-04-26 14:59:24 I tivit.train.loop: [eval] epoch=44 metrics={'loss': 0.4513348837693532, 'pitch': 0.18458604315916696, 'onset': 0.13651807026730645, 'offset': 0.13023077903522384, 'hand': 0.0, 'clef': 0.0, 'total': 0.4513348837693532}
+2026-04-26 14:59:24 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_44.pt
+2026-04-26 14:59:43 I tivit.train.loop: [train] epoch=45 step=5 avg_loss=0.5905
+2026-04-26 15:00:00 I tivit.train.loop: [train] epoch=45 step=10 avg_loss=0.6532
+2026-04-26 15:00:19 I tivit.train.loop: [train] epoch=45 step=15 avg_loss=0.6314
+2026-04-26 15:00:38 I tivit.train.loop: [train] epoch=45 step=20 avg_loss=0.6195
+2026-04-26 15:00:58 I tivit.train.loop: [train] epoch=45 step=25 avg_loss=0.6586
+2026-04-26 15:01:16 I tivit.train.loop: [train] epoch=45 step=30 avg_loss=0.6372
+2026-04-26 15:01:35 I tivit.train.loop: [train] epoch=45 step=35 avg_loss=0.6518
+2026-04-26 15:01:52 I tivit.train.loop: [train] epoch=45 step=40 avg_loss=0.6334
+2026-04-26 15:02:10 I tivit.train.loop: [train] epoch=45 step=45 avg_loss=0.6360
+2026-04-26 15:02:28 I tivit.train.loop: [train] epoch=45 step=50 avg_loss=0.6396
+2026-04-26 15:02:40 I tivit.train.loop: [train] epoch=45 metrics={'loss': 0.6389407942879874, 'pitch': 0.20658480376005173, 'onset': 0.2493753063510049, 'offset': 0.1829806850203928, 'hand': 0.0, 'clef': 0.0, 'total': 0.6389407942879874}
+2026-04-26 15:03:03 I tivit.train.loop: [eval] epoch=45 metrics={'loss': 0.4515984058380127, 'pitch': 0.1867424961593416, 'onset': 0.13583006047540241, 'offset': 0.12902583926916122, 'hand': 0.0, 'clef': 0.0, 'total': 0.4515984058380127}
+2026-04-26 15:03:03 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_45.pt
+2026-04-26 15:03:21 I tivit.train.loop: [train] epoch=46 step=5 avg_loss=0.6228
+2026-04-26 15:03:39 I tivit.train.loop: [train] epoch=46 step=10 avg_loss=0.5987
+2026-04-26 15:03:58 I tivit.train.loop: [train] epoch=46 step=15 avg_loss=0.6018
+2026-04-26 15:04:16 I tivit.train.loop: [train] epoch=46 step=20 avg_loss=0.5864
+2026-04-26 15:04:35 I tivit.train.loop: [train] epoch=46 step=25 avg_loss=0.5831
+2026-04-26 15:04:54 I tivit.train.loop: [train] epoch=46 step=30 avg_loss=0.5744
+2026-04-26 15:05:11 I tivit.train.loop: [train] epoch=46 step=35 avg_loss=0.6017
+2026-04-26 15:05:30 I tivit.train.loop: [train] epoch=46 step=40 avg_loss=0.6184
+2026-04-26 15:05:48 I tivit.train.loop: [train] epoch=46 step=45 avg_loss=0.6455
+2026-04-26 15:06:07 I tivit.train.loop: [train] epoch=46 step=50 avg_loss=0.6332
+2026-04-26 15:06:19 I tivit.train.loop: [train] epoch=46 metrics={'loss': 0.622799461742617, 'pitch': 0.198288047088767, 'onset': 0.2449960008544742, 'offset': 0.17951541372908736, 'hand': 0.0, 'clef': 0.0, 'total': 0.622799461742617}
+2026-04-26 15:06:42 I tivit.train.loop: [eval] epoch=46 metrics={'loss': 0.4512622422642178, 'pitch': 0.1858842538462745, 'onset': 0.13579118169016308, 'offset': 0.12958680589993796, 'hand': 0.0, 'clef': 0.0, 'total': 0.4512622422642178}
+2026-04-26 15:06:42 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_46.pt
+2026-04-26 15:06:59 I tivit.train.loop: [train] epoch=47 step=5 avg_loss=0.6856
+2026-04-26 15:07:17 I tivit.train.loop: [train] epoch=47 step=10 avg_loss=0.6178
+2026-04-26 15:07:35 I tivit.train.loop: [train] epoch=47 step=15 avg_loss=0.5872
+2026-04-26 15:07:53 I tivit.train.loop: [train] epoch=47 step=20 avg_loss=0.6032
+2026-04-26 15:08:11 I tivit.train.loop: [train] epoch=47 step=25 avg_loss=0.6061
+2026-04-26 15:08:29 I tivit.train.loop: [train] epoch=47 step=30 avg_loss=0.6197
+2026-04-26 15:08:47 I tivit.train.loop: [train] epoch=47 step=35 avg_loss=0.6259
+2026-04-26 15:09:05 I tivit.train.loop: [train] epoch=47 step=40 avg_loss=0.6115
+2026-04-26 15:09:23 I tivit.train.loop: [train] epoch=47 step=45 avg_loss=0.6092
+2026-04-26 15:09:40 I tivit.train.loop: [train] epoch=47 step=50 avg_loss=0.5962
+2026-04-26 15:09:51 I tivit.train.loop: [train] epoch=47 metrics={'loss': 0.589650496559323, 'pitch': 0.19318310564981317, 'onset': 0.22784510817167894, 'offset': 0.16862228386244685, 'hand': 0.0, 'clef': 0.0, 'total': 0.589650496559323}
+2026-04-26 15:10:14 I tivit.train.loop: [eval] epoch=47 metrics={'loss': 0.4508858737018373, 'pitch': 0.1853831128941642, 'onset': 0.1350883874628279, 'offset': 0.13041437375876638, 'hand': 0.0, 'clef': 0.0, 'total': 0.4508858737018373}
+2026-04-26 15:10:14 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_47.pt
+2026-04-26 15:10:31 I tivit.train.loop: [train] epoch=48 step=5 avg_loss=0.3904
+2026-04-26 15:10:49 I tivit.train.loop: [train] epoch=48 step=10 avg_loss=0.4967
+2026-04-26 15:11:08 I tivit.train.loop: [train] epoch=48 step=15 avg_loss=0.5083
+2026-04-26 15:11:25 I tivit.train.loop: [train] epoch=48 step=20 avg_loss=0.5496
+2026-04-26 15:11:43 I tivit.train.loop: [train] epoch=48 step=25 avg_loss=0.5541
+2026-04-26 15:12:01 I tivit.train.loop: [train] epoch=48 step=30 avg_loss=0.5350
+2026-04-26 15:12:20 I tivit.train.loop: [train] epoch=48 step=35 avg_loss=0.5297
+2026-04-26 15:12:37 I tivit.train.loop: [train] epoch=48 step=40 avg_loss=0.5330
+2026-04-26 15:12:55 I tivit.train.loop: [train] epoch=48 step=45 avg_loss=0.5617
+2026-04-26 15:13:13 I tivit.train.loop: [train] epoch=48 step=50 avg_loss=0.5674
+2026-04-26 15:13:24 I tivit.train.loop: [train] epoch=48 metrics={'loss': 0.5718398712716013, 'pitch': 0.19189374865788333, 'onset': 0.21927958122401867, 'offset': 0.1606665404759488, 'hand': 0.0, 'clef': 0.0, 'total': 0.5718398712716013}
+2026-04-26 15:13:46 I tivit.train.loop: [eval] epoch=48 metrics={'loss': 0.4468116859594981, 'pitch': 0.18383890638748804, 'onset': 0.13356449372238582, 'offset': 0.12940828791922993, 'hand': 0.0, 'clef': 0.0, 'total': 0.4468116859594981}
+2026-04-26 15:13:46 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_48.pt
+2026-04-26 15:14:04 I tivit.train.loop: [train] epoch=49 step=5 avg_loss=0.4387
+2026-04-26 15:14:22 I tivit.train.loop: [train] epoch=49 step=10 avg_loss=0.4724
+2026-04-26 15:14:40 I tivit.train.loop: [train] epoch=49 step=15 avg_loss=0.5456
+2026-04-26 15:14:58 I tivit.train.loop: [train] epoch=49 step=20 avg_loss=0.5381
+2026-04-26 15:15:16 I tivit.train.loop: [train] epoch=49 step=25 avg_loss=0.5636
+2026-04-26 15:15:33 I tivit.train.loop: [train] epoch=49 step=30 avg_loss=0.5559
+2026-04-26 15:15:52 I tivit.train.loop: [train] epoch=49 step=35 avg_loss=0.5658
+2026-04-26 15:16:10 I tivit.train.loop: [train] epoch=49 step=40 avg_loss=0.5685
+2026-04-26 15:16:28 I tivit.train.loop: [train] epoch=49 step=45 avg_loss=0.5697
+2026-04-26 15:16:46 I tivit.train.loop: [train] epoch=49 step=50 avg_loss=0.5920
+2026-04-26 15:16:57 I tivit.train.loop: [train] epoch=49 metrics={'loss': 0.5934444885208922, 'pitch': 0.19309456210653736, 'onset': 0.23107978307975913, 'offset': 0.16927014389690362, 'hand': 0.0, 'clef': 0.0, 'total': 0.5934444885208922}
+2026-04-26 15:17:20 I tivit.train.loop: [eval] epoch=49 metrics={'loss': 0.4483315580421024, 'pitch': 0.18223357697327933, 'onset': 0.1373453065752983, 'offset': 0.1287526778048939, 'hand': 0.0, 'clef': 0.0, 'total': 0.4483315580421024}
+2026-04-26 15:17:20 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_49.pt
+2026-04-26 15:17:37 I tivit.train.loop: [train] epoch=50 step=5 avg_loss=0.5700
+2026-04-26 15:17:56 I tivit.train.loop: [train] epoch=50 step=10 avg_loss=0.5674
+2026-04-26 15:18:14 I tivit.train.loop: [train] epoch=50 step=15 avg_loss=0.5694
+2026-04-26 15:18:31 I tivit.train.loop: [train] epoch=50 step=20 avg_loss=0.5647
+2026-04-26 15:18:48 I tivit.train.loop: [train] epoch=50 step=25 avg_loss=0.5803
+2026-04-26 15:19:08 I tivit.train.loop: [train] epoch=50 step=30 avg_loss=0.5792
+2026-04-26 15:19:25 I tivit.train.loop: [train] epoch=50 step=35 avg_loss=0.6062
+2026-04-26 15:19:43 I tivit.train.loop: [train] epoch=50 step=40 avg_loss=0.6119
+2026-04-26 15:20:00 I tivit.train.loop: [train] epoch=50 step=45 avg_loss=0.6226
+2026-04-26 15:20:18 I tivit.train.loop: [train] epoch=50 step=50 avg_loss=0.6073
+2026-04-26 15:20:30 I tivit.train.loop: [train] epoch=50 metrics={'loss': 0.623804083972607, 'pitch': 0.20181346965848274, 'onset': 0.24302781373262405, 'offset': 0.1789627972076524, 'hand': 0.0, 'clef': 0.0, 'total': 0.623804083972607}
+2026-04-26 15:20:52 I tivit.train.loop: [eval] epoch=50 metrics={'loss': 0.4475051015615463, 'pitch': 0.18459329505761465, 'onset': 0.13478320754236645, 'offset': 0.12812859689195952, 'hand': 0.0, 'clef': 0.0, 'total': 0.4475051015615463}
+2026-04-26 15:20:52 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_50.pt
+2026-04-26 15:21:11 I tivit.train.loop: [train] epoch=51 step=5 avg_loss=0.8936
+2026-04-26 15:21:29 I tivit.train.loop: [train] epoch=51 step=10 avg_loss=0.6994
+2026-04-26 15:21:48 I tivit.train.loop: [train] epoch=51 step=15 avg_loss=0.7422
+2026-04-26 15:22:05 I tivit.train.loop: [train] epoch=51 step=20 avg_loss=0.6818
+2026-04-26 15:22:24 I tivit.train.loop: [train] epoch=51 step=25 avg_loss=0.6548
+2026-04-26 15:22:41 I tivit.train.loop: [train] epoch=51 step=30 avg_loss=0.6433
+2026-04-26 15:23:01 I tivit.train.loop: [train] epoch=51 step=35 avg_loss=0.6363
+2026-04-26 15:23:19 I tivit.train.loop: [train] epoch=51 step=40 avg_loss=0.6151
+2026-04-26 15:23:36 I tivit.train.loop: [train] epoch=51 step=45 avg_loss=0.6081
+2026-04-26 15:23:55 I tivit.train.loop: [train] epoch=51 step=50 avg_loss=0.6130
+2026-04-26 15:24:06 I tivit.train.loop: [train] epoch=51 metrics={'loss': 0.6077271401882172, 'pitch': 0.19269828470248096, 'onset': 0.23868268798544723, 'offset': 0.17634616960894386, 'hand': 0.0, 'clef': 0.0, 'total': 0.6077271401882172}
+2026-04-26 15:24:29 I tivit.train.loop: [eval] epoch=51 metrics={'loss': 0.45027342438697815, 'pitch': 0.18219826618830362, 'onset': 0.13727474792136085, 'offset': 0.13080040903555024, 'hand': 0.0, 'clef': 0.0, 'total': 0.45027342438697815}
+2026-04-26 15:24:29 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_51.pt
+2026-04-26 15:24:47 I tivit.train.loop: [train] epoch=52 step=5 avg_loss=0.6442
+2026-04-26 15:25:05 I tivit.train.loop: [train] epoch=52 step=10 avg_loss=0.6963
+2026-04-26 15:25:22 I tivit.train.loop: [train] epoch=52 step=15 avg_loss=0.6698
+2026-04-26 15:25:41 I tivit.train.loop: [train] epoch=52 step=20 avg_loss=0.6563
+2026-04-26 15:25:59 I tivit.train.loop: [train] epoch=52 step=25 avg_loss=0.6276
+2026-04-26 15:26:18 I tivit.train.loop: [train] epoch=52 step=30 avg_loss=0.6125
+2026-04-26 15:26:36 I tivit.train.loop: [train] epoch=52 step=35 avg_loss=0.6021
+2026-04-26 15:26:54 I tivit.train.loop: [train] epoch=52 step=40 avg_loss=0.5844
+2026-04-26 15:27:13 I tivit.train.loop: [train] epoch=52 step=45 avg_loss=0.5832
+2026-04-26 15:27:31 I tivit.train.loop: [train] epoch=52 step=50 avg_loss=0.5931
+2026-04-26 15:27:42 I tivit.train.loop: [train] epoch=52 metrics={'loss': 0.5980882931430385, 'pitch': 0.19283260798679208, 'onset': 0.2344129778585344, 'offset': 0.17084271221790673, 'hand': 0.0, 'clef': 0.0, 'total': 0.5980882931430385}
+2026-04-26 15:28:04 I tivit.train.loop: [eval] epoch=52 metrics={'loss': 0.4405551056067149, 'pitch': 0.1791248710619079, 'onset': 0.1334718945953581, 'offset': 0.12795833829376432, 'hand': 0.0, 'clef': 0.0, 'total': 0.4405551056067149}
+2026-04-26 15:28:04 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_52.pt
+2026-04-26 15:28:22 I tivit.train.loop: [train] epoch=53 step=5 avg_loss=0.7082
+2026-04-26 15:28:40 I tivit.train.loop: [train] epoch=53 step=10 avg_loss=0.6759
+2026-04-26 15:29:00 I tivit.train.loop: [train] epoch=53 step=15 avg_loss=0.6673
+2026-04-26 15:29:18 I tivit.train.loop: [train] epoch=53 step=20 avg_loss=0.6512
+2026-04-26 15:29:36 I tivit.train.loop: [train] epoch=53 step=25 avg_loss=0.6185
+2026-04-26 15:29:55 I tivit.train.loop: [train] epoch=53 step=30 avg_loss=0.6107
+2026-04-26 15:30:13 I tivit.train.loop: [train] epoch=53 step=35 avg_loss=0.6133
+2026-04-26 15:30:31 I tivit.train.loop: [train] epoch=53 step=40 avg_loss=0.6044
+2026-04-26 15:30:49 I tivit.train.loop: [train] epoch=53 step=45 avg_loss=0.6108
+2026-04-26 15:31:06 I tivit.train.loop: [train] epoch=53 step=50 avg_loss=0.6068
+2026-04-26 15:31:17 I tivit.train.loop: [train] epoch=53 metrics={'loss': 0.6095634535798486, 'pitch': 0.20381426206737194, 'onset': 0.23455903313632281, 'offset': 0.1711901603442318, 'hand': 0.0, 'clef': 0.0, 'total': 0.6095634535798486}
+2026-04-26 15:31:40 I tivit.train.loop: [eval] epoch=53 metrics={'loss': 0.4409122003449334, 'pitch': 0.18006936460733414, 'onset': 0.13161668015850914, 'offset': 0.1292261497841941, 'hand': 0.0, 'clef': 0.0, 'total': 0.4409122003449334}
+2026-04-26 15:31:40 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_53.pt
+2026-04-26 15:31:58 I tivit.train.loop: [train] epoch=54 step=5 avg_loss=0.5827
+2026-04-26 15:32:16 I tivit.train.loop: [train] epoch=54 step=10 avg_loss=0.5901
+2026-04-26 15:32:35 I tivit.train.loop: [train] epoch=54 step=15 avg_loss=0.5981
+2026-04-26 15:32:53 I tivit.train.loop: [train] epoch=54 step=20 avg_loss=0.6310
+2026-04-26 15:33:11 I tivit.train.loop: [train] epoch=54 step=25 avg_loss=0.6354
+2026-04-26 15:33:29 I tivit.train.loop: [train] epoch=54 step=30 avg_loss=0.6184
+2026-04-26 15:33:47 I tivit.train.loop: [train] epoch=54 step=35 avg_loss=0.6506
+2026-04-26 15:34:04 I tivit.train.loop: [train] epoch=54 step=40 avg_loss=0.6429
+2026-04-26 15:34:22 I tivit.train.loop: [train] epoch=54 step=45 avg_loss=0.6456
+2026-04-26 15:34:40 I tivit.train.loop: [train] epoch=54 step=50 avg_loss=0.6690
+2026-04-26 15:34:52 I tivit.train.loop: [train] epoch=54 metrics={'loss': 0.6735642153137135, 'pitch': 0.20258978655878104, 'onset': 0.2708011564781081, 'offset': 0.20017327290942083, 'hand': 0.0, 'clef': 0.0, 'total': 0.6735642153137135}
+2026-04-26 15:35:15 I tivit.train.loop: [eval] epoch=54 metrics={'loss': 0.4462565812799666, 'pitch': 0.18167333470450509, 'onset': 0.13745184822214973, 'offset': 0.1271313950419426, 'hand': 0.0, 'clef': 0.0, 'total': 0.4462565812799666}
+2026-04-26 15:35:15 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_54.pt
+2026-04-26 15:35:33 I tivit.train.loop: [train] epoch=55 step=5 avg_loss=0.6464
+2026-04-26 15:35:50 I tivit.train.loop: [train] epoch=55 step=10 avg_loss=0.6308
+2026-04-26 15:36:08 I tivit.train.loop: [train] epoch=55 step=15 avg_loss=0.6267
+2026-04-26 15:36:27 I tivit.train.loop: [train] epoch=55 step=20 avg_loss=0.6103
+2026-04-26 15:36:45 I tivit.train.loop: [train] epoch=55 step=25 avg_loss=0.6094
+2026-04-26 15:37:03 I tivit.train.loop: [train] epoch=55 step=30 avg_loss=0.5983
+2026-04-26 15:37:20 I tivit.train.loop: [train] epoch=55 step=35 avg_loss=0.6041
+2026-04-26 15:37:38 I tivit.train.loop: [train] epoch=55 step=40 avg_loss=0.6124
+2026-04-26 15:37:56 I tivit.train.loop: [train] epoch=55 step=45 avg_loss=0.6053
+2026-04-26 15:38:14 I tivit.train.loop: [train] epoch=55 step=50 avg_loss=0.6304
+2026-04-26 15:38:25 I tivit.train.loop: [train] epoch=55 metrics={'loss': 0.6257364834254643, 'pitch': 0.1943966900964953, 'onset': 0.24887764397657142, 'offset': 0.1824621485089356, 'hand': 0.0, 'clef': 0.0, 'total': 0.6257364834254643}
+2026-04-26 15:38:49 I tivit.train.loop: [eval] epoch=55 metrics={'loss': 0.44146908654106987, 'pitch': 0.17777046975162294, 'onset': 0.13570536259147856, 'offset': 0.12799325047267807, 'hand': 0.0, 'clef': 0.0, 'total': 0.44146908654106987}
+2026-04-26 15:38:49 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_55.pt
+2026-04-26 15:39:07 I tivit.train.loop: [train] epoch=56 step=5 avg_loss=0.5145
+2026-04-26 15:39:26 I tivit.train.loop: [train] epoch=56 step=10 avg_loss=0.5786
+2026-04-26 15:39:44 I tivit.train.loop: [train] epoch=56 step=15 avg_loss=0.6406
+2026-04-26 15:40:02 I tivit.train.loop: [train] epoch=56 step=20 avg_loss=0.6693
+2026-04-26 15:40:20 I tivit.train.loop: [train] epoch=56 step=25 avg_loss=0.6607
+2026-04-26 15:40:38 I tivit.train.loop: [train] epoch=56 step=30 avg_loss=0.6459
+2026-04-26 15:40:56 I tivit.train.loop: [train] epoch=56 step=35 avg_loss=0.6308
+2026-04-26 15:41:14 I tivit.train.loop: [train] epoch=56 step=40 avg_loss=0.6231
+2026-04-26 15:41:34 I tivit.train.loop: [train] epoch=56 step=45 avg_loss=0.6202
+2026-04-26 15:41:51 I tivit.train.loop: [train] epoch=56 step=50 avg_loss=0.6179
+2026-04-26 15:42:02 I tivit.train.loop: [train] epoch=56 metrics={'loss': 0.6155728939569222, 'pitch': 0.19878349059595252, 'onset': 0.24070017138179742, 'offset': 0.17608922902705534, 'hand': 0.0, 'clef': 0.0, 'total': 0.6155728939569222}
+2026-04-26 15:42:25 I tivit.train.loop: [eval] epoch=56 metrics={'loss': 0.443987348013454, 'pitch': 0.1806567998396026, 'onset': 0.1341444162858857, 'offset': 0.1291861351993349, 'hand': 0.0, 'clef': 0.0, 'total': 0.443987348013454}
+2026-04-26 15:42:25 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_56.pt
+2026-04-26 15:42:43 I tivit.train.loop: [train] epoch=57 step=5 avg_loss=0.7911
+2026-04-26 15:43:02 I tivit.train.loop: [train] epoch=57 step=10 avg_loss=0.7193
+2026-04-26 15:43:19 I tivit.train.loop: [train] epoch=57 step=15 avg_loss=0.6847
+2026-04-26 15:43:37 I tivit.train.loop: [train] epoch=57 step=20 avg_loss=0.6626
+2026-04-26 15:43:56 I tivit.train.loop: [train] epoch=57 step=25 avg_loss=0.6421
+2026-04-26 15:44:13 I tivit.train.loop: [train] epoch=57 step=30 avg_loss=0.6646
+2026-04-26 15:44:31 I tivit.train.loop: [train] epoch=57 step=35 avg_loss=0.6381
+2026-04-26 15:44:48 I tivit.train.loop: [train] epoch=57 step=40 avg_loss=0.6560
+2026-04-26 15:45:07 I tivit.train.loop: [train] epoch=57 step=45 avg_loss=0.6643
+2026-04-26 15:45:25 I tivit.train.loop: [train] epoch=57 step=50 avg_loss=0.6628
+2026-04-26 15:45:35 I tivit.train.loop: [train] epoch=57 metrics={'loss': 0.6635618569715968, 'pitch': 0.21283928937507127, 'onset': 0.25925297852394713, 'offset': 0.19146959033777128, 'hand': 0.0, 'clef': 0.0, 'total': 0.6635618569715968}
+2026-04-26 15:45:58 I tivit.train.loop: [eval] epoch=57 metrics={'loss': 0.4451868534088135, 'pitch': 0.18003417385949028, 'onset': 0.13716734283500248, 'offset': 0.12798534168137443, 'hand': 0.0, 'clef': 0.0, 'total': 0.4451868534088135}
+2026-04-26 15:45:58 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_57.pt
+2026-04-26 15:46:17 I tivit.train.loop: [train] epoch=58 step=5 avg_loss=0.8084
+2026-04-26 15:46:34 I tivit.train.loop: [train] epoch=58 step=10 avg_loss=0.7609
+2026-04-26 15:46:52 I tivit.train.loop: [train] epoch=58 step=15 avg_loss=0.6762
+2026-04-26 15:47:10 I tivit.train.loop: [train] epoch=58 step=20 avg_loss=0.6616
+2026-04-26 15:47:29 I tivit.train.loop: [train] epoch=58 step=25 avg_loss=0.6332
+2026-04-26 15:47:46 I tivit.train.loop: [train] epoch=58 step=30 avg_loss=0.6426
+2026-04-26 15:48:04 I tivit.train.loop: [train] epoch=58 step=35 avg_loss=0.6514
+2026-04-26 15:48:23 I tivit.train.loop: [train] epoch=58 step=40 avg_loss=0.6582
+2026-04-26 15:48:42 I tivit.train.loop: [train] epoch=58 step=45 avg_loss=0.6671
+2026-04-26 15:49:00 I tivit.train.loop: [train] epoch=58 step=50 avg_loss=0.6494
+2026-04-26 15:49:10 I tivit.train.loop: [train] epoch=58 metrics={'loss': 0.6504146816595545, 'pitch': 0.20602871800930994, 'onset': 0.25646100741512373, 'offset': 0.18792495651627486, 'hand': 0.0, 'clef': 0.0, 'total': 0.6504146816595545}
+2026-04-26 15:49:33 I tivit.train.loop: [eval] epoch=58 metrics={'loss': 0.44632774591445923, 'pitch': 0.17940832508934867, 'onset': 0.1383139987786611, 'offset': 0.1286054319805569, 'hand': 0.0, 'clef': 0.0, 'total': 0.44632774591445923}
+2026-04-26 15:49:33 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_58.pt
+2026-04-26 15:49:51 I tivit.train.loop: [train] epoch=59 step=5 avg_loss=0.6455
+2026-04-26 15:50:09 I tivit.train.loop: [train] epoch=59 step=10 avg_loss=0.6491
+2026-04-26 15:50:27 I tivit.train.loop: [train] epoch=59 step=15 avg_loss=0.6057
+2026-04-26 15:50:46 I tivit.train.loop: [train] epoch=59 step=20 avg_loss=0.6821
+2026-04-26 15:51:03 I tivit.train.loop: [train] epoch=59 step=25 avg_loss=0.6623
+2026-04-26 15:51:22 I tivit.train.loop: [train] epoch=59 step=30 avg_loss=0.6621
+2026-04-26 15:51:40 I tivit.train.loop: [train] epoch=59 step=35 avg_loss=0.6536
+2026-04-26 15:51:58 I tivit.train.loop: [train] epoch=59 step=40 avg_loss=0.6659
+2026-04-26 15:52:15 I tivit.train.loop: [train] epoch=59 step=45 avg_loss=0.6551
+2026-04-26 15:52:34 I tivit.train.loop: [train] epoch=59 step=50 avg_loss=0.6415
+2026-04-26 15:52:45 I tivit.train.loop: [train] epoch=59 metrics={'loss': 0.6398203817178618, 'pitch': 0.20684108503584592, 'onset': 0.2500764932834877, 'offset': 0.18290280733468398, 'hand': 0.0, 'clef': 0.0, 'total': 0.6398203817178618}
+2026-04-26 15:53:08 I tivit.train.loop: [eval] epoch=59 metrics={'loss': 0.4454248779349857, 'pitch': 0.17792375634113947, 'onset': 0.13737166093455422, 'offset': 0.13012945445047486, 'hand': 0.0, 'clef': 0.0, 'total': 0.4454248779349857}
+2026-04-26 15:53:08 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_59.pt
+2026-04-26 15:53:28 I tivit.train.loop: [train] epoch=60 step=5 avg_loss=0.9630
+2026-04-26 15:53:46 I tivit.train.loop: [train] epoch=60 step=10 avg_loss=0.7916
+2026-04-26 15:54:05 I tivit.train.loop: [train] epoch=60 step=15 avg_loss=0.7054
+2026-04-26 15:54:23 I tivit.train.loop: [train] epoch=60 step=20 avg_loss=0.6766
+2026-04-26 15:54:42 I tivit.train.loop: [train] epoch=60 step=25 avg_loss=0.6729
+2026-04-26 15:55:00 I tivit.train.loop: [train] epoch=60 step=30 avg_loss=0.6718
+2026-04-26 15:55:18 I tivit.train.loop: [train] epoch=60 step=35 avg_loss=0.6408
+2026-04-26 15:55:36 I tivit.train.loop: [train] epoch=60 step=40 avg_loss=0.6520
+2026-04-26 15:55:54 I tivit.train.loop: [train] epoch=60 step=45 avg_loss=0.6540
+2026-04-26 15:56:13 I tivit.train.loop: [train] epoch=60 step=50 avg_loss=0.6319
+2026-04-26 15:56:24 I tivit.train.loop: [train] epoch=60 metrics={'loss': 0.6273067992813183, 'pitch': 0.2048875316977501, 'onset': 0.2440316896393614, 'offset': 0.17838758497305637, 'hand': 0.0, 'clef': 0.0, 'total': 0.6273067992813183}
+2026-04-26 15:56:47 I tivit.train.loop: [eval] epoch=60 metrics={'loss': 0.4454006337457233, 'pitch': 0.18032714227835336, 'onset': 0.1350734738839997, 'offset': 0.13000002255042395, 'hand': 0.0, 'clef': 0.0, 'total': 0.4454006337457233}
+2026-04-26 15:56:47 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_60.pt
+2026-04-26 15:57:05 I tivit.train.loop: [train] epoch=61 step=5 avg_loss=0.5281
+2026-04-26 15:57:22 I tivit.train.loop: [train] epoch=61 step=10 avg_loss=0.5375
+2026-04-26 15:57:40 I tivit.train.loop: [train] epoch=61 step=15 avg_loss=0.5442
+2026-04-26 15:57:58 I tivit.train.loop: [train] epoch=61 step=20 avg_loss=0.5424
+2026-04-26 15:58:16 I tivit.train.loop: [train] epoch=61 step=25 avg_loss=0.5685
+2026-04-26 15:58:34 I tivit.train.loop: [train] epoch=61 step=30 avg_loss=0.5574
+2026-04-26 15:58:52 I tivit.train.loop: [train] epoch=61 step=35 avg_loss=0.5648
+2026-04-26 15:59:10 I tivit.train.loop: [train] epoch=61 step=40 avg_loss=0.5697
+2026-04-26 15:59:30 I tivit.train.loop: [train] epoch=61 step=45 avg_loss=0.5808
+2026-04-26 15:59:49 I tivit.train.loop: [train] epoch=61 step=50 avg_loss=0.5875
+2026-04-26 16:00:00 I tivit.train.loop: [train] epoch=61 metrics={'loss': 0.5949806874653079, 'pitch': 0.19705233483944298, 'onset': 0.22974201643242026, 'offset': 0.1681863397078694, 'hand': 0.0, 'clef': 0.0, 'total': 0.5949806874653079}
+2026-04-26 16:00:23 I tivit.train.loop: [eval] epoch=61 metrics={'loss': 0.44147875408331555, 'pitch': 0.17702492160929573, 'onset': 0.13502911892202166, 'offset': 0.12942471769120958, 'hand': 0.0, 'clef': 0.0, 'total': 0.44147875408331555}
+2026-04-26 16:00:23 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_61.pt
+2026-04-26 16:00:42 I tivit.train.loop: [train] epoch=62 step=5 avg_loss=0.6607
+2026-04-26 16:01:00 I tivit.train.loop: [train] epoch=62 step=10 avg_loss=0.6043
+2026-04-26 16:01:18 I tivit.train.loop: [train] epoch=62 step=15 avg_loss=0.5903
+2026-04-26 16:01:36 I tivit.train.loop: [train] epoch=62 step=20 avg_loss=0.5876
+2026-04-26 16:01:54 I tivit.train.loop: [train] epoch=62 step=25 avg_loss=0.5896
+2026-04-26 16:02:12 I tivit.train.loop: [train] epoch=62 step=30 avg_loss=0.5751
+2026-04-26 16:02:29 I tivit.train.loop: [train] epoch=62 step=35 avg_loss=0.5559
+2026-04-26 16:02:47 I tivit.train.loop: [train] epoch=62 step=40 avg_loss=0.5506
+2026-04-26 16:03:06 I tivit.train.loop: [train] epoch=62 step=45 avg_loss=0.5500
+2026-04-26 16:03:24 I tivit.train.loop: [train] epoch=62 step=50 avg_loss=0.5543
+2026-04-26 16:03:35 I tivit.train.loop: [train] epoch=62 metrics={'loss': 0.5625392856462946, 'pitch': 0.1992681325887734, 'onset': 0.21016161874780115, 'offset': 0.15310953395827762, 'hand': 0.0, 'clef': 0.0, 'total': 0.5625392856462946}
+2026-04-26 16:03:58 I tivit.train.loop: [eval] epoch=62 metrics={'loss': 0.44222276078330147, 'pitch': 0.17859863075945112, 'onset': 0.1334998549686538, 'offset': 0.1301242800222503, 'hand': 0.0, 'clef': 0.0, 'total': 0.44222276078330147}
+2026-04-26 16:03:58 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_62.pt
+2026-04-26 16:04:16 I tivit.train.loop: [train] epoch=63 step=5 avg_loss=0.6079
+2026-04-26 16:04:34 I tivit.train.loop: [train] epoch=63 step=10 avg_loss=0.6608
+2026-04-26 16:04:53 I tivit.train.loop: [train] epoch=63 step=15 avg_loss=0.6376
+2026-04-26 16:05:11 I tivit.train.loop: [train] epoch=63 step=20 avg_loss=0.6011
+2026-04-26 16:05:30 I tivit.train.loop: [train] epoch=63 step=25 avg_loss=0.5857
+2026-04-26 16:05:47 I tivit.train.loop: [train] epoch=63 step=30 avg_loss=0.5701
+2026-04-26 16:06:06 I tivit.train.loop: [train] epoch=63 step=35 avg_loss=0.5905
+2026-04-26 16:06:24 I tivit.train.loop: [train] epoch=63 step=40 avg_loss=0.6022
+2026-04-26 16:06:42 I tivit.train.loop: [train] epoch=63 step=45 avg_loss=0.5991
+2026-04-26 16:07:02 I tivit.train.loop: [train] epoch=63 step=50 avg_loss=0.6042
+2026-04-26 16:07:13 I tivit.train.loop: [train] epoch=63 metrics={'loss': 0.5998784292419002, 'pitch': 0.19166378184871855, 'onset': 0.23498184613461764, 'offset': 0.17323279971221708, 'hand': 0.0, 'clef': 0.0, 'total': 0.5998784292419002}
+2026-04-26 16:07:36 I tivit.train.loop: [eval] epoch=63 metrics={'loss': 0.43988098369704354, 'pitch': 0.17662152068482506, 'onset': 0.13493938164578545, 'offset': 0.1283200763993793, 'hand': 0.0, 'clef': 0.0, 'total': 0.43988098369704354}
+2026-04-26 16:07:36 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_63.pt
+2026-04-26 16:07:55 I tivit.train.loop: [train] epoch=64 step=5 avg_loss=0.5307
+2026-04-26 16:08:12 I tivit.train.loop: [train] epoch=64 step=10 avg_loss=0.5086
+2026-04-26 16:08:30 I tivit.train.loop: [train] epoch=64 step=15 avg_loss=0.5564
+2026-04-26 16:08:50 I tivit.train.loop: [train] epoch=64 step=20 avg_loss=0.6055
+2026-04-26 16:09:07 I tivit.train.loop: [train] epoch=64 step=25 avg_loss=0.5778
+2026-04-26 16:09:26 I tivit.train.loop: [train] epoch=64 step=30 avg_loss=0.5915
+2026-04-26 16:09:44 I tivit.train.loop: [train] epoch=64 step=35 avg_loss=0.6029
+2026-04-26 16:10:03 I tivit.train.loop: [train] epoch=64 step=40 avg_loss=0.6159
+2026-04-26 16:10:21 I tivit.train.loop: [train] epoch=64 step=45 avg_loss=0.6432
+2026-04-26 16:10:38 I tivit.train.loop: [train] epoch=64 step=50 avg_loss=0.6388
+2026-04-26 16:10:49 I tivit.train.loop: [train] epoch=64 metrics={'loss': 0.6351680705007517, 'pitch': 0.19982782962187282, 'onset': 0.2505955106385474, 'offset': 0.18474472960773505, 'hand': 0.0, 'clef': 0.0, 'total': 0.6351680705007517}
+2026-04-26 16:11:11 I tivit.train.loop: [eval] epoch=64 metrics={'loss': 0.43951699137687683, 'pitch': 0.17627763582600486, 'onset': 0.13419190049171448, 'offset': 0.12904745091994604, 'hand': 0.0, 'clef': 0.0, 'total': 0.43951699137687683}
+2026-04-26 16:11:11 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_64.pt
+2026-04-26 16:11:30 I tivit.train.loop: [train] epoch=65 step=5 avg_loss=0.6702
+2026-04-26 16:11:49 I tivit.train.loop: [train] epoch=65 step=10 avg_loss=0.7354
+2026-04-26 16:12:07 I tivit.train.loop: [train] epoch=65 step=15 avg_loss=0.6960
+2026-04-26 16:12:25 I tivit.train.loop: [train] epoch=65 step=20 avg_loss=0.6956
+2026-04-26 16:12:44 I tivit.train.loop: [train] epoch=65 step=25 avg_loss=0.6617
+2026-04-26 16:13:02 I tivit.train.loop: [train] epoch=65 step=30 avg_loss=0.6357
+2026-04-26 16:13:21 I tivit.train.loop: [train] epoch=65 step=35 avg_loss=0.6570
+2026-04-26 16:13:39 I tivit.train.loop: [train] epoch=65 step=40 avg_loss=0.6455
+2026-04-26 16:13:58 I tivit.train.loop: [train] epoch=65 step=45 avg_loss=0.6452
+2026-04-26 16:14:16 I tivit.train.loop: [train] epoch=65 step=50 avg_loss=0.6428
+2026-04-26 16:14:26 I tivit.train.loop: [train] epoch=65 metrics={'loss': 0.6435942357441164, 'pitch': 0.2055336485775012, 'onset': 0.25233021490978746, 'offset': 0.18573036705547907, 'hand': 0.0, 'clef': 0.0, 'total': 0.6435942357441164}
+2026-04-26 16:14:49 I tivit.train.loop: [eval] epoch=65 metrics={'loss': 0.4408675962024265, 'pitch': 0.17477142231331932, 'onset': 0.13642081121603647, 'offset': 0.12967536805404556, 'hand': 0.0, 'clef': 0.0, 'total': 0.4408675962024265}
+2026-04-26 16:14:49 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_65.pt
+2026-04-26 16:15:06 I tivit.train.loop: [train] epoch=66 step=5 avg_loss=0.6771
+2026-04-26 16:15:25 I tivit.train.loop: [train] epoch=66 step=10 avg_loss=0.6500
+2026-04-26 16:15:43 I tivit.train.loop: [train] epoch=66 step=15 avg_loss=0.6077
+2026-04-26 16:16:01 I tivit.train.loop: [train] epoch=66 step=20 avg_loss=0.5701
+2026-04-26 16:16:19 I tivit.train.loop: [train] epoch=66 step=25 avg_loss=0.5809
+2026-04-26 16:16:38 I tivit.train.loop: [train] epoch=66 step=30 avg_loss=0.5781
+2026-04-26 16:16:56 I tivit.train.loop: [train] epoch=66 step=35 avg_loss=0.5765
+2026-04-26 16:17:14 I tivit.train.loop: [train] epoch=66 step=40 avg_loss=0.5658
+2026-04-26 16:17:32 I tivit.train.loop: [train] epoch=66 step=45 avg_loss=0.5609
+2026-04-26 16:17:50 I tivit.train.loop: [train] epoch=66 step=50 avg_loss=0.5670
+2026-04-26 16:18:03 I tivit.train.loop: [train] epoch=66 metrics={'loss': 0.5645595417832429, 'pitch': 0.1939175547856205, 'onset': 0.21433176859369818, 'offset': 0.15631021671700027, 'hand': 0.0, 'clef': 0.0, 'total': 0.5645595417832429}
+2026-04-26 16:18:26 I tivit.train.loop: [eval] epoch=66 metrics={'loss': 0.4434893528620402, 'pitch': 0.18076470577054554, 'onset': 0.13311530070172417, 'offset': 0.12960934473408592, 'hand': 0.0, 'clef': 0.0, 'total': 0.4434893528620402}
+2026-04-26 16:18:26 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_66.pt
+2026-04-26 16:18:44 I tivit.train.loop: [train] epoch=67 step=5 avg_loss=0.5758
+2026-04-26 16:19:01 I tivit.train.loop: [train] epoch=67 step=10 avg_loss=0.6039
+2026-04-26 16:19:21 I tivit.train.loop: [train] epoch=67 step=15 avg_loss=0.6049
+2026-04-26 16:19:39 I tivit.train.loop: [train] epoch=67 step=20 avg_loss=0.5703
+2026-04-26 16:19:58 I tivit.train.loop: [train] epoch=67 step=25 avg_loss=0.6087
+2026-04-26 16:20:16 I tivit.train.loop: [train] epoch=67 step=30 avg_loss=0.6009
+2026-04-26 16:20:35 I tivit.train.loop: [train] epoch=67 step=35 avg_loss=0.6016
+2026-04-26 16:20:53 I tivit.train.loop: [train] epoch=67 step=40 avg_loss=0.6138
+2026-04-26 16:21:12 I tivit.train.loop: [train] epoch=67 step=45 avg_loss=0.6040
+2026-04-26 16:21:30 I tivit.train.loop: [train] epoch=67 step=50 avg_loss=0.6098
+2026-04-26 16:21:41 I tivit.train.loop: [train] epoch=67 metrics={'loss': 0.6072289021509998, 'pitch': 0.20154532776126322, 'onset': 0.2339193846257228, 'offset': 0.17176419616026697, 'hand': 0.0, 'clef': 0.0, 'total': 0.6072289021509998}
+2026-04-26 16:22:04 I tivit.train.loop: [eval] epoch=67 metrics={'loss': 0.43982810113165116, 'pitch': 0.17645560536119673, 'onset': 0.13341880258586672, 'offset': 0.12995370643006432, 'hand': 0.0, 'clef': 0.0, 'total': 0.43982810113165116}
+2026-04-26 16:22:04 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_67.pt
+2026-04-26 16:22:22 I tivit.train.loop: [train] epoch=68 step=5 avg_loss=0.5653
+2026-04-26 16:22:40 I tivit.train.loop: [train] epoch=68 step=10 avg_loss=0.5473
+2026-04-26 16:22:58 I tivit.train.loop: [train] epoch=68 step=15 avg_loss=0.6317
+2026-04-26 16:23:17 I tivit.train.loop: [train] epoch=68 step=20 avg_loss=0.5788
+2026-04-26 16:23:35 I tivit.train.loop: [train] epoch=68 step=25 avg_loss=0.5996
+2026-04-26 16:23:52 I tivit.train.loop: [train] epoch=68 step=30 avg_loss=0.5926
+2026-04-26 16:24:10 I tivit.train.loop: [train] epoch=68 step=35 avg_loss=0.6039
+2026-04-26 16:24:28 I tivit.train.loop: [train] epoch=68 step=40 avg_loss=0.6069
+2026-04-26 16:24:45 I tivit.train.loop: [train] epoch=68 step=45 avg_loss=0.5937
+2026-04-26 16:25:03 I tivit.train.loop: [train] epoch=68 step=50 avg_loss=0.5891
+2026-04-26 16:25:14 I tivit.train.loop: [train] epoch=68 metrics={'loss': 0.5897758254465068, 'pitch': 0.19402141840952747, 'onset': 0.22881722267506258, 'offset': 0.16693718309672373, 'hand': 0.0, 'clef': 0.0, 'total': 0.5897758254465068}
+2026-04-26 16:25:37 I tivit.train.loop: [eval] epoch=68 metrics={'loss': 0.43902621666590375, 'pitch': 0.17601968927515876, 'onset': 0.13333573275142246, 'offset': 0.12967080291774538, 'hand': 0.0, 'clef': 0.0, 'total': 0.43902621666590375}
+2026-04-26 16:25:37 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_68.pt
+2026-04-26 16:25:55 I tivit.train.loop: [train] epoch=69 step=5 avg_loss=0.7296
+2026-04-26 16:26:12 I tivit.train.loop: [train] epoch=69 step=10 avg_loss=0.6396
+2026-04-26 16:26:31 I tivit.train.loop: [train] epoch=69 step=15 avg_loss=0.6463
+2026-04-26 16:26:49 I tivit.train.loop: [train] epoch=69 step=20 avg_loss=0.6457
+2026-04-26 16:27:07 I tivit.train.loop: [train] epoch=69 step=25 avg_loss=0.6343
+2026-04-26 16:27:24 I tivit.train.loop: [train] epoch=69 step=30 avg_loss=0.6163
+2026-04-26 16:27:42 I tivit.train.loop: [train] epoch=69 step=35 avg_loss=0.6018
+2026-04-26 16:28:00 I tivit.train.loop: [train] epoch=69 step=40 avg_loss=0.6236
+2026-04-26 16:28:18 I tivit.train.loop: [train] epoch=69 step=45 avg_loss=0.6192
+2026-04-26 16:28:36 I tivit.train.loop: [train] epoch=69 step=50 avg_loss=0.6162
+2026-04-26 16:28:46 I tivit.train.loop: [train] epoch=69 metrics={'loss': 0.61088317126598, 'pitch': 0.19153322181049384, 'onset': 0.24171598817942277, 'offset': 0.17763396008115895, 'hand': 0.0, 'clef': 0.0, 'total': 0.61088317126598}
+2026-04-26 16:29:09 I tivit.train.loop: [eval] epoch=69 metrics={'loss': 0.4362737900680966, 'pitch': 0.1740980123480161, 'onset': 0.13377230862776437, 'offset': 0.1284034682644738, 'hand': 0.0, 'clef': 0.0, 'total': 0.4362737900680966}
+2026-04-26 16:29:09 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_69.pt
+2026-04-26 16:29:28 I tivit.train.loop: [train] epoch=70 step=5 avg_loss=0.5155
+2026-04-26 16:29:46 I tivit.train.loop: [train] epoch=70 step=10 avg_loss=0.5395
+2026-04-26 16:30:05 I tivit.train.loop: [train] epoch=70 step=15 avg_loss=0.5326
+2026-04-26 16:30:23 I tivit.train.loop: [train] epoch=70 step=20 avg_loss=0.6125
+2026-04-26 16:30:41 I tivit.train.loop: [train] epoch=70 step=25 avg_loss=0.6503
+2026-04-26 16:31:00 I tivit.train.loop: [train] epoch=70 step=30 avg_loss=0.6540
+2026-04-26 16:31:18 I tivit.train.loop: [train] epoch=70 step=35 avg_loss=0.6616
+2026-04-26 16:31:36 I tivit.train.loop: [train] epoch=70 step=40 avg_loss=0.6484
+2026-04-26 16:31:54 I tivit.train.loop: [train] epoch=70 step=45 avg_loss=0.6436
+2026-04-26 16:32:13 I tivit.train.loop: [train] epoch=70 step=50 avg_loss=0.6348
+2026-04-26 16:32:23 I tivit.train.loop: [train] epoch=70 metrics={'loss': 0.6340228667799032, 'pitch': 0.19160281304480895, 'onset': 0.25356310465425813, 'offset': 0.18885694711275822, 'hand': 0.0, 'clef': 0.0, 'total': 0.6340228667799032}
+2026-04-26 16:32:47 I tivit.train.loop: [eval] epoch=70 metrics={'loss': 0.43909983502493966, 'pitch': 0.1757098345292939, 'onset': 0.1349049707253774, 'offset': 0.12848503639300665, 'hand': 0.0, 'clef': 0.0, 'total': 0.43909983502493966}
+2026-04-26 16:32:47 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_70.pt
+2026-04-26 16:33:05 I tivit.train.loop: [train] epoch=71 step=5 avg_loss=0.6123
+2026-04-26 16:33:22 I tivit.train.loop: [train] epoch=71 step=10 avg_loss=0.5286
+2026-04-26 16:33:41 I tivit.train.loop: [train] epoch=71 step=15 avg_loss=0.5361
+2026-04-26 16:33:59 I tivit.train.loop: [train] epoch=71 step=20 avg_loss=0.5376
+2026-04-26 16:34:17 I tivit.train.loop: [train] epoch=71 step=25 avg_loss=0.5357
+2026-04-26 16:34:36 I tivit.train.loop: [train] epoch=71 step=30 avg_loss=0.5527
+2026-04-26 16:34:53 I tivit.train.loop: [train] epoch=71 step=35 avg_loss=0.5524
+2026-04-26 16:35:11 I tivit.train.loop: [train] epoch=71 step=40 avg_loss=0.5573
+2026-04-26 16:35:29 I tivit.train.loop: [train] epoch=71 step=45 avg_loss=0.5622
+2026-04-26 16:35:47 I tivit.train.loop: [train] epoch=71 step=50 avg_loss=0.5664
+2026-04-26 16:35:58 I tivit.train.loop: [train] epoch=71 metrics={'loss': 0.5720429915302204, 'pitch': 0.185014749332419, 'onset': 0.2237098491135633, 'offset': 0.16331839547404703, 'hand': 0.0, 'clef': 0.0, 'total': 0.5720429915302204}
+2026-04-26 16:36:21 I tivit.train.loop: [eval] epoch=71 metrics={'loss': 0.4374353273047341, 'pitch': 0.17430431644121805, 'onset': 0.13532092753383848, 'offset': 0.12781008415751988, 'hand': 0.0, 'clef': 0.0, 'total': 0.4374353273047341}
+2026-04-26 16:36:21 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_71.pt
+2026-04-26 16:36:41 I tivit.train.loop: [train] epoch=72 step=5 avg_loss=0.5265
+2026-04-26 16:36:59 I tivit.train.loop: [train] epoch=72 step=10 avg_loss=0.5397
+2026-04-26 16:37:17 I tivit.train.loop: [train] epoch=72 step=15 avg_loss=0.5514
+2026-04-26 16:37:36 I tivit.train.loop: [train] epoch=72 step=20 avg_loss=0.5885
+2026-04-26 16:37:56 I tivit.train.loop: [train] epoch=72 step=25 avg_loss=0.6069
+2026-04-26 16:38:14 I tivit.train.loop: [train] epoch=72 step=30 avg_loss=0.6176
+2026-04-26 16:38:32 I tivit.train.loop: [train] epoch=72 step=35 avg_loss=0.6396
+2026-04-26 16:38:51 I tivit.train.loop: [train] epoch=72 step=40 avg_loss=0.6432
+2026-04-26 16:39:10 I tivit.train.loop: [train] epoch=72 step=45 avg_loss=0.6500
+2026-04-26 16:39:27 I tivit.train.loop: [train] epoch=72 step=50 avg_loss=0.6547
+2026-04-26 16:39:38 I tivit.train.loop: [train] epoch=72 metrics={'loss': 0.6455509926912919, 'pitch': 0.20472070082740965, 'onset': 0.2539531713667906, 'offset': 0.18687712007536078, 'hand': 0.0, 'clef': 0.0, 'total': 0.6455509926912919}
+2026-04-26 16:40:01 I tivit.train.loop: [eval] epoch=72 metrics={'loss': 0.43883321351475185, 'pitch': 0.1746054407623079, 'onset': 0.13362114048666424, 'offset': 0.13060663061009514, 'hand': 0.0, 'clef': 0.0, 'total': 0.43883321351475185}
+2026-04-26 16:40:01 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_72.pt
+2026-04-26 16:40:20 I tivit.train.loop: [train] epoch=73 step=5 avg_loss=0.6444
+2026-04-26 16:40:38 I tivit.train.loop: [train] epoch=73 step=10 avg_loss=0.6046
+2026-04-26 16:40:56 I tivit.train.loop: [train] epoch=73 step=15 avg_loss=0.6167
+2026-04-26 16:41:15 I tivit.train.loop: [train] epoch=73 step=20 avg_loss=0.6050
+2026-04-26 16:41:33 I tivit.train.loop: [train] epoch=73 step=25 avg_loss=0.5978
+2026-04-26 16:41:52 I tivit.train.loop: [train] epoch=73 step=30 avg_loss=0.5907
+2026-04-26 16:42:10 I tivit.train.loop: [train] epoch=73 step=35 avg_loss=0.5919
+2026-04-26 16:42:28 I tivit.train.loop: [train] epoch=73 step=40 avg_loss=0.6010
+2026-04-26 16:42:46 I tivit.train.loop: [train] epoch=73 step=45 avg_loss=0.5942
+2026-04-26 16:43:04 I tivit.train.loop: [train] epoch=73 step=50 avg_loss=0.6018
+2026-04-26 16:43:14 I tivit.train.loop: [train] epoch=73 metrics={'loss': 0.5975379432147404, 'pitch': 0.18788623627064363, 'onset': 0.2360583317448508, 'offset': 0.1735933782919398, 'hand': 0.0, 'clef': 0.0, 'total': 0.5975379432147404}
+2026-04-26 16:43:37 I tivit.train.loop: [eval] epoch=73 metrics={'loss': 0.4379761417706807, 'pitch': 0.17535596672031614, 'onset': 0.13390889598263633, 'offset': 0.12871127823988596, 'hand': 0.0, 'clef': 0.0, 'total': 0.4379761417706807}
+2026-04-26 16:43:37 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_73.pt
+2026-04-26 16:43:56 I tivit.train.loop: [train] epoch=74 step=5 avg_loss=0.7278
+2026-04-26 16:44:15 I tivit.train.loop: [train] epoch=74 step=10 avg_loss=0.6063
+2026-04-26 16:44:33 I tivit.train.loop: [train] epoch=74 step=15 avg_loss=0.5779
+2026-04-26 16:44:51 I tivit.train.loop: [train] epoch=74 step=20 avg_loss=0.5561
+2026-04-26 16:45:09 I tivit.train.loop: [train] epoch=74 step=25 avg_loss=0.5640
+2026-04-26 16:45:28 I tivit.train.loop: [train] epoch=74 step=30 avg_loss=0.5644
+2026-04-26 16:45:45 I tivit.train.loop: [train] epoch=74 step=35 avg_loss=0.5503
+2026-04-26 16:46:03 I tivit.train.loop: [train] epoch=74 step=40 avg_loss=0.5483
+2026-04-26 16:46:22 I tivit.train.loop: [train] epoch=74 step=45 avg_loss=0.5520
+2026-04-26 16:46:40 I tivit.train.loop: [train] epoch=74 step=50 avg_loss=0.5511
+2026-04-26 16:46:52 I tivit.train.loop: [train] epoch=74 metrics={'loss': 0.5591847772868175, 'pitch': 0.18896825906803022, 'onset': 0.21416348661735374, 'offset': 0.1560530334289344, 'hand': 0.0, 'clef': 0.0, 'total': 0.5591847772868175}
+2026-04-26 16:47:15 I tivit.train.loop: [eval] epoch=74 metrics={'loss': 0.4375801980495453, 'pitch': 0.1765388548374176, 'onset': 0.13093561596340603, 'offset': 0.13010572435127365, 'hand': 0.0, 'clef': 0.0, 'total': 0.4375801980495453}
+2026-04-26 16:47:15 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_74.pt
+2026-04-26 16:47:33 I tivit.train.loop: [train] epoch=75 step=5 avg_loss=0.5470
+2026-04-26 16:47:51 I tivit.train.loop: [train] epoch=75 step=10 avg_loss=0.5455
+2026-04-26 16:48:09 I tivit.train.loop: [train] epoch=75 step=15 avg_loss=0.5613
+2026-04-26 16:48:26 I tivit.train.loop: [train] epoch=75 step=20 avg_loss=0.5789
+2026-04-26 16:48:44 I tivit.train.loop: [train] epoch=75 step=25 avg_loss=0.5999
+2026-04-26 16:49:01 I tivit.train.loop: [train] epoch=75 step=30 avg_loss=0.6040
+2026-04-26 16:49:20 I tivit.train.loop: [train] epoch=75 step=35 avg_loss=0.6368
+2026-04-26 16:49:39 I tivit.train.loop: [train] epoch=75 step=40 avg_loss=0.6273
+2026-04-26 16:49:57 I tivit.train.loop: [train] epoch=75 step=45 avg_loss=0.6205
+2026-04-26 16:50:14 I tivit.train.loop: [train] epoch=75 step=50 avg_loss=0.6184
+2026-04-26 16:50:25 I tivit.train.loop: [train] epoch=75 metrics={'loss': 0.6186607018956598, 'pitch': 0.193038246963384, 'onset': 0.2455197255004127, 'offset': 0.18010272915070913, 'hand': 0.0, 'clef': 0.0, 'total': 0.6186607018956598}
+2026-04-26 16:50:48 I tivit.train.loop: [eval] epoch=75 metrics={'loss': 0.43912888401084477, 'pitch': 0.17473077028989792, 'onset': 0.13484648201200697, 'offset': 0.1295516404012839, 'hand': 0.0, 'clef': 0.0, 'total': 0.43912888401084477}
+2026-04-26 16:50:48 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_75.pt
+2026-04-26 16:51:06 I tivit.train.loop: [train] epoch=76 step=5 avg_loss=0.8100
+2026-04-26 16:51:24 I tivit.train.loop: [train] epoch=76 step=10 avg_loss=0.6627
+2026-04-26 16:51:41 I tivit.train.loop: [train] epoch=76 step=15 avg_loss=0.6047
+2026-04-26 16:51:59 I tivit.train.loop: [train] epoch=76 step=20 avg_loss=0.5695
+2026-04-26 16:52:17 I tivit.train.loop: [train] epoch=76 step=25 avg_loss=0.5576
+2026-04-26 16:52:35 I tivit.train.loop: [train] epoch=76 step=30 avg_loss=0.5796
+2026-04-26 16:52:54 I tivit.train.loop: [train] epoch=76 step=35 avg_loss=0.5959
+2026-04-26 16:53:11 I tivit.train.loop: [train] epoch=76 step=40 avg_loss=0.5998
+2026-04-26 16:53:29 I tivit.train.loop: [train] epoch=76 step=45 avg_loss=0.6050
+2026-04-26 16:53:47 I tivit.train.loop: [train] epoch=76 step=50 avg_loss=0.6042
+2026-04-26 16:53:59 I tivit.train.loop: [train] epoch=76 metrics={'loss': 0.6053911672448212, 'pitch': 0.1889958551750993, 'onset': 0.24027509903008082, 'offset': 0.17612021135271722, 'hand': 0.0, 'clef': 0.0, 'total': 0.6053911672448212}
+2026-04-26 16:54:21 I tivit.train.loop: [eval] epoch=76 metrics={'loss': 0.4418663332859675, 'pitch': 0.17528821776310602, 'onset': 0.13636591285467148, 'offset': 0.1302122034960323, 'hand': 0.0, 'clef': 0.0, 'total': 0.4418663332859675}
+2026-04-26 16:54:21 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_76.pt
+2026-04-26 16:54:39 I tivit.train.loop: [train] epoch=77 step=5 avg_loss=0.5240
+2026-04-26 16:54:59 I tivit.train.loop: [train] epoch=77 step=10 avg_loss=0.5423
+2026-04-26 16:55:18 I tivit.train.loop: [train] epoch=77 step=15 avg_loss=0.5285
+2026-04-26 16:55:36 I tivit.train.loop: [train] epoch=77 step=20 avg_loss=0.5603
+2026-04-26 16:55:54 I tivit.train.loop: [train] epoch=77 step=25 avg_loss=0.5743
+2026-04-26 16:56:13 I tivit.train.loop: [train] epoch=77 step=30 avg_loss=0.5455
+2026-04-26 16:56:32 I tivit.train.loop: [train] epoch=77 step=35 avg_loss=0.5532
+2026-04-26 16:56:50 I tivit.train.loop: [train] epoch=77 step=40 avg_loss=0.5659
+2026-04-26 16:57:10 I tivit.train.loop: [train] epoch=77 step=45 avg_loss=0.5718
+2026-04-26 16:57:28 I tivit.train.loop: [train] epoch=77 step=50 avg_loss=0.5690
+2026-04-26 16:57:39 I tivit.train.loop: [train] epoch=77 metrics={'loss': 0.5656995880153944, 'pitch': 0.18518679729610119, 'onset': 0.21908757638818813, 'offset': 0.1614252173535104, 'hand': 0.0, 'clef': 0.0, 'total': 0.5656995880153944}
+2026-04-26 16:58:02 I tivit.train.loop: [eval] epoch=77 metrics={'loss': 0.4362991220421261, 'pitch': 0.17389159980747435, 'onset': 0.13406499392456478, 'offset': 0.12834252251519096, 'hand': 0.0, 'clef': 0.0, 'total': 0.4362991220421261}
+2026-04-26 16:58:02 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_77.pt
+2026-04-26 16:58:20 I tivit.train.loop: [train] epoch=78 step=5 avg_loss=0.7207
+2026-04-26 16:58:39 I tivit.train.loop: [train] epoch=78 step=10 avg_loss=0.6044
+2026-04-26 16:58:57 I tivit.train.loop: [train] epoch=78 step=15 avg_loss=0.5795
+2026-04-26 16:59:16 I tivit.train.loop: [train] epoch=78 step=20 avg_loss=0.5933
+2026-04-26 16:59:33 I tivit.train.loop: [train] epoch=78 step=25 avg_loss=0.5918
+2026-04-26 16:59:51 I tivit.train.loop: [train] epoch=78 step=30 avg_loss=0.5950
+2026-04-26 17:00:11 I tivit.train.loop: [train] epoch=78 step=35 avg_loss=0.5976
+2026-04-26 17:00:28 I tivit.train.loop: [train] epoch=78 step=40 avg_loss=0.5961
+2026-04-26 17:00:46 I tivit.train.loop: [train] epoch=78 step=45 avg_loss=0.5978
+2026-04-26 17:01:05 I tivit.train.loop: [train] epoch=78 step=50 avg_loss=0.6013
+2026-04-26 17:01:16 I tivit.train.loop: [train] epoch=78 metrics={'loss': 0.596978375934205, 'pitch': 0.19421022989839878, 'onset': 0.23228186101845974, 'offset': 0.17048628487676945, 'hand': 0.0, 'clef': 0.0, 'total': 0.596978375934205}
+2026-04-26 17:01:39 I tivit.train.loop: [eval] epoch=78 metrics={'loss': 0.43718358874320984, 'pitch': 0.1734980915983518, 'onset': 0.13402743389209112, 'offset': 0.12965806325276694, 'hand': 0.0, 'clef': 0.0, 'total': 0.43718358874320984}
+2026-04-26 17:01:39 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_78.pt
+2026-04-26 17:01:56 I tivit.train.loop: [train] epoch=79 step=5 avg_loss=0.6431
+2026-04-26 17:02:14 I tivit.train.loop: [train] epoch=79 step=10 avg_loss=0.6065
+2026-04-26 17:02:32 I tivit.train.loop: [train] epoch=79 step=15 avg_loss=0.6013
+2026-04-26 17:02:49 I tivit.train.loop: [train] epoch=79 step=20 avg_loss=0.6017
+2026-04-26 17:03:07 I tivit.train.loop: [train] epoch=79 step=25 avg_loss=0.6107
+2026-04-26 17:03:25 I tivit.train.loop: [train] epoch=79 step=30 avg_loss=0.5886
+2026-04-26 17:03:42 I tivit.train.loop: [train] epoch=79 step=35 avg_loss=0.6107
+2026-04-26 17:04:00 I tivit.train.loop: [train] epoch=79 step=40 avg_loss=0.6100
+2026-04-26 17:04:17 I tivit.train.loop: [train] epoch=79 step=45 avg_loss=0.6203
+2026-04-26 17:04:35 I tivit.train.loop: [train] epoch=79 step=50 avg_loss=0.6254
+2026-04-26 17:04:46 I tivit.train.loop: [train] epoch=79 metrics={'loss': 0.6193786724558417, 'pitch': 0.19572517388271835, 'onset': 0.24502782270593462, 'offset': 0.17862567403968774, 'hand': 0.0, 'clef': 0.0, 'total': 0.6193786724558417}
+2026-04-26 17:05:08 I tivit.train.loop: [eval] epoch=79 metrics={'loss': 0.43727024065123665, 'pitch': 0.17547237790293163, 'onset': 0.13345103296968672, 'offset': 0.12834682688117027, 'hand': 0.0, 'clef': 0.0, 'total': 0.43727024065123665}
+2026-04-26 17:05:08 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_79.pt
+2026-04-26 17:05:27 I tivit.train.loop: [train] epoch=80 step=5 avg_loss=0.5988
+2026-04-26 17:05:45 I tivit.train.loop: [train] epoch=80 step=10 avg_loss=0.6117
+2026-04-26 17:06:03 I tivit.train.loop: [train] epoch=80 step=15 avg_loss=0.6217
+2026-04-26 17:06:20 I tivit.train.loop: [train] epoch=80 step=20 avg_loss=0.5802
+2026-04-26 17:06:38 I tivit.train.loop: [train] epoch=80 step=25 avg_loss=0.5795
+2026-04-26 17:06:57 I tivit.train.loop: [train] epoch=80 step=30 avg_loss=0.5686
+2026-04-26 17:07:15 I tivit.train.loop: [train] epoch=80 step=35 avg_loss=0.5834
+2026-04-26 17:07:33 I tivit.train.loop: [train] epoch=80 step=40 avg_loss=0.5887
+2026-04-26 17:07:51 I tivit.train.loop: [train] epoch=80 step=45 avg_loss=0.5832
+2026-04-26 17:08:09 I tivit.train.loop: [train] epoch=80 step=50 avg_loss=0.5874
+2026-04-26 17:08:20 I tivit.train.loop: [train] epoch=80 metrics={'loss': 0.5936713511089109, 'pitch': 0.19796587568971347, 'onset': 0.22822918363337247, 'offset': 0.1674762936133259, 'hand': 0.0, 'clef': 0.0, 'total': 0.5936713511089109}
+2026-04-26 17:08:42 I tivit.train.loop: [eval] epoch=80 metrics={'loss': 0.4393663936191135, 'pitch': 0.17541595631175572, 'onset': 0.13447855164607367, 'offset': 0.12947187821070352, 'hand': 0.0, 'clef': 0.0, 'total': 0.4393663936191135}
+2026-04-26 17:08:43 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_80.pt
+2026-04-26 17:09:00 I tivit.train.loop: [train] epoch=81 step=5 avg_loss=0.6056
+2026-04-26 17:09:20 I tivit.train.loop: [train] epoch=81 step=10 avg_loss=0.5947
+2026-04-26 17:09:38 I tivit.train.loop: [train] epoch=81 step=15 avg_loss=0.5818
+2026-04-26 17:09:55 I tivit.train.loop: [train] epoch=81 step=20 avg_loss=0.5790
+2026-04-26 17:10:12 I tivit.train.loop: [train] epoch=81 step=25 avg_loss=0.5720
+2026-04-26 17:10:29 I tivit.train.loop: [train] epoch=81 step=30 avg_loss=0.5883
+2026-04-26 17:10:47 I tivit.train.loop: [train] epoch=81 step=35 avg_loss=0.5824
+2026-04-26 17:11:07 I tivit.train.loop: [train] epoch=81 step=40 avg_loss=0.5903
+2026-04-26 17:11:26 I tivit.train.loop: [train] epoch=81 step=45 avg_loss=0.5905
+2026-04-26 17:11:43 I tivit.train.loop: [train] epoch=81 step=50 avg_loss=0.6097
+2026-04-26 17:11:54 I tivit.train.loop: [train] epoch=81 metrics={'loss': 0.6054798640170187, 'pitch': 0.1937234345472084, 'onset': 0.2378251372643237, 'offset': 0.1739312967039504, 'hand': 0.0, 'clef': 0.0, 'total': 0.6054798640170187}
+2026-04-26 17:12:17 I tivit.train.loop: [eval] epoch=81 metrics={'loss': 0.43612880342536503, 'pitch': 0.17316915757126278, 'onset': 0.13345648927821052, 'offset': 0.12950315533412826, 'hand': 0.0, 'clef': 0.0, 'total': 0.43612880342536503}
+2026-04-26 17:12:17 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_81.pt
+2026-04-26 17:12:35 I tivit.train.loop: [train] epoch=82 step=5 avg_loss=0.4571
+2026-04-26 17:12:52 I tivit.train.loop: [train] epoch=82 step=10 avg_loss=0.5293
+2026-04-26 17:13:11 I tivit.train.loop: [train] epoch=82 step=15 avg_loss=0.5064
+2026-04-26 17:13:29 I tivit.train.loop: [train] epoch=82 step=20 avg_loss=0.5027
+2026-04-26 17:13:48 I tivit.train.loop: [train] epoch=82 step=25 avg_loss=0.5547
+2026-04-26 17:14:06 I tivit.train.loop: [train] epoch=82 step=30 avg_loss=0.5570
+2026-04-26 17:14:24 I tivit.train.loop: [train] epoch=82 step=35 avg_loss=0.5522
+2026-04-26 17:14:42 I tivit.train.loop: [train] epoch=82 step=40 avg_loss=0.5519
+2026-04-26 17:15:00 I tivit.train.loop: [train] epoch=82 step=45 avg_loss=0.5487
+2026-04-26 17:15:18 I tivit.train.loop: [train] epoch=82 step=50 avg_loss=0.5500
+2026-04-26 17:15:28 I tivit.train.loop: [train] epoch=82 metrics={'loss': 0.553259476738156, 'pitch': 0.17773087870962215, 'onset': 0.21666842867743294, 'offset': 0.15886016583667611, 'hand': 0.0, 'clef': 0.0, 'total': 0.553259476738156}
+2026-04-26 17:15:51 I tivit.train.loop: [eval] epoch=82 metrics={'loss': 0.43856870465808445, 'pitch': 0.1755246106121275, 'onset': 0.1343210306432512, 'offset': 0.12872305926349428, 'hand': 0.0, 'clef': 0.0, 'total': 0.43856870465808445}
+2026-04-26 17:15:51 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_82.pt
+2026-04-26 17:16:10 I tivit.train.loop: [train] epoch=83 step=5 avg_loss=0.7642
+2026-04-26 17:16:28 I tivit.train.loop: [train] epoch=83 step=10 avg_loss=0.6644
+2026-04-26 17:16:46 I tivit.train.loop: [train] epoch=83 step=15 avg_loss=0.7017
+2026-04-26 17:17:05 I tivit.train.loop: [train] epoch=83 step=20 avg_loss=0.6547
+2026-04-26 17:17:23 I tivit.train.loop: [train] epoch=83 step=25 avg_loss=0.6638
+2026-04-26 17:17:41 I tivit.train.loop: [train] epoch=83 step=30 avg_loss=0.6526
+2026-04-26 17:17:59 I tivit.train.loop: [train] epoch=83 step=35 avg_loss=0.6393
+2026-04-26 17:18:16 I tivit.train.loop: [train] epoch=83 step=40 avg_loss=0.6316
+2026-04-26 17:18:34 I tivit.train.loop: [train] epoch=83 step=45 avg_loss=0.6363
+2026-04-26 17:18:53 I tivit.train.loop: [train] epoch=83 step=50 avg_loss=0.6313
+2026-04-26 17:19:04 I tivit.train.loop: [train] epoch=83 metrics={'loss': 0.6215034712035701, 'pitch': 0.20257923400626993, 'onset': 0.2409876527370147, 'offset': 0.17793658909932622, 'hand': 0.0, 'clef': 0.0, 'total': 0.6215034712035701}
+2026-04-26 17:19:27 I tivit.train.loop: [eval] epoch=83 metrics={'loss': 0.43834120366308427, 'pitch': 0.17435166239738464, 'onset': 0.135087788105011, 'offset': 0.12890174984931946, 'hand': 0.0, 'clef': 0.0, 'total': 0.43834120366308427}
+2026-04-26 17:19:27 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_83.pt
+2026-04-26 17:19:45 I tivit.train.loop: [train] epoch=84 step=5 avg_loss=0.5447
+2026-04-26 17:20:03 I tivit.train.loop: [train] epoch=84 step=10 avg_loss=0.5674
+2026-04-26 17:20:21 I tivit.train.loop: [train] epoch=84 step=15 avg_loss=0.5904
+2026-04-26 17:20:39 I tivit.train.loop: [train] epoch=84 step=20 avg_loss=0.5913
+2026-04-26 17:20:57 I tivit.train.loop: [train] epoch=84 step=25 avg_loss=0.5991
+2026-04-26 17:21:16 I tivit.train.loop: [train] epoch=84 step=30 avg_loss=0.5960
+2026-04-26 17:21:33 I tivit.train.loop: [train] epoch=84 step=35 avg_loss=0.5775
+2026-04-26 17:21:51 I tivit.train.loop: [train] epoch=84 step=40 avg_loss=0.5714
+2026-04-26 17:22:09 I tivit.train.loop: [train] epoch=84 step=45 avg_loss=0.5930
+2026-04-26 17:22:27 I tivit.train.loop: [train] epoch=84 step=50 avg_loss=0.5790
+2026-04-26 17:22:38 I tivit.train.loop: [train] epoch=84 metrics={'loss': 0.5769167725207671, 'pitch': 0.18766390152697293, 'onset': 0.22457761106626042, 'offset': 0.1646752598572452, 'hand': 0.0, 'clef': 0.0, 'total': 0.5769167725207671}
+2026-04-26 17:23:00 I tivit.train.loop: [eval] epoch=84 metrics={'loss': 0.4373299280802409, 'pitch': 0.1731952064567142, 'onset': 0.1341561252872149, 'offset': 0.12997860295905006, 'hand': 0.0, 'clef': 0.0, 'total': 0.4373299280802409}
+2026-04-26 17:23:00 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_84.pt
+2026-04-26 17:23:18 I tivit.train.loop: [train] epoch=85 step=5 avg_loss=0.6935
+2026-04-26 17:23:37 I tivit.train.loop: [train] epoch=85 step=10 avg_loss=0.6348
+2026-04-26 17:23:55 I tivit.train.loop: [train] epoch=85 step=15 avg_loss=0.6070
+2026-04-26 17:24:13 I tivit.train.loop: [train] epoch=85 step=20 avg_loss=0.6004
+2026-04-26 17:24:30 I tivit.train.loop: [train] epoch=85 step=25 avg_loss=0.5926
+2026-04-26 17:24:49 I tivit.train.loop: [train] epoch=85 step=30 avg_loss=0.6067
+2026-04-26 17:25:07 I tivit.train.loop: [train] epoch=85 step=35 avg_loss=0.6278
+2026-04-26 17:25:25 I tivit.train.loop: [train] epoch=85 step=40 avg_loss=0.6381
+2026-04-26 17:25:43 I tivit.train.loop: [train] epoch=85 step=45 avg_loss=0.6449
+2026-04-26 17:26:01 I tivit.train.loop: [train] epoch=85 step=50 avg_loss=0.6754
+2026-04-26 17:26:11 I tivit.train.loop: [train] epoch=85 metrics={'loss': 0.6763546849196812, 'pitch': 0.20606831278441087, 'onset': 0.27062361729594897, 'offset': 0.1996627559639373, 'hand': 0.0, 'clef': 0.0, 'total': 0.6763546849196812}
+2026-04-26 17:26:34 I tivit.train.loop: [eval] epoch=85 metrics={'loss': 0.440314918756485, 'pitch': 0.17266791893376243, 'onset': 0.13695723646216923, 'offset': 0.13068976418839562, 'hand': 0.0, 'clef': 0.0, 'total': 0.440314918756485}
+2026-04-26 17:26:34 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_85.pt
+2026-04-26 17:26:52 I tivit.train.loop: [train] epoch=86 step=5 avg_loss=0.6716
+2026-04-26 17:27:09 I tivit.train.loop: [train] epoch=86 step=10 avg_loss=0.5983
+2026-04-26 17:27:26 I tivit.train.loop: [train] epoch=86 step=15 avg_loss=0.6175
+2026-04-26 17:27:44 I tivit.train.loop: [train] epoch=86 step=20 avg_loss=0.7028
+2026-04-26 17:28:03 I tivit.train.loop: [train] epoch=86 step=25 avg_loss=0.6839
+2026-04-26 17:28:22 I tivit.train.loop: [train] epoch=86 step=30 avg_loss=0.6572
+2026-04-26 17:28:40 I tivit.train.loop: [train] epoch=86 step=35 avg_loss=0.6512
+2026-04-26 17:28:57 I tivit.train.loop: [train] epoch=86 step=40 avg_loss=0.6365
+2026-04-26 17:29:15 I tivit.train.loop: [train] epoch=86 step=45 avg_loss=0.6212
+2026-04-26 17:29:33 I tivit.train.loop: [train] epoch=86 step=50 avg_loss=0.6109
+2026-04-26 17:29:44 I tivit.train.loop: [train] epoch=86 metrics={'loss': 0.6095838400552858, 'pitch': 0.19662116313318037, 'onset': 0.23811392570441625, 'offset': 0.174848754029229, 'hand': 0.0, 'clef': 0.0, 'total': 0.6095838400552858}
+2026-04-26 17:30:07 I tivit.train.loop: [eval] epoch=86 metrics={'loss': 0.43838881618446773, 'pitch': 0.17365184095170763, 'onset': 0.13565034170945486, 'offset': 0.12908663062585723, 'hand': 0.0, 'clef': 0.0, 'total': 0.43838881618446773}
+2026-04-26 17:30:07 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_86.pt
+2026-04-26 17:30:24 I tivit.train.loop: [train] epoch=87 step=5 avg_loss=0.8251
+2026-04-26 17:30:42 I tivit.train.loop: [train] epoch=87 step=10 avg_loss=0.7193
+2026-04-26 17:30:59 I tivit.train.loop: [train] epoch=87 step=15 avg_loss=0.6668
+2026-04-26 17:31:17 I tivit.train.loop: [train] epoch=87 step=20 avg_loss=0.6602
+2026-04-26 17:31:36 I tivit.train.loop: [train] epoch=87 step=25 avg_loss=0.6288
+2026-04-26 17:31:53 I tivit.train.loop: [train] epoch=87 step=30 avg_loss=0.6176
+2026-04-26 17:32:10 I tivit.train.loop: [train] epoch=87 step=35 avg_loss=0.6054
+2026-04-26 17:32:30 I tivit.train.loop: [train] epoch=87 step=40 avg_loss=0.6022
+2026-04-26 17:32:47 I tivit.train.loop: [train] epoch=87 step=45 avg_loss=0.6027
+2026-04-26 17:33:05 I tivit.train.loop: [train] epoch=87 step=50 avg_loss=0.5955
+2026-04-26 17:33:16 I tivit.train.loop: [train] epoch=87 metrics={'loss': 0.5939759583968036, 'pitch': 0.19316329807043076, 'onset': 0.23111909164010352, 'offset': 0.16969357220069417, 'hand': 0.0, 'clef': 0.0, 'total': 0.5939759583968036}
+2026-04-26 17:33:39 I tivit.train.loop: [eval] epoch=87 metrics={'loss': 0.4344535966714223, 'pitch': 0.17229964418543708, 'onset': 0.13438369830449423, 'offset': 0.1277702475587527, 'hand': 0.0, 'clef': 0.0, 'total': 0.4344535966714223}
+2026-04-26 17:33:39 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_87.pt
+2026-04-26 17:33:57 I tivit.train.loop: [train] epoch=88 step=5 avg_loss=0.6053
+2026-04-26 17:34:15 I tivit.train.loop: [train] epoch=88 step=10 avg_loss=0.6158
+2026-04-26 17:34:32 I tivit.train.loop: [train] epoch=88 step=15 avg_loss=0.5704
+2026-04-26 17:34:50 I tivit.train.loop: [train] epoch=88 step=20 avg_loss=0.5572
+2026-04-26 17:35:09 I tivit.train.loop: [train] epoch=88 step=25 avg_loss=0.5887
+2026-04-26 17:35:27 I tivit.train.loop: [train] epoch=88 step=30 avg_loss=0.5970
+2026-04-26 17:35:46 I tivit.train.loop: [train] epoch=88 step=35 avg_loss=0.5951
+2026-04-26 17:36:03 I tivit.train.loop: [train] epoch=88 step=40 avg_loss=0.5953
+2026-04-26 17:36:21 I tivit.train.loop: [train] epoch=88 step=45 avg_loss=0.6105
+2026-04-26 17:36:39 I tivit.train.loop: [train] epoch=88 step=50 avg_loss=0.6033
+2026-04-26 17:36:51 I tivit.train.loop: [train] epoch=88 metrics={'loss': 0.604265848983009, 'pitch': 0.18491388070133497, 'onset': 0.24161422646270608, 'offset': 0.1777377408349289, 'hand': 0.0, 'clef': 0.0, 'total': 0.604265848983009}
+2026-04-26 17:37:14 I tivit.train.loop: [eval] epoch=88 metrics={'loss': 0.439370463291804, 'pitch': 0.1718802112672064, 'onset': 0.13657972630527285, 'offset': 0.13091052654716703, 'hand': 0.0, 'clef': 0.0, 'total': 0.439370463291804}
+2026-04-26 17:37:14 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_88.pt
+2026-04-26 17:37:32 I tivit.train.loop: [train] epoch=89 step=5 avg_loss=0.5063
+2026-04-26 17:37:51 I tivit.train.loop: [train] epoch=89 step=10 avg_loss=0.5572
+2026-04-26 17:38:07 I tivit.train.loop: [train] epoch=89 step=15 avg_loss=0.5609
+2026-04-26 17:38:26 I tivit.train.loop: [train] epoch=89 step=20 avg_loss=0.6152
+2026-04-26 17:38:44 I tivit.train.loop: [train] epoch=89 step=25 avg_loss=0.5958
+2026-04-26 17:39:02 I tivit.train.loop: [train] epoch=89 step=30 avg_loss=0.6005
+2026-04-26 17:39:20 I tivit.train.loop: [train] epoch=89 step=35 avg_loss=0.6097
+2026-04-26 17:39:38 I tivit.train.loop: [train] epoch=89 step=40 avg_loss=0.6176
+2026-04-26 17:39:56 I tivit.train.loop: [train] epoch=89 step=45 avg_loss=0.6097
+2026-04-26 17:40:15 I tivit.train.loop: [train] epoch=89 step=50 avg_loss=0.6120
+2026-04-26 17:40:27 I tivit.train.loop: [train] epoch=89 metrics={'loss': 0.6064359765007811, 'pitch': 0.19246869000061503, 'onset': 0.23876108791468278, 'offset': 0.17520620266221604, 'hand': 0.0, 'clef': 0.0, 'total': 0.6064359765007811}
+2026-04-26 17:40:50 I tivit.train.loop: [eval] epoch=89 metrics={'loss': 0.43720464573966134, 'pitch': 0.17357161889473596, 'onset': 0.13463243428203794, 'offset': 0.1290005933907297, 'hand': 0.0, 'clef': 0.0, 'total': 0.43720464573966134}
+2026-04-26 17:40:50 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_89.pt
+2026-04-26 17:41:08 I tivit.train.loop: [train] epoch=90 step=5 avg_loss=0.7536
+2026-04-26 17:41:26 I tivit.train.loop: [train] epoch=90 step=10 avg_loss=0.7709
+2026-04-26 17:41:45 I tivit.train.loop: [train] epoch=90 step=15 avg_loss=0.6885
+2026-04-26 17:42:03 I tivit.train.loop: [train] epoch=90 step=20 avg_loss=0.6670
+2026-04-26 17:42:21 I tivit.train.loop: [train] epoch=90 step=25 avg_loss=0.6795
+2026-04-26 17:42:40 I tivit.train.loop: [train] epoch=90 step=30 avg_loss=0.6688
+2026-04-26 17:42:58 I tivit.train.loop: [train] epoch=90 step=35 avg_loss=0.6968
+2026-04-26 17:43:17 I tivit.train.loop: [train] epoch=90 step=40 avg_loss=0.6600
+2026-04-26 17:43:35 I tivit.train.loop: [train] epoch=90 step=45 avg_loss=0.6474
+2026-04-26 17:43:53 I tivit.train.loop: [train] epoch=90 step=50 avg_loss=0.6476
+2026-04-26 17:44:04 I tivit.train.loop: [train] epoch=90 metrics={'loss': 0.642964522512454, 'pitch': 0.1893220141811191, 'onset': 0.26074554925819615, 'offset': 0.19289695443409793, 'hand': 0.0, 'clef': 0.0, 'total': 0.642964522512454}
+2026-04-26 17:44:26 I tivit.train.loop: [eval] epoch=90 metrics={'loss': 0.4331345773405499, 'pitch': 0.1707241940829489, 'onset': 0.1352159215344323, 'offset': 0.127194465448459, 'hand': 0.0, 'clef': 0.0, 'total': 0.4331345773405499}
+2026-04-26 17:44:26 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_90.pt
+2026-04-26 17:44:44 I tivit.train.loop: [train] epoch=91 step=5 avg_loss=0.6681
+2026-04-26 17:45:03 I tivit.train.loop: [train] epoch=91 step=10 avg_loss=0.6021
+2026-04-26 17:45:21 I tivit.train.loop: [train] epoch=91 step=15 avg_loss=0.6195
+2026-04-26 17:45:39 I tivit.train.loop: [train] epoch=91 step=20 avg_loss=0.6046
+2026-04-26 17:45:57 I tivit.train.loop: [train] epoch=91 step=25 avg_loss=0.5913
+2026-04-26 17:46:16 I tivit.train.loop: [train] epoch=91 step=30 avg_loss=0.5943
+2026-04-26 17:46:34 I tivit.train.loop: [train] epoch=91 step=35 avg_loss=0.5871
+2026-04-26 17:46:52 I tivit.train.loop: [train] epoch=91 step=40 avg_loss=0.5960
+2026-04-26 17:47:10 I tivit.train.loop: [train] epoch=91 step=45 avg_loss=0.6034
+2026-04-26 17:47:28 I tivit.train.loop: [train] epoch=91 step=50 avg_loss=0.5926
+2026-04-26 17:47:39 I tivit.train.loop: [train] epoch=91 metrics={'loss': 0.5899373039884387, 'pitch': 0.19130717175749112, 'onset': 0.22985467708335733, 'offset': 0.16877545514759026, 'hand': 0.0, 'clef': 0.0, 'total': 0.5899373039884387}
+2026-04-26 17:48:02 I tivit.train.loop: [eval] epoch=91 metrics={'loss': 0.4353161156177521, 'pitch': 0.17242524358961317, 'onset': 0.13483777973386976, 'offset': 0.12805309974484974, 'hand': 0.0, 'clef': 0.0, 'total': 0.4353161156177521}
+2026-04-26 17:48:02 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_91.pt
+2026-04-26 17:48:20 I tivit.train.loop: [train] epoch=92 step=5 avg_loss=0.5268
+2026-04-26 17:48:38 I tivit.train.loop: [train] epoch=92 step=10 avg_loss=0.5012
+2026-04-26 17:48:55 I tivit.train.loop: [train] epoch=92 step=15 avg_loss=0.5298
+2026-04-26 17:49:14 I tivit.train.loop: [train] epoch=92 step=20 avg_loss=0.5803
+2026-04-26 17:49:33 I tivit.train.loop: [train] epoch=92 step=25 avg_loss=0.5711
+2026-04-26 17:49:51 I tivit.train.loop: [train] epoch=92 step=30 avg_loss=0.5640
+2026-04-26 17:50:10 I tivit.train.loop: [train] epoch=92 step=35 avg_loss=0.5796
+2026-04-26 17:50:28 I tivit.train.loop: [train] epoch=92 step=40 avg_loss=0.5724
+2026-04-26 17:50:46 I tivit.train.loop: [train] epoch=92 step=45 avg_loss=0.5732
+2026-04-26 17:51:04 I tivit.train.loop: [train] epoch=92 step=50 avg_loss=0.5933
+2026-04-26 17:51:14 I tivit.train.loop: [train] epoch=92 metrics={'loss': 0.6047167648684304, 'pitch': 0.19020839766511377, 'onset': 0.23945447676024348, 'offset': 0.17505389339518998, 'hand': 0.0, 'clef': 0.0, 'total': 0.6047167648684304}
+2026-04-26 17:51:37 I tivit.train.loop: [eval] epoch=92 metrics={'loss': 0.43733592496977913, 'pitch': 0.17226753301090664, 'onset': 0.13555574334330028, 'offset': 0.12951265027125677, 'hand': 0.0, 'clef': 0.0, 'total': 0.43733592496977913}
+2026-04-26 17:51:37 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_92.pt
+2026-04-26 17:51:55 I tivit.train.loop: [train] epoch=93 step=5 avg_loss=0.5692
+2026-04-26 17:52:14 I tivit.train.loop: [train] epoch=93 step=10 avg_loss=0.6255
+2026-04-26 17:52:31 I tivit.train.loop: [train] epoch=93 step=15 avg_loss=0.6225
+2026-04-26 17:52:50 I tivit.train.loop: [train] epoch=93 step=20 avg_loss=0.5859
+2026-04-26 17:53:07 I tivit.train.loop: [train] epoch=93 step=25 avg_loss=0.5966
+2026-04-26 17:53:26 I tivit.train.loop: [train] epoch=93 step=30 avg_loss=0.6074
+2026-04-26 17:53:44 I tivit.train.loop: [train] epoch=93 step=35 avg_loss=0.6179
+2026-04-26 17:54:04 I tivit.train.loop: [train] epoch=93 step=40 avg_loss=0.6292
+2026-04-26 17:54:21 I tivit.train.loop: [train] epoch=93 step=45 avg_loss=0.6151
+2026-04-26 17:54:39 I tivit.train.loop: [train] epoch=93 step=50 avg_loss=0.6217
+2026-04-26 17:54:50 I tivit.train.loop: [train] epoch=93 metrics={'loss': 0.6231574888499278, 'pitch': 0.1965890940067903, 'onset': 0.24604819138657372, 'offset': 0.1805202065492576, 'hand': 0.0, 'clef': 0.0, 'total': 0.6231574888499278}
+2026-04-26 17:55:13 I tivit.train.loop: [eval] epoch=93 metrics={'loss': 0.4346552524301741, 'pitch': 0.17088900258143744, 'onset': 0.1346828473938836, 'offset': 0.1290834036966165, 'hand': 0.0, 'clef': 0.0, 'total': 0.4346552524301741}
+2026-04-26 17:55:13 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_93.pt
+2026-04-26 17:55:30 I tivit.train.loop: [train] epoch=94 step=5 avg_loss=0.6638
+2026-04-26 17:55:49 I tivit.train.loop: [train] epoch=94 step=10 avg_loss=0.5735
+2026-04-26 17:56:07 I tivit.train.loop: [train] epoch=94 step=15 avg_loss=0.5617
+2026-04-26 17:56:25 I tivit.train.loop: [train] epoch=94 step=20 avg_loss=0.5675
+2026-04-26 17:56:44 I tivit.train.loop: [train] epoch=94 step=25 avg_loss=0.6109
+2026-04-26 17:57:02 I tivit.train.loop: [train] epoch=94 step=30 avg_loss=0.5998
+2026-04-26 17:57:20 I tivit.train.loop: [train] epoch=94 step=35 avg_loss=0.5840
+2026-04-26 17:57:38 I tivit.train.loop: [train] epoch=94 step=40 avg_loss=0.5913
+2026-04-26 17:57:57 I tivit.train.loop: [train] epoch=94 step=45 avg_loss=0.5907
+2026-04-26 17:58:14 I tivit.train.loop: [train] epoch=94 step=50 avg_loss=0.5822
+2026-04-26 17:58:25 I tivit.train.loop: [train] epoch=94 metrics={'loss': 0.573975812151747, 'pitch': 0.18046201385979382, 'onset': 0.2267062932534038, 'offset': 0.16680750503854933, 'hand': 0.0, 'clef': 0.0, 'total': 0.573975812151747}
+2026-04-26 17:58:48 I tivit.train.loop: [eval] epoch=94 metrics={'loss': 0.4343147493071026, 'pitch': 0.1707328028149075, 'onset': 0.13414695196681553, 'offset': 0.1294349936975373, 'hand': 0.0, 'clef': 0.0, 'total': 0.4343147493071026}
+2026-04-26 17:58:48 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_94.pt
+2026-04-26 17:59:06 I tivit.train.loop: [train] epoch=95 step=5 avg_loss=0.5509
+2026-04-26 17:59:24 I tivit.train.loop: [train] epoch=95 step=10 avg_loss=0.5415
+2026-04-26 17:59:42 I tivit.train.loop: [train] epoch=95 step=15 avg_loss=0.5425
+2026-04-26 18:00:02 I tivit.train.loop: [train] epoch=95 step=20 avg_loss=0.5384
+2026-04-26 18:00:20 I tivit.train.loop: [train] epoch=95 step=25 avg_loss=0.5526
+2026-04-26 18:00:38 I tivit.train.loop: [train] epoch=95 step=30 avg_loss=0.5591
+2026-04-26 18:00:56 I tivit.train.loop: [train] epoch=95 step=35 avg_loss=0.5529
+2026-04-26 18:01:15 I tivit.train.loop: [train] epoch=95 step=40 avg_loss=0.5401
+2026-04-26 18:01:33 I tivit.train.loop: [train] epoch=95 step=45 avg_loss=0.5668
+2026-04-26 18:01:50 I tivit.train.loop: [train] epoch=95 step=50 avg_loss=0.5502
+2026-04-26 18:02:01 I tivit.train.loop: [train] epoch=95 metrics={'loss': 0.5646438396201944, 'pitch': 0.187205415992242, 'onset': 0.21796186240214221, 'offset': 0.15947656249100306, 'hand': 0.0, 'clef': 0.0, 'total': 0.5646438396201944}
+2026-04-26 18:02:24 I tivit.train.loop: [eval] epoch=95 metrics={'loss': 0.43118415276209515, 'pitch': 0.17126046866178513, 'onset': 0.13163532565037409, 'offset': 0.12828836176130506, 'hand': 0.0, 'clef': 0.0, 'total': 0.43118415276209515}
+2026-04-26 18:02:24 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_95.pt
+2026-04-26 18:02:42 I tivit.train.loop: [train] epoch=96 step=5 avg_loss=0.5812
+2026-04-26 18:03:00 I tivit.train.loop: [train] epoch=96 step=10 avg_loss=0.5670
+2026-04-26 18:03:18 I tivit.train.loop: [train] epoch=96 step=15 avg_loss=0.5206
+2026-04-26 18:03:36 I tivit.train.loop: [train] epoch=96 step=20 avg_loss=0.5341
+2026-04-26 18:03:55 I tivit.train.loop: [train] epoch=96 step=25 avg_loss=0.5365
+2026-04-26 18:04:13 I tivit.train.loop: [train] epoch=96 step=30 avg_loss=0.5564
+2026-04-26 18:04:31 I tivit.train.loop: [train] epoch=96 step=35 avg_loss=0.6068
+2026-04-26 18:04:48 I tivit.train.loop: [train] epoch=96 step=40 avg_loss=0.6020
+2026-04-26 18:05:06 I tivit.train.loop: [train] epoch=96 step=45 avg_loss=0.6102
+2026-04-26 18:05:23 I tivit.train.loop: [train] epoch=96 step=50 avg_loss=0.6261
+2026-04-26 18:05:34 I tivit.train.loop: [train] epoch=96 metrics={'loss': 0.6261318837696651, 'pitch': 0.19038070499334694, 'onset': 0.2512751743197441, 'offset': 0.18447600234791917, 'hand': 0.0, 'clef': 0.0, 'total': 0.6261318837696651}
+2026-04-26 18:05:57 I tivit.train.loop: [eval] epoch=96 metrics={'loss': 0.43826111488872105, 'pitch': 0.17200299931897056, 'onset': 0.13719763772355187, 'offset': 0.12906047039561802, 'hand': 0.0, 'clef': 0.0, 'total': 0.43826111488872105}
+2026-04-26 18:05:57 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_96.pt
+2026-04-26 18:06:15 I tivit.train.loop: [train] epoch=97 step=5 avg_loss=0.6331
+2026-04-26 18:06:33 I tivit.train.loop: [train] epoch=97 step=10 avg_loss=0.5294
+2026-04-26 18:06:51 I tivit.train.loop: [train] epoch=97 step=15 avg_loss=0.5388
+2026-04-26 18:07:10 I tivit.train.loop: [train] epoch=97 step=20 avg_loss=0.5267
+2026-04-26 18:07:28 I tivit.train.loop: [train] epoch=97 step=25 avg_loss=0.5397
+2026-04-26 18:07:45 I tivit.train.loop: [train] epoch=97 step=30 avg_loss=0.5488
+2026-04-26 18:08:04 I tivit.train.loop: [train] epoch=97 step=35 avg_loss=0.5527
+2026-04-26 18:08:23 I tivit.train.loop: [train] epoch=97 step=40 avg_loss=0.5605
+2026-04-26 18:08:41 I tivit.train.loop: [train] epoch=97 step=45 avg_loss=0.5626
+2026-04-26 18:09:00 I tivit.train.loop: [train] epoch=97 step=50 avg_loss=0.5627
+2026-04-26 18:09:11 I tivit.train.loop: [train] epoch=97 metrics={'loss': 0.5674150867282219, 'pitch': 0.18115446168296742, 'onset': 0.2236505610481748, 'offset': 0.16261006526227267, 'hand': 0.0, 'clef': 0.0, 'total': 0.5674150867282219}
+2026-04-26 18:09:34 I tivit.train.loop: [eval] epoch=97 metrics={'loss': 0.43224406242370605, 'pitch': 0.17076685941881603, 'onset': 0.1319971705476443, 'offset': 0.1294800415635109, 'hand': 0.0, 'clef': 0.0, 'total': 0.43224406242370605}
+2026-04-26 18:09:34 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_97.pt
+2026-04-26 18:09:52 I tivit.train.loop: [train] epoch=98 step=5 avg_loss=0.5374
+2026-04-26 18:10:11 I tivit.train.loop: [train] epoch=98 step=10 avg_loss=0.5975
+2026-04-26 18:10:30 I tivit.train.loop: [train] epoch=98 step=15 avg_loss=0.6211
+2026-04-26 18:10:47 I tivit.train.loop: [train] epoch=98 step=20 avg_loss=0.6237
+2026-04-26 18:11:05 I tivit.train.loop: [train] epoch=98 step=25 avg_loss=0.6269
+2026-04-26 18:11:23 I tivit.train.loop: [train] epoch=98 step=30 avg_loss=0.6064
+2026-04-26 18:11:41 I tivit.train.loop: [train] epoch=98 step=35 avg_loss=0.6047
+2026-04-26 18:11:59 I tivit.train.loop: [train] epoch=98 step=40 avg_loss=0.5847
+2026-04-26 18:12:18 I tivit.train.loop: [train] epoch=98 step=45 avg_loss=0.5829
+2026-04-26 18:12:36 I tivit.train.loop: [train] epoch=98 step=50 avg_loss=0.5856
+2026-04-26 18:12:47 I tivit.train.loop: [train] epoch=98 metrics={'loss': 0.5779961195756804, 'pitch': 0.19134853878673516, 'onset': 0.22267653399480963, 'offset': 0.16397105087086838, 'hand': 0.0, 'clef': 0.0, 'total': 0.5779961195756804}
+2026-04-26 18:13:11 I tivit.train.loop: [eval] epoch=98 metrics={'loss': 0.43221134609646267, 'pitch': 0.16965900361537933, 'onset': 0.13330002791351742, 'offset': 0.12925231373972362, 'hand': 0.0, 'clef': 0.0, 'total': 0.43221134609646267}
+2026-04-26 18:13:11 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_98.pt
+2026-04-26 18:13:29 I tivit.train.loop: [train] epoch=99 step=5 avg_loss=0.8933
+2026-04-26 18:13:48 I tivit.train.loop: [train] epoch=99 step=10 avg_loss=0.7818
+2026-04-26 18:14:06 I tivit.train.loop: [train] epoch=99 step=15 avg_loss=0.7093
+2026-04-26 18:14:24 I tivit.train.loop: [train] epoch=99 step=20 avg_loss=0.6827
+2026-04-26 18:14:42 I tivit.train.loop: [train] epoch=99 step=25 avg_loss=0.6629
+2026-04-26 18:15:00 I tivit.train.loop: [train] epoch=99 step=30 avg_loss=0.6618
+2026-04-26 18:15:18 I tivit.train.loop: [train] epoch=99 step=35 avg_loss=0.6345
+2026-04-26 18:15:36 I tivit.train.loop: [train] epoch=99 step=40 avg_loss=0.6350
+2026-04-26 18:15:54 I tivit.train.loop: [train] epoch=99 step=45 avg_loss=0.6242
+2026-04-26 18:16:13 I tivit.train.loop: [train] epoch=99 step=50 avg_loss=0.6316
+2026-04-26 18:16:24 I tivit.train.loop: [train] epoch=99 metrics={'loss': 0.6259199881328726, 'pitch': 0.20284407782667088, 'onset': 0.24449295677104085, 'offset': 0.17858295564381582, 'hand': 0.0, 'clef': 0.0, 'total': 0.6259199881328726}
+2026-04-26 18:16:47 I tivit.train.loop: [eval] epoch=99 metrics={'loss': 0.43147056301434833, 'pitch': 0.17069863031307855, 'onset': 0.13269773291216957, 'offset': 0.1280741881993082, 'hand': 0.0, 'clef': 0.0, 'total': 0.43147056301434833}
+2026-04-26 18:16:47 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_99.pt
+2026-04-26 18:17:05 I tivit.train.loop: [train] epoch=100 step=5 avg_loss=0.5756
+2026-04-26 18:17:22 I tivit.train.loop: [train] epoch=100 step=10 avg_loss=0.5912
+2026-04-26 18:17:41 I tivit.train.loop: [train] epoch=100 step=15 avg_loss=0.6239
+2026-04-26 18:17:58 I tivit.train.loop: [train] epoch=100 step=20 avg_loss=0.6294
+2026-04-26 18:18:16 I tivit.train.loop: [train] epoch=100 step=25 avg_loss=0.6133
+2026-04-26 18:18:35 I tivit.train.loop: [train] epoch=100 step=30 avg_loss=0.6310
+2026-04-26 18:18:53 I tivit.train.loop: [train] epoch=100 step=35 avg_loss=0.6264
+2026-04-26 18:19:11 I tivit.train.loop: [train] epoch=100 step=40 avg_loss=0.6165
+2026-04-26 18:19:29 I tivit.train.loop: [train] epoch=100 step=45 avg_loss=0.6204
+2026-04-26 18:19:46 I tivit.train.loop: [train] epoch=100 step=50 avg_loss=0.6168
+2026-04-26 18:19:57 I tivit.train.loop: [train] epoch=100 metrics={'loss': 0.6100738402807487, 'pitch': 0.19393188801576505, 'onset': 0.24008003074043202, 'offset': 0.1760619192753198, 'hand': 0.0, 'clef': 0.0, 'total': 0.6100738402807487}
+2026-04-26 18:20:19 I tivit.train.loop: [eval] epoch=100 metrics={'loss': 0.4366675251060062, 'pitch': 0.17223340272903442, 'onset': 0.13591015256113476, 'offset': 0.1285239631930987, 'hand': 0.0, 'clef': 0.0, 'total': 0.4366675251060062}
+2026-04-26 18:20:19 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_100.pt
+2026-04-26 18:20:37 I tivit.train.loop: [train] epoch=101 step=5 avg_loss=0.7205
+2026-04-26 18:20:54 I tivit.train.loop: [train] epoch=101 step=10 avg_loss=0.6130
+2026-04-26 18:21:12 I tivit.train.loop: [train] epoch=101 step=15 avg_loss=0.6364
+2026-04-26 18:21:30 I tivit.train.loop: [train] epoch=101 step=20 avg_loss=0.6217
+2026-04-26 18:21:48 I tivit.train.loop: [train] epoch=101 step=25 avg_loss=0.5968
+2026-04-26 18:22:06 I tivit.train.loop: [train] epoch=101 step=30 avg_loss=0.6158
+2026-04-26 18:22:25 I tivit.train.loop: [train] epoch=101 step=35 avg_loss=0.5991
+2026-04-26 18:22:43 I tivit.train.loop: [train] epoch=101 step=40 avg_loss=0.6090
+2026-04-26 18:23:02 I tivit.train.loop: [train] epoch=101 step=45 avg_loss=0.6086
+2026-04-26 18:23:21 I tivit.train.loop: [train] epoch=101 step=50 avg_loss=0.6069
+2026-04-26 18:23:31 I tivit.train.loop: [train] epoch=101 metrics={'loss': 0.5985199314243389, 'pitch': 0.19166442836230657, 'onset': 0.23492475163261844, 'offset': 0.17193075107797137, 'hand': 0.0, 'clef': 0.0, 'total': 0.5985199314243389}
+2026-04-26 18:23:54 I tivit.train.loop: [eval] epoch=101 metrics={'loss': 0.4360557877355152, 'pitch': 0.17481526152955162, 'onset': 0.13290202286508349, 'offset': 0.1283384979599052, 'hand': 0.0, 'clef': 0.0, 'total': 0.4360557877355152}
+2026-04-26 18:23:54 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_101.pt
+2026-04-26 18:24:12 I tivit.train.loop: [train] epoch=102 step=5 avg_loss=0.5873
+2026-04-26 18:24:30 I tivit.train.loop: [train] epoch=102 step=10 avg_loss=0.5389
+2026-04-26 18:24:48 I tivit.train.loop: [train] epoch=102 step=15 avg_loss=0.5281
+2026-04-26 18:25:06 I tivit.train.loop: [train] epoch=102 step=20 avg_loss=0.5368
+2026-04-26 18:25:25 I tivit.train.loop: [train] epoch=102 step=25 avg_loss=0.5361
+2026-04-26 18:25:43 I tivit.train.loop: [train] epoch=102 step=30 avg_loss=0.5444
+2026-04-26 18:26:01 I tivit.train.loop: [train] epoch=102 step=35 avg_loss=0.5355
+2026-04-26 18:26:20 I tivit.train.loop: [train] epoch=102 step=40 avg_loss=0.5458
+2026-04-26 18:26:40 I tivit.train.loop: [train] epoch=102 step=45 avg_loss=0.5613
+2026-04-26 18:26:57 I tivit.train.loop: [train] epoch=102 step=50 avg_loss=0.5693
+2026-04-26 18:27:08 I tivit.train.loop: [train] epoch=102 metrics={'loss': 0.5706877016796256, 'pitch': 0.18114762134709447, 'onset': 0.2243650937980076, 'offset': 0.16517498737798547, 'hand': 0.0, 'clef': 0.0, 'total': 0.5706877016796256}
+2026-04-26 18:27:30 I tivit.train.loop: [eval] epoch=102 metrics={'loss': 0.43415693276458317, 'pitch': 0.17274555067221323, 'onset': 0.1320243759287728, 'offset': 0.1293870032661491, 'hand': 0.0, 'clef': 0.0, 'total': 0.43415693276458317}
+2026-04-26 18:27:30 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_102.pt
+2026-04-26 18:27:49 I tivit.train.loop: [train] epoch=103 step=5 avg_loss=0.7874
+2026-04-26 18:28:07 I tivit.train.loop: [train] epoch=103 step=10 avg_loss=0.7310
+2026-04-26 18:28:25 I tivit.train.loop: [train] epoch=103 step=15 avg_loss=0.6851
+2026-04-26 18:28:43 I tivit.train.loop: [train] epoch=103 step=20 avg_loss=0.6298
+2026-04-26 18:29:01 I tivit.train.loop: [train] epoch=103 step=25 avg_loss=0.6024
+2026-04-26 18:29:19 I tivit.train.loop: [train] epoch=103 step=30 avg_loss=0.5888
+2026-04-26 18:29:37 I tivit.train.loop: [train] epoch=103 step=35 avg_loss=0.6039
+2026-04-26 18:29:54 I tivit.train.loop: [train] epoch=103 step=40 avg_loss=0.6048
+2026-04-26 18:30:13 I tivit.train.loop: [train] epoch=103 step=45 avg_loss=0.6199
+2026-04-26 18:30:32 I tivit.train.loop: [train] epoch=103 step=50 avg_loss=0.6200
+2026-04-26 18:30:43 I tivit.train.loop: [train] epoch=103 metrics={'loss': 0.6133729562444507, 'pitch': 0.20351308738847948, 'onset': 0.23645572336214893, 'offset': 0.17340414408805235, 'hand': 0.0, 'clef': 0.0, 'total': 0.6133729562444507}
+2026-04-26 18:31:05 I tivit.train.loop: [eval] epoch=103 metrics={'loss': 0.434845228989919, 'pitch': 0.1718627048863305, 'onset': 0.13497752199570337, 'offset': 0.1280049979686737, 'hand': 0.0, 'clef': 0.0, 'total': 0.434845228989919}
+2026-04-26 18:31:05 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_103.pt
+2026-04-26 18:31:22 I tivit.train.loop: [train] epoch=104 step=5 avg_loss=0.6611
+2026-04-26 18:31:42 I tivit.train.loop: [train] epoch=104 step=10 avg_loss=0.5906
+2026-04-26 18:32:00 I tivit.train.loop: [train] epoch=104 step=15 avg_loss=0.6260
+2026-04-26 18:32:18 I tivit.train.loop: [train] epoch=104 step=20 avg_loss=0.6005
+2026-04-26 18:32:36 I tivit.train.loop: [train] epoch=104 step=25 avg_loss=0.6055
+2026-04-26 18:32:54 I tivit.train.loop: [train] epoch=104 step=30 avg_loss=0.5865
+2026-04-26 18:33:13 I tivit.train.loop: [train] epoch=104 step=35 avg_loss=0.5777
+2026-04-26 18:33:31 I tivit.train.loop: [train] epoch=104 step=40 avg_loss=0.5898
+2026-04-26 18:33:53 I tivit.train.loop: [train] epoch=104 step=45 avg_loss=0.5949
+2026-04-26 18:34:15 I tivit.train.loop: [train] epoch=104 step=50 avg_loss=0.5881
+2026-04-26 18:34:27 I tivit.train.loop: [train] epoch=104 metrics={'loss': 0.5910418927669525, 'pitch': 0.19036427786890067, 'onset': 0.2309677592425976, 'offset': 0.1697098545308383, 'hand': 0.0, 'clef': 0.0, 'total': 0.5910418927669525}
+2026-04-26 18:34:56 I tivit.train.loop: [eval] epoch=104 metrics={'loss': 0.4347973134782579, 'pitch': 0.1709937403599421, 'onset': 0.135119186507331, 'offset': 0.12868438412745795, 'hand': 0.0, 'clef': 0.0, 'total': 0.4347973134782579}
+2026-04-26 18:34:56 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_104.pt
+2026-04-26 18:35:17 I tivit.train.loop: [train] epoch=105 step=5 avg_loss=0.6682
+2026-04-26 18:35:38 I tivit.train.loop: [train] epoch=105 step=10 avg_loss=0.6485
+2026-04-26 18:35:58 I tivit.train.loop: [train] epoch=105 step=15 avg_loss=0.5819
+2026-04-26 18:36:19 I tivit.train.loop: [train] epoch=105 step=20 avg_loss=0.5921
+2026-04-26 18:36:41 I tivit.train.loop: [train] epoch=105 step=25 avg_loss=0.5613
+2026-04-26 18:37:00 I tivit.train.loop: [train] epoch=105 step=30 avg_loss=0.5504
+2026-04-26 18:37:21 I tivit.train.loop: [train] epoch=105 step=35 avg_loss=0.5512
+2026-04-26 18:37:42 I tivit.train.loop: [train] epoch=105 step=40 avg_loss=0.5611
+2026-04-26 18:38:03 I tivit.train.loop: [train] epoch=105 step=45 avg_loss=0.5606
+2026-04-26 18:38:22 I tivit.train.loop: [train] epoch=105 step=50 avg_loss=0.5643
+2026-04-26 18:38:34 I tivit.train.loop: [train] epoch=105 metrics={'loss': 0.5799614410355406, 'pitch': 0.18897590800276343, 'onset': 0.2264776405579639, 'offset': 0.1645078923342363, 'hand': 0.0, 'clef': 0.0, 'total': 0.5799614410355406}
+2026-04-26 18:39:00 I tivit.train.loop: [eval] epoch=105 metrics={'loss': 0.43216190569930607, 'pitch': 0.17406209144327375, 'onset': 0.1296500919593705, 'offset': 0.12844973140292698, 'hand': 0.0, 'clef': 0.0, 'total': 0.43216190569930607}
+2026-04-26 18:39:01 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_105.pt
+2026-04-26 18:39:20 I tivit.train.loop: [train] epoch=106 step=5 avg_loss=0.5756
+2026-04-26 18:39:38 I tivit.train.loop: [train] epoch=106 step=10 avg_loss=0.5952
+2026-04-26 18:39:57 I tivit.train.loop: [train] epoch=106 step=15 avg_loss=0.5911
+2026-04-26 18:40:16 I tivit.train.loop: [train] epoch=106 step=20 avg_loss=0.5783
+2026-04-26 18:40:34 I tivit.train.loop: [train] epoch=106 step=25 avg_loss=0.6040
+2026-04-26 18:40:53 I tivit.train.loop: [train] epoch=106 step=30 avg_loss=0.6077
+2026-04-26 18:41:12 I tivit.train.loop: [train] epoch=106 step=35 avg_loss=0.6149
+2026-04-26 18:41:31 I tivit.train.loop: [train] epoch=106 step=40 avg_loss=0.6093
+2026-04-26 18:41:49 I tivit.train.loop: [train] epoch=106 step=45 avg_loss=0.6036
+2026-04-26 18:42:07 I tivit.train.loop: [train] epoch=106 step=50 avg_loss=0.6162
+2026-04-26 18:42:19 I tivit.train.loop: [train] epoch=106 metrics={'loss': 0.6076211400751798, 'pitch': 0.18975550090929247, 'onset': 0.24172848041327494, 'offset': 0.17613716058011325, 'hand': 0.0, 'clef': 0.0, 'total': 0.6076211400751798}
+2026-04-26 18:42:48 I tivit.train.loop: [eval] epoch=106 metrics={'loss': 0.43498916096157497, 'pitch': 0.1708071173893081, 'onset': 0.13381457659933302, 'offset': 0.1303674636615647, 'hand': 0.0, 'clef': 0.0, 'total': 0.43498916096157497}
+2026-04-26 18:42:48 I tivit.train.loop: Saved checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_106.pt
+2026-04-26 18:43:11 I tivit.train.loop: [train] epoch=107 step=5 avg_loss=0.5673
+2026-04-26 18:43:39 I tivit.train.loop: [train] epoch=107 step=10 avg_loss=0.5701
+2026-04-26 18:44:00 I tivit.train.loop: [train] epoch=107 step=15 avg_loss=0.5928
+2026-04-26 18:44:23 I tivit.train.loop: [train] epoch=107 step=20 avg_loss=0.5730
+2026-04-26 18:44:42 I tivit.train.loop: [train] epoch=107 step=25 avg_loss=0.5545
+2026-04-26 18:45:02 I tivit.train.loop: [train] epoch=107 step=30 avg_loss=0.5442
+2026-04-26 18:45:22 I tivit.train.loop: [train] epoch=107 step=35 avg_loss=0.5512
+2026-04-26 18:45:44 I tivit.train.loop: [train] epoch=107 step=40 avg_loss=0.5603

@@ -1,0 +1,2 @@
+/home/achatzigiannis/tivit-vam/pipelines/eval_single.py --config configs/default.yaml --config configs/overrides/manual_training.yaml --config configs/overrides/manual_training_best_eval.yaml --checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_7.pt --split valid --verbose info
+configs: configs/default.yaml, configs/overrides/manual_training.yaml, configs/overrides/manual_training_best_eval.yaml

@@ -1,0 +1,319 @@
+{
+  "decoder": {
+    "offset": {
+      "hold": 0.20220000000000002,
+      "median": 3,
+      "merge_gap": 1,
+      "min_off": 2,
+      "min_on": 2,
+      "open": 0.337
+    },
+    "onset": {
+      "hold": 0.1536,
+      "median": 3,
+      "merge_gap": 1,
+      "min_off": 2,
+      "min_on": 2,
+      "open": 0.256
+    }
+  },
+  "method": "threshold_sweep",
+  "metrics": {
+    "ev_f1_mean": 0.0155745330863942,
+    "offset_event_f1": 0.002808988652237727,
+    "onset_event_f1": 0.028340077520550674
+  },
+  "split": "valid",
+  "sweep": {
+    "delta": 0.04,
+    "max_prob": 0.7,
+    "min_prob": 0.2,
+    "per_head": {
+      "offset": {
+        "center": 0.457,
+        "results": [
+          {
+            "clips": 9,
+            "f1": 0.002688171122023092,
+            "fn": 707,
+            "fp": 35,
+            "hold": 0.1542,
+            "precision": 0.027777777770061726,
+            "recall": 0.001412429378511124,
+            "threshold": 0.257,
+            "tp": 1
+          },
+          {
+            "clips": 9,
+            "f1": 0.002781640866912624,
+            "fn": 707,
+            "fp": 10,
+            "hold": 0.1782,
+            "precision": 0.09090909082644627,
+            "recall": 0.001412429378511124,
+            "threshold": 0.297,
+            "tp": 1
+          },
+          {
+            "clips": 9,
+            "f1": 0.002808988652237727,
+            "fn": 707,
+            "fp": 3,
+            "hold": 0.20220000000000002,
+            "precision": 0.249999999375,
+            "recall": 0.001412429378511124,
+            "threshold": 0.337,
+            "tp": 1
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.22619999999999998,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.377,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.2502,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.417,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.2742,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.457,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.29819999999999997,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.497,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.3222,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.537,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.34619999999999995,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.577,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.3702,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.617,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 708,
+            "fp": 0,
+            "hold": 0.3942,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.657,
+            "tp": 0
+          }
+        ],
+        "source": "training.metrics",
+        "values": [
+          0.257,
+          0.297,
+          0.337,
+          0.377,
+          0.417,
+          0.457,
+          0.497,
+          0.537,
+          0.577,
+          0.617,
+          0.657
+        ]
+      },
+      "onset": {
+        "center": 0.456,
+        "results": [
+          {
+            "clips": 9,
+            "f1": 0.028340077520550674,
+            "fn": 755,
+            "fp": 205,
+            "hold": 0.1536,
+            "precision": 0.06392694063635036,
+            "recall": 0.018205461638254806,
+            "threshold": 0.256,
+            "tp": 14
+          },
+          {
+            "clips": 9,
+            "f1": 0.015837101808701008,
+            "fn": 762,
+            "fp": 108,
+            "hold": 0.17759999999999998,
+            "precision": 0.060869565212098305,
+            "recall": 0.009102730819127403,
+            "threshold": 0.296,
+            "tp": 7
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 51,
+            "hold": 0.2016,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.336,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 28,
+            "hold": 0.2256,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.376,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 23,
+            "hold": 0.2496,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.416,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 11,
+            "hold": 0.2736,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.456,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 6,
+            "hold": 0.2976,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.496,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 4,
+            "hold": 0.3216,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.536,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 2,
+            "hold": 0.34559999999999996,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.576,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 2,
+            "hold": 0.3696,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.616,
+            "tp": 0
+          },
+          {
+            "clips": 9,
+            "f1": 0.0,
+            "fn": 769,
+            "fp": 0,
+            "hold": 0.3936,
+            "precision": 0.0,
+            "recall": 0.0,
+            "threshold": 0.656,
+            "tp": 0
+          }
+        ],
+        "source": "training.metrics",
+        "values": [
+          0.256,
+          0.296,
+          0.336,
+          0.376,
+          0.416,
+          0.456,
+          0.496,
+          0.536,
+          0.576,
+          0.616,
+          0.656
+        ]
+      }
+    },
+    "steps": 11
+  },
+  "thresholds": {
+    "offset": 0.337,
+    "onset": 0.256
+  }
+}

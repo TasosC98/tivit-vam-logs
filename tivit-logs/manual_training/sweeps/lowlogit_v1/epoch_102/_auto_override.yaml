@@ -1,0 +1,5 @@
+logging:
+  log_dir: /home/achatzigiannis/tivit-logs/manual_training/sweeps/lowlogit_v1/epoch_102
+  postproc_debug: false
+calibration:
+  output_path: /home/achatzigiannis/tivit-logs/manual_training/sweeps/lowlogit_v1/epoch_102/calibration.json

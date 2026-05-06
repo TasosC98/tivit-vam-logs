@@ -1,0 +1,4 @@
+2026-04-24 15:10:28 I tivit.stage.calibration: starting sweep on split=valid deterministic=False
+2026-04-24 15:10:28 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-24 15:10:28 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_19.pt (epoch 19)
+2026-04-24 15:10:41 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/sweeps/lowlogit_v1/epoch_019/calibration.json

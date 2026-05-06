@@ -1,0 +1,10 @@
+logging:
+  log_dir: /home/achatzigiannis/tivit-logs/manual_training/sweeps/pitch_threshold_epoch7/thr_0p13
+training:
+  metrics:
+    key_probe:
+      threshold: 0.13
+    patk:
+      threshold: 0.13
+calibration:
+  output_path: /home/achatzigiannis/tivit-logs/manual_training/sweeps/lowlogit_v1/epoch_007/calibration.json

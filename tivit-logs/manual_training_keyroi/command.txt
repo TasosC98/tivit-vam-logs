@@ -1,0 +1,2 @@
+/home/achatzigiannis/tivit-vam/pipelines/train_single.py --config configs/default.yaml --config configs/overrides/manual_training.yaml --config configs/overrides/manual_training_keyroi_train.yaml --verbose info
+configs: configs/default.yaml, configs/overrides/manual_training.yaml, configs/overrides/manual_training_keyroi_train.yaml

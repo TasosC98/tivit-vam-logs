@@ -1,0 +1,12 @@
+logging:
+  log_dir: /home/achatzigiannis/tivit-logs/manual_training_keyroi/sweeps/pitch_density_epoch_7/thr_0p75
+training:
+  metrics:
+    key_probe:
+      threshold: 0.75
+      top_k: 10
+    patk:
+      threshold: 0.75
+      top_k: 10
+calibration:
+  output_path: /home/achatzigiannis/tivit-logs/manual_training_keyroi/sweeps/keyroi_v1/epoch_7/calibration.json

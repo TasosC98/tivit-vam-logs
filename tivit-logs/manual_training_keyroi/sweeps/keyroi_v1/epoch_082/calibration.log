@@ -1,0 +1,8 @@
+2026-04-26 20:58:27 I tivit.stage.calibration: starting sweep on split=valid deterministic=False
+2026-04-26 20:58:27 I tivit.data.roi.keyboard_roi: reg_refined: loaded 31 cache entries from /home/achatzigiannis/tivit-vam/reg_refined_pianovam.json (upgraded=0 skipped_target_hw=0 skipped_invalid=0)
+2026-04-26 20:58:27 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-26 20:58:27 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training_keyroi/checkpoints/epoch_82.pt (epoch 82)
+2026-04-26 20:58:48 W tivit.data.roi.keyboard_roi: reg_refined: video_12 status=fallback_worsened err_before=5.38px err_after=5.38px err_white=5.38px err_black=5.38px frames=96
+2026-04-26 20:58:59 W tivit.data.roi.keyboard_roi: reg_refined: video_39 status=fallback_worsened err_before=5.50px err_after=5.50px err_white=5.50px err_black=5.50px frames=96
+2026-04-26 20:59:13 W tivit.data.roi.keyboard_roi: reg_refined: video_31 status=fallback_worsened err_before=5.33px err_after=5.33px err_white=5.33px err_black=5.33px frames=96
+2026-04-26 20:59:14 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training_keyroi/sweeps/keyroi_v1/epoch_082/calibration.json

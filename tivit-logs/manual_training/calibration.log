@@ -1,0 +1,51 @@
+2026-04-22 22:29:48 I tivit.stage.calibration: starting sweep on split=val deterministic=False
+2026-04-22 22:29:48 W tivit.data.datasets.pianovam_impl: PianoVAM root has no Video/ folder: ${PIANOVAM_ROOT}
+2026-04-22 22:29:49 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-22 22:29:49 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_200.pt (epoch 200)
+2026-04-22 22:29:49 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration.json
+2026-04-22 22:34:46 I tivit.stage.calibration: starting sweep on split=val deterministic=False
+2026-04-22 22:34:46 W tivit.data.datasets.pianovam_impl: PianoVAM root has no Video/ folder: ${PIANOVAM_ROOT}
+2026-04-22 22:34:47 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-22 22:34:47 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_200.pt (epoch 200)
+2026-04-22 22:34:47 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration.json
+2026-04-22 22:34:58 I tivit.stage.calibration: starting sweep on split=val deterministic=False
+2026-04-22 22:34:58 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-22 22:34:58 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_200.pt (epoch 200)
+2026-04-22 22:35:15 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration.json
+2026-04-22 22:45:14 I tivit.stage.calibration: starting sweep on split=val deterministic=False
+2026-04-22 22:45:14 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-22 22:45:14 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_200.pt (epoch 200)
+2026-04-22 22:45:29 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration.json
+2026-04-24 12:38:13 I tivit.stage.calibration: starting sweep on split=valid deterministic=False
+2026-04-24 12:52:25 I tivit.stage.calibration: starting sweep on split=valid deterministic=False
+2026-04-24 12:52:25 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-24 12:52:25 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_200.pt (epoch 200)
+2026-04-24 12:52:25 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 12:52:25 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 12:52:25 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 12:52:25 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 12:52:39 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration/best_manual_training.json
+2026-04-24 14:24:44 I tivit.stage.calibration: starting sweep on split=valid deterministic=False
+2026-04-24 14:24:44 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-24 14:24:44 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_125.pt (epoch 125)
+2026-04-24 14:24:44 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 14:24:44 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 14:24:44 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 14:24:44 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 14:24:58 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration/lowlogit_manual_training_v1.json
+2026-04-24 14:25:38 I tivit.stage.calibration: starting sweep on split=valid deterministic=False
+2026-04-24 14:25:39 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-24 14:25:39 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_200.pt (epoch 200)
+2026-04-24 14:25:39 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 14:25:39 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 14:25:39 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 14:25:39 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 14:25:53 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration/lowlogit_manual_training_v1.json
+2026-04-24 17:04:08 I tivit.stage.calibration: starting sweep on split=valid deterministic=False
+2026-04-24 17:04:08 I tivit.pipelines._common: Initialized lazy encoder before checkpoint load.
+2026-04-24 17:04:08 I tivit.stage.calibration: loaded checkpoint /home/achatzigiannis/tivit-logs/manual_training/checkpoints/epoch_7.pt (epoch 7)
+2026-04-24 17:04:08 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 17:04:08 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 17:04:08 D h5py._conv: Creating converter from 7 to 5
+2026-04-24 17:04:08 D h5py._conv: Creating converter from 5 to 7
+2026-04-24 17:04:22 I tivit.final.calibration: calibration saved to /home/achatzigiannis/tivit-logs/manual_training/calibration/lowlogit_manual_training_v1.json
